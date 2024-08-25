@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ------------------products-------------------- */
+.container{
+    background-color: #fafafa;
+    width: 100%;
+    padding: 0 24px;
+}
+.container .products{
+    width: 90%;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 250px;
+    padding: 0.75rem;
+    border: 1px solid #808080;
+    border-radius: 1rem;
+    
+}
+
+.wrap-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    border: 1px solid rgb(213, 212, 212);
+    border-radius: 1rem;
+}
+
+.wrap-img .pic {
+    width: 80%;
+    object-fit: cover;
+}
+
+.product-details {
+    margin-top: 10px;
+}
+
+.price{
+    color: red;
+    font-weight: 700;
+}
+
+.shipping{
+    color: #04AA6D;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.buy-button {
+    background: rgb(255, 66, 78);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 16px;
+}
+
+.cart-button {
+    background: rgb(31, 31, 186);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    white-space: nowrap;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    font-size: 16px;
+}
+
+/* -------------------table------------------- */
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
