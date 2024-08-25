@@ -107,7 +107,13 @@
     padding: 0 24px;
 }
 
-.container .wraper {
+.products{
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 20px;
+}
+
+.wraper {
     width: 90%;
     background-color: #ffffff;
     margin: 0 auto;
