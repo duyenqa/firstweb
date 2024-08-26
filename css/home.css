@@ -40,7 +40,7 @@
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -105,6 +105,8 @@
 
   .topnav.responsive .dropdown-content {
     position: relative;
+    min-width: 326px;
+    border-radius: 0.5rem;
   }
 
   .topnav.responsive .dropdown .dropbtn {
@@ -129,7 +131,6 @@
 
 .wraper {
   width: 90%;
-  background-color: #ffffff;
   margin: 0 auto;
 }
 
@@ -145,7 +146,6 @@
   padding: 0.75rem;
   border: 1px solid #808080;
   border-radius: 1rem;
-
 }
 
 .wrap-img {
@@ -228,11 +228,37 @@
     max-width: 196px;
   }
 }
-/* -------------------table------------------- */
-.list {
+
+/*--------------Search---------------*/
+.search{
   padding: 1.5rem 0;
 }
 
+.inputSearch{
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 5px;
+  border: 1px solid #dadada;
+  border-radius: 0.5rem;
+}
+.inputSearch:focus{
+  width: 50%;
+  border: 1px solid #13afdf;
+  transition: ease-in-out, width .35s ease-in-out;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .inputSearch{
+    width: 100%;
+  }
+  .inputSearch:focus{
+    width: 100%;
+    transition: 0;
+  }
+}
+
+/* -------------------table------------------- */
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -268,4 +294,5 @@
   text-align: center;
   padding: 15px 0;
   border-radius: 0.5rem;
+  margin-top: 1rem;
 }
