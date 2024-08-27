@@ -37,11 +37,11 @@
 }
 
 .dropdown-content {
+  list-style-type: none;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
   width: 160px;
-  overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -97,6 +97,7 @@
     float: none;
     display: block;
     text-align: left;
+    color: #fff;
   }
 
   .topnav.responsive .dropdown {
@@ -105,8 +106,14 @@
 
   .topnav.responsive .dropdown-content {
     position: relative;
-    min-width: 326px;
+    min-width: 496px;
     border-radius: 0.5rem;
+    background-color: inherit;
+  }
+
+  .dropdown-content li{
+    max-width: 453px;
+    border-bottom: 1px solid #fafafa;
   }
 
   .topnav.responsive .dropdown .dropbtn {
@@ -118,7 +125,6 @@
 
 /* ------------------products-------------------- */
 .container {
-  background-color: #fafafa;
   width: 100%;
   padding: 0 24px;
 }
@@ -220,7 +226,8 @@
     min-width: 300px;
   }
   .products { 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  }
   .box{
     width: 100%;
   }
