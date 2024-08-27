@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.row {}
+
+
+.inputText {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #dadada;
+}
+
+.actions {
+    margin-left: 50px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.message-success{
+    color: green;
+    padding: 1rem 0;
+}
