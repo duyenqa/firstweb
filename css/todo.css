@@ -125,7 +125,6 @@
 .container {
     width: 100%;
     padding: 0 24px;
-
 }
 
 .title {
@@ -142,7 +141,7 @@
     background-color: #fafafa;
 }
 
-.box{
+.box {
     width: 50%;
     margin: 0 auto;
 }
@@ -203,7 +202,7 @@ i {
     cursor: pointer;
 }
 
-.result{
+.result {
     position: fixed;
     top: 50px;
     right: 24px;
@@ -213,39 +212,53 @@ i {
     color: green;
     background-color: greenyellow;
     padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.message-success.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 @media (max-width: 600px) {
-    .wraper{
+    .wraper {
         background: inherit;
     }
-    .box, .inputText{
+
+    .box,
+    .inputText {
         width: 100%;
     }
+
     .row {
         display: flex;
         flex-direction: column;
         gap: 10px;
         margin: 0;
     }
-    .buttonAdd{
+
+    .buttonAdd {
         margin: 0;
     }
-    .result{
+
+    .result {
         top: 51px;
         right: 0;
     }
+
     .message-success {
         font-size: 12px;
         padding: 5px 2px;
     }
 }
+
 /*-------------footer---------------*/
-.footer{
+.footer {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 15px 0;
     border-radius: 0.5rem;
     margin-top: 1rem;
-  }
+}

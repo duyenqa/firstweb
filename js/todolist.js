@@ -10,6 +10,9 @@ function addTodo() {
         <p class="message-success">
             <i class="fa fa-check" aria-hidden="true"></i>
             You created successfully
+            <span id="close" onclick="onClose()">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </span>
         </p>`;
         
         ul.innerHTML += `
@@ -20,4 +23,12 @@ function addTodo() {
             </span>
         </li>`;
     }
+    
+    setTimeout(() => {
+        document.querySelector(".message-success").classList.add('show');
+    }, 3000);
+}
+
+function onClose() {
+    document.querySelector(".message-success").classList.remove('show');
 }
