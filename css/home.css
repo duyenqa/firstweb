@@ -6,7 +6,7 @@
 
 /*-----------Main menu--------------*/
 .topnav {
-  background-color: #333;
+  background-color: #f80;
   border-radius: 0.5rem;
 }
 
@@ -26,7 +26,7 @@
   background-color: inherit;
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
@@ -266,9 +266,8 @@
 
 /* -------------------table------------------- */
 #customers {
-  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
 }
 
 #customers td,
