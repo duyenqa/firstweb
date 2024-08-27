@@ -213,6 +213,9 @@ i {
 }
 
 @media (max-width: 600px) {
+    .wraper{
+        background: inherit;
+    }
     .box, .inputText{
         width: 100%;
     }
