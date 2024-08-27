@@ -203,11 +203,14 @@ i {
     cursor: pointer;
 }
 
-.message-success {
-    color: green;
+.result{
     position: fixed;
     top: 50px;
     right: 24px;
+}
+
+.message-success {
+    color: green;
     background-color: greenyellow;
     padding: 10px 20px;
 }
@@ -228,9 +231,13 @@ i {
     .buttonAdd{
         margin: 0;
     }
-
+    .result{
+        top: 51px;
+        right: 0;
+    }
     .message-success {
         font-size: 12px;
+        padding: 5px 2px;
     }
 }
 /*-------------footer---------------*/
