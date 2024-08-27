@@ -8,12 +8,13 @@ function addTodo() {
     } else {
         message.innerHTML += `
         <p class="message-success">
-        <i class="fa fa-check" aria-hidden="true"></i>
-        You created successfully
+            <i class="fa fa-check" aria-hidden="true"></i>
+            You created successfully
         </p>`;
+        
         ul.innerHTML += `
         <li>
-            ${inputValue}
+            <span class="nameTodo">${inputValue}</span>
             <span class="actions">
                 <i class="fa fa-trash" aria-hidden="true"></i>
             </span>
