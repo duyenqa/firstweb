@@ -22,6 +22,9 @@ function addTodo() {
                 <i class="fa fa-trash" aria-hidden="true"></i>
             </span>
         </li>`;
+
+        //After created successfully, delete data of input tag
+        document.getElementById("myInput").value = " ";
     }
     
     setTimeout(() => {
