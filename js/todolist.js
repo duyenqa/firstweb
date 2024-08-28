@@ -7,7 +7,7 @@ function addTodo() {
         alert("You must write something!");
     } else {
         message.innerHTML += `
-        <p class="message-success">
+        <p id="result" class="message-success">
             <i class="fa fa-check" aria-hidden="true"></i>
             You created successfully
             <span id="close" onclick="onClose()">
@@ -30,5 +30,5 @@ function addTodo() {
 }
 
 function onClose() {
-    document.querySelector(".message-success").classList.remove('show');
+    document.getElementById('result').remove();
 }
