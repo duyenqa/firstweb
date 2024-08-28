@@ -26,7 +26,7 @@ function addTodo() {
     
     setTimeout(() => {
         document.querySelector(".message-success").classList.add('show');
-    }, 3000);
+    }, 2000);
 }
 
 function onClose() {
