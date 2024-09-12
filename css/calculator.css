@@ -1,0 +1,20 @@
+.result{
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.row{
+    width: 208px;
+    margin-top:2px;
+}
+.btn{
+    width: 49px;
+    height: 30px;
+    font-weight: bold;
+}
+.btnequal{
+    width: 102px;
+    height: 30px;
+    font-weight:bold;
+}
