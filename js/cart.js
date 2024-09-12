@@ -1,8 +1,8 @@
 function init() {
     const products = [
-        { id: "iphone-5", name: "Iphone 5", price: 30000000 },
-        { id: "iphone-x", name: "Iphone X", price: 12000000 },
-        { id: "google-pixel", name: "Google Pixel", price: 11000000 }
+        { id: "iphone-5", name: "Iphone 5", price: 30000000,qty:1 },
+        { id: "iphone-x", name: "Iphone X", price: 12000000,qty:1 },
+        { id: "google-pixel", name: "Google Pixel", price: 11000000,qty:1 }
     ];
     //đổ vào input
     let ProductsModels = document.getElementById("ProductsModels");
@@ -25,11 +25,13 @@ function addToCart(id) {
     products = JSON.parse(ProductsModels.value);
     let CartModels = document.getElementById("CartModels");
     cart = JSON.parse(CartModels.value);
+    let totalCart = document.getElementById("CartSize");
+    totalCart.innerHTML = cart.length + 1;
     let isExistCart = -1;
     //giỏ đã có sản phẩm
     for (let i = 0; i < cart.length; i++) {
-        if(id == cart[i].product.id){
-            cart[i].product.qty += 1;
+        if(cart[i].product.id.includes(id)){
+            cart[i].qty += 1;
             break;
         }
     }
@@ -37,7 +39,7 @@ function addToCart(id) {
     if(isExistCart == -1){
         for (let i = 0; i < products.length; i++) {
             if(id == products[i].id){
-                cart.push({product:products[i],qty:1});
+                cart.push({product:products[i], qty:products[i].qty});
                 break;
             }
         }
@@ -52,7 +54,7 @@ function updateCart(cart) {
     for (let i = 0; i < cart.length; i++) {
         str += `<li id="${cart[i].product.id}">
             <button onclick="removeFromCart('${cart[i].product.id}')">- remove</button> &nbsp;
-            <span>${cart[i].product.name} - price: ${cart[i].product.price} - quantity: ${cart[i].qty}</span>
+            <span>${cart[i].product.name} - price: ${(cart[i].product.price * cart[i].qty)} - quantity: ${cart[i].qty}</span>
         </li>`
     }
     //xuất ra cho người dùng xem
