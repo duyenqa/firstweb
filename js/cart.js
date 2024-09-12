@@ -20,42 +20,50 @@ function init() {
     ProductsView.innerHTML = str;
     updateCart([]);
 }
+
 function addToCart(id) {
     let ProductsModels = document.getElementById("ProductsModels");
-    products = JSON.parse(ProductsModels.value);
+    let products = JSON.parse(ProductsModels.value);
     let CartModels = document.getElementById("CartModels");
-    cart = JSON.parse(CartModels.value);
+    let cart = JSON.parse(CartModels.value);
     let totalCart = document.getElementById("CartSize");
-    totalCart.innerHTML = cart.length + 1;
-    let isExistCart = -1;
-    //giỏ đã có sản phẩm
+    let isExistCart = false;
+
+    // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa ?
     for (let i = 0; i < cart.length; i++) {
-        if(cart[i].product.id.includes(id)){
+        if (cart[i].product.id === id) {
             cart[i].qty += 1;
+            isExistCart = true;
             break;
         }
     }
-    //giỏ rỗng
-    if(isExistCart == -1){
+
+    // Nếu sản phẩm chưa tồn tại trong giỏ hàng, thêm sản phẩm vào giỏ
+    if (!isExistCart) {
         for (let i = 0; i < products.length; i++) {
-            if(id == products[i].id){
-                cart.push({product:products[i], qty:products[i].qty});
+            if (products[i].id === id) {
+                cart.push({ product: products[i], qty: 1 });
                 break;
             }
         }
     }
+
+    // Cập nhật tổng số lượng sản phẩm trong giỏ hàng
+    totalCart.innerHTML = cart.length;
     updateCart(cart);
 }
+
 function updateCart(cart) {
     //đổ vào input
     let CartModels = document.getElementById("CartModels");
     CartModels.value = JSON.stringify(cart);
     let str = "";
     for (let i = 0; i < cart.length; i++) {
-        str += `<li id="${cart[i].product.id}">
-            <button onclick="removeFromCart('${cart[i].product.id}')">- remove</button> &nbsp;
+            str += `<li id="${cart[i].product.id}">
+            <button onclick="removeFromCart('${cart[i].product.id}')">delete</button> &nbsp;
             <span>${cart[i].product.name} - price: ${(cart[i].product.price * cart[i].qty)} - quantity: ${cart[i].qty}</span>
-        </li>`
+        </li>`;
+        
     }
     //xuất ra cho người dùng xem
     let CartView = document.getElementById("CartView");
