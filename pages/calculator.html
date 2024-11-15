@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/calculator.css">
     <title>Calculator Simple</title>
 </head>
+
 <body>
-    <div class="display">
-        <input class="result" id="Result" type="text" />
+    <div class="container">
+        <div class="row">
+            <input class="result" id="Result" type="text" />
+        </div>
+        <div class="row">
+            <input class="btn" type="button" value="AC" onclick="Result.value = ''" />
+            <input class="btn" type="button" value="Del"
+                onclick="Result.value=Result.value.substr(0,Result.value.length-1)" />
+            <input class="btn" type="button" value="%" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="0" onclick="Result.value += this.value" />
+        </div>
+        <div class="row">
+            <input class="btn" type="button" value="7" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="8" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="9" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="+" onclick="Result.value += this.value" />
+        </div>
+        <div class="row">
+            <input class="btn" type="button" value="4" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="5" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="6" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="-" onclick="Result.value += this.value" />
+        </div>
+        <div class="row">
+            <input class="btn" type="button" value="1" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="2" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="3" onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="*" onclick="Result.value += this.value" />
+        </div>
+        <div class="row">
+            <input class="btn" id="btnequal" type="button" value="=" onclick="Result.value = eval(Result.value)" />
+            <input class="btn" type="button" value="." onclick="Result.value += this.value" />
+            <input class="btn" type="button" value="/" onclick="Result.value += this.value" />
+        </div>
     </div>
-    <div class="row">
-        <input class="btn" type="button" value="AC" onclick="Result.value = ''" />
-        <input class="btn" type="button" value="Del"
-            onclick="Result.value=Result.value.substr(0,Result.value.length-1)" />
-        <input class="btn" type="button" value="%" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="0" onclick="Result.value += this.value" />
-    </div>
-    <div class="row">
-        <input class="btn" type="button" value="7" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="8" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="9" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="+" onclick="Result.value += this.value" />
-    </div>
-    <div class="row">
-        <input class="btn" type="button" value="4" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="5" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="6" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="-" onclick="Result.value += this.value" />
-    </div>
-    <div class="row">
-        <input class="btn" type="button" value="1" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="2" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="3" onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="*" onclick="Result.value += this.value" />
-    </div>
-    <div class="row">
-        <input class="btnequal" type="button" value="=" onclick="Result.value = eval(Result.value)" />
-        <input class="btn" type="button" value="." onclick="Result.value += this.value" />
-        <input class="btn" type="button" value="/" onclick="Result.value += this.value" />
-    </div> 
 </body>
+
 </html>
