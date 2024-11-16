@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/todo.css">
-    <title>To Do Page</title>
+    <link rel="stylesheet" href="../css/exampleweb.css">
+    <title>Embed Web</title>
 </head>
-
 <body>
     <div class="container">
         <div class="wraper">
@@ -29,19 +27,9 @@
       
               <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
             </div>
-          </div>
+        </div>
         <div class="wraper">
-            <div class="box">
-                <div class="title">
-                    <h2>Products</h2>
-                  </div>
-                <div class="row">
-                    <input type="text" class="inputText" id="myInput" placeholder="Enter text">
-                    <button class="buttonAdd" type="button" onclick="addTodo()">Add</button>
-                </div>
-                <div class="result" id="notification"></div>
-                <ul class="showList" id="list"></ul>
-            </div>
+            <iframe class="demoFrame" id="theFrame" src="http://example.com/"></iframe>
         </div>
         <div class="wraper">
             <div class="footer">
@@ -55,5 +43,4 @@
     <script src="../js/menu.js"></script>
     <script src="../js/todolist.js"></script>
 </body>
-
 </html>
