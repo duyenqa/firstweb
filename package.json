@@ -4,5 +4,8 @@
   "description": "",
   "main": "index.js",
   "author": "Ngo Thi Kim Duyen",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
 }

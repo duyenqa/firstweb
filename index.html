@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <div class="wraper">
+    <div class="wraperMenu">
       <div class="topnav" id="myTopnav">
         <a href="./index.html">Home</a>
         <a href="./pages/todo.html">To do</a>
@@ -35,41 +35,7 @@
       <div class="title">
         <h2>Products</h2>
       </div>
-      <div class="products">
-        <div class="box">
-          <div class="wrap-img">
-            <img class="pic"
-              src="https://24hstore.vn/images/products/2024/08/22/large/iphone-15-pro-hinh-1_1724313056_1.jpg"
-              alt="iPhone 15 Pro" />
-          </div>
-          <div class="product-details">
-            <h4 class="name-product">iPhone 15 Pro 128GB Titan Xanh</h4>
-            <p class="price">27,990,000₫</p>
-            <p class="shipping">Delivery within 2 hours</p>
-
-            <div class="buttons">
-              <button class="buy-button">Mua ngay</button>
-              <button class="cart-button">Giỏ hàng</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="wrap-img">
-            <img class="pic" src="https://24hstore.vn/images/products/2023/07/26/large/galaxy-z-flip5-lavender.jpg"
-              alt="iPhone 15 Pro" />
-          </div>
-          <div class="product-details">
-            <h4 class="name-product">Samsung Galaxy Z Flip5 5G Chính hãng</h4>
-            <p class="price">14,290,000₫</p>
-            <p class="shipping">Delivery within 2 hours</p>
-
-            <div class="buttons">
-              <button class="buy-button">Mua ngay</button>
-              <button class="cart-button">Giỏ hàng</button>
-            </div>
-          </div>
-        </div>
+      <div id="product-list" class="products">
       </div>
     </div>
     <div class="wraper">
@@ -133,7 +99,9 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./js/menu.js"></script>
+  <script src="./js/ItemProduct.js"></script>
   <script src="./js/search.js"></script>
   <script src="./js/sort.js"></script>
 </body>
