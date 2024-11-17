@@ -237,6 +237,7 @@
     width: 40%;
   }
 }
+
 @media (max-width: 928px) {
   .container{
     padding: 0;
@@ -255,8 +256,22 @@
   .box{
     width: 100%;
   }
+  .wrap-img {
+    padding: 1.5rem;
+  }
+  .wrap-img .pic {
+    max-width: 30%;
+  }
 }
 
+@media (min-width: 1000px) {
+  .wrap-img {
+    padding: 1.5rem;
+  }
+  .wrap-img .pic {
+    max-width: 30%;
+  }
+}
 /*--------------Search---------------*/
 .search{
   padding: 1.5rem 0;
