@@ -186,41 +186,36 @@
 .buttons {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  align-items: center;
+  height: 15%;
+  background-color: aqua;
+  margin-top: 1rem;
 }
 
 .buy-button {
   background: rgb(255, 66, 78);
-  border-radius: 4px;
-  border: none;
+  width: 25%;
+  height: fit-content;
+  padding: 3px 0;
+  margin: 0;
   cursor: pointer;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  gap: 8px;
-  white-space: nowrap;
   color: rgb(255, 255, 255);
-  height: 40px;
-  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
 .cart-button {
-  background: rgb(31, 31, 186);
-  border-radius: 4px;
-  border: none;
+  width: 25%;
+  height: fit-content;
+  padding: 3px 0;
+  margin: 0;
   cursor: pointer;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  gap: 8px;
-  white-space: nowrap;
+  background: rgb(31, 31, 186);
   color: rgb(255, 255, 255);
-  height: 40px;
-  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
 @media (min-width: 800px) {
@@ -245,7 +240,6 @@
   }
   .box{
     width: 100%;
-    height: fit-content;
   }
 }
 
