@@ -44,11 +44,17 @@
           <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off" />
         </div>
         <div class="row">
-          <label for="country">Country</label>
+          <label for="country">Select Country:</label>
           <select class="selectCountry" id="country" name="country">
+            <option value="all">None</option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="author">Select Author:</label>
+          <select class="selectAuthor" id="author" name="author">
           </select>
         </div>
         <div class="row">
@@ -82,7 +88,9 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/menu.js"></script>
+  <script src="../js/dropdownAuthor.js"></script>
   <script src="../js/formContact.js"></script>
 </body>
 

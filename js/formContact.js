@@ -2,6 +2,7 @@ function showAlert() {
     let firstName = document.getElementById("fname").value;
     let lastName = document.getElementById("lname").value;
     let country = document.getElementById("country").value;
+    let author = document.getElementById("author").value;
     let description = document.getElementById("description").value;
     let gender = "";
     let genderRadioButtons = document.getElementsByName("gender");
@@ -23,7 +24,7 @@ function showAlert() {
         }
     }
 
-    let message = "Full Name: " + lastName + " " + firstName + "\nGender: " + gender  + "\nLive in: " + country + "\nDescription: " + description + "\nColors: " + colors;
+    let message = "Full Name: " + lastName + " " + firstName + "\nGender: " + gender  + "\nLive in: " + country + "\nAuthor: " + author + "\nDescription: " + description + "\nColors: " + colors;
 
     confirm(message);
 }

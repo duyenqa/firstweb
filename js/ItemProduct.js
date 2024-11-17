@@ -1,4 +1,3 @@
-// Start by showing a loading spinner or message before the request completes
 const productList = document.getElementById('product-list');
 productList.innerHTML = '<p class="loading">Loading products...</p>';
 
