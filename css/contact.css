@@ -172,23 +172,29 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.row {
-    margin: 0 auto;
-    width: 50%;
-}
-
 .action {
-    text-align: center;
     margin: 10px 0;
 }
 
-@media screen and (max-width: 600px) {
-    input[type=submit] {
+@media (max-width: 928px) {
+    label{
         width: 100%;
+    }
+    .action{
+        text-align: center;
+    }
+    input[type=submit] {
+        width: 50%;
         margin-top: 0;
     }
 
     .row {
+        width: 100%;
+    }
+}
+
+@media (min-width: 800px) {
+    input[type=submit] {
         width: 100%;
     }
 }
