@@ -36,17 +36,21 @@
                 <div class="form">
                     <label class="labelEmail">Email:</label>
                     <input
+                        id="username"
                         class="inputEmail"
-                        placeholder="user123@gmail.com"
+                        placeholder="your_email@example.com"
                         type="email"
+                        required
                     />
                     <label class="labelPass">Password:</label>
                     <input
+                        id="password"
                         class="inputPassword"
                         placeholder="••••••••"
                         type="password"
+                        required
                     />
-                    <button class="btnLogin">Log In</button>
+                    <button class="btnLogin" onclick="onLogIn()">Log In</button>
                 </div>
             </div>
         </div>
@@ -60,5 +64,6 @@
           </div>
     </div>
     <script src="../js/menu.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

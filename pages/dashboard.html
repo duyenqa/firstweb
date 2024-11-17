@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./contact.html">Contact</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a href="../pages/calculator.html">Calculator</a></li>
+                        <li><a href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
+        <div class="wraper">
+            <h3>Welcome to Dashboard</h3>
+            <button onclick="onLogOut()">Log Out</button>
+        </div>
+        <div class="wraper">
+            <div class="footer">
+                &copy; Copyright by Ngô Thị Kim Duyên
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            // If the user is not logged in, redirect them to the login page
+            if (!isLoggedIn || isLoggedIn !== 'true') {
+                window.location.href = "login.html"; // Redirect to login page
+            }
+        };
+    </script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
