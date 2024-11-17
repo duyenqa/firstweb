@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*-----------Main menu--------------*/
+.topnav {
+    background-color: #f80;
+    border-radius: 0.5rem;
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        overflow: hidden;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+    }
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        color: #fff;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: relative;
+        min-width: 496px;
+        border-radius: 0.5rem;
+        background-color: inherit;
+    }
+
+    .dropdown-content li {
+        max-width: 473px;
+        border-bottom: 1px solid #fafafa;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/*-----------main content--------------*/
+.container {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.wraper {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+
+.logIn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.labelEmail, .labelPass {
+    margin: 0.5rem 0;
+    display: block;
+}
+
+.form > .inputEmail {
+    width: 100%;
+    height: 44px;
+    padding-left: 0.5rem;
+}
+
+.form > .inputPassword {
+    width: 100%;
+    height: 44px;
+    padding-left: 0.5rem;
+}
+
+.btnLogin {
+    display: block;
+    background-color: #0E927A;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+@media (max-width: 928px) {
+    .wraper {
+        background: inherit;
+    }
+
+    .image > img{
+        width: 100%;
+    }
+
+    .logIn{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*-------------footer---------------*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
