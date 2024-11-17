@@ -11,7 +11,6 @@ axios.get('https://fakestoreapi.com/products')
                 <div class="product-details">
                     <h4 class="name-product">${product.title}</h4>
                     <p class="price">$${product.price}</p>
-                    <p class="shipping">Delivery within 2 hours</p>
                 </div>
                 <div class="buttons">
                     <button class="buy-button">Mua ngay</button>
@@ -19,9 +18,7 @@ axios.get('https://fakestoreapi.com/products')
                 </div>
             </div>
             `;
-        }).join(''); // Join the array of strings into one large string
-
-        // Inject the generated HTML into the DOM
+        }).join('');
         productList.innerHTML = productsHtml;
     })
     .catch(error => {

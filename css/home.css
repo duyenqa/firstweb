@@ -179,10 +179,6 @@
   font-weight: 700;
 }
 
-.shipping {
-  color: #04AA6D;
-}
-
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -202,6 +198,7 @@
   border: none;
   border-radius: 5px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .cart-button {
@@ -215,11 +212,29 @@
   border: none;
   border-radius: 5px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 @media (min-width: 800px) {
   .wraperMenu{
     min-width: 300px;
+  }
+  
+  .wrap-img {
+    height: 46%;
+  }
+  
+  .product-details {
+    height: 31%;
+    margin-top: 4px;
+  }
+
+  .buy-button {
+    width: 40%;
+  }
+  
+  .cart-button {
+    width: 40%;
   }
 }
 @media (max-width: 928px) {
