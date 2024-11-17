@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 /*-----------Main menu--------------*/
@@ -136,6 +137,10 @@ form {
     display: block;
 }
 
+.row {
+    margin: 15px 0;
+}
+
 .title {
     display: flex;
     justify-content: center;
@@ -155,7 +160,6 @@ textarea {
 
 label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
     font-weight: 600;
 }
 
@@ -176,6 +180,25 @@ input[type=submit]:hover {
     margin: 10px 0;
 }
 
+.selectCountry {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .selectCountry option {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .selectCountry option:hover {
+    background-color: #f1f1f1;
+    color: #000;
+  }
+
 @media (max-width: 928px) {
     label{
         width: 100%;
@@ -188,8 +211,14 @@ input[type=submit]:hover {
         margin-top: 0;
     }
 
+    input[type=checkbox] {
+        width: 1rem;
+        margin: 0.5rem 0;
+    }
+
     .row {
         width: 100%;
+        margin: 5px 0;
     }
 }
 
