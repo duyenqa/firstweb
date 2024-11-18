@@ -1,3 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 .accordions {
     margin: 1rem 0;
 }
@@ -12,6 +19,7 @@
     border: none;
     outline: none;
     transition: 0.4s;
+    margin: 3px 0;
 }
 
 .active,
@@ -27,6 +35,6 @@
     transition: max-height 0.2s ease-out;
 }
 
-.panel > p{
+.panel>p {
     padding: 10px 0;
 }
