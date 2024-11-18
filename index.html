@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/itemProduct.css">
+  <link rel="stylesheet" href="./css/accordion.css">
+  <link rel="stylesheet" href="./css/galleryimage.css">
   <link rel="stylesheet" href="./css/footer.css">
   <title>Demo My Web</title>
 </head>
@@ -41,7 +43,63 @@
       <div id="product-list" class="products">
       </div>
     </div>
-    
+
+    <div class="wraper">
+      <div class="title">
+        <h2>Accordion</h2>
+      </div>
+      <div class="accordions">
+        <button class="accordionButton">Section 1</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordionButton">Section 2</button>
+        <div class="panel">
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_5terre.jpg">
+                <img src="./images/img_5terre.jpg" alt="Cinque Terre">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_forest.jpg">
+                <img src="./images/img_forest.jpg" alt="Forest">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_lights.jpg">
+                <img src="./images/img_lights.jpg" alt="Northern Lights">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+
+          <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="img_mountains.jpg">
+                <img src="./images/img_mountains.jpg" alt="Mountains">
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="accordionButton">Section 3</button>
+        <div class="panel">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="wraper">
       <div class="footer">
         &copy; Copyright by Ngô Thị Kim Duyên
@@ -54,6 +112,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./js/menu.js"></script>
   <script src="./js/ItemProduct.js"></script>
+  <script src="./js/accordion.js"></script>
 </body>
 
 </html>
