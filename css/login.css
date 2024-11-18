@@ -179,6 +179,25 @@
     margin: 10px 0;
 }
 
+.heading{
+    text-align: center;
+}
+
+.loginAccount{
+    border-collapse: separate;
+    border-spacing: inherit;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.textTd{
+    font-size: 13px;
+    color: #28313c;
+    box-shadow: 0 1px 0 0 #f1f1f3;
+    vertical-align: middle;
+}
+
 @media (max-width: 928px) {
     .wraper {
         background: inherit;

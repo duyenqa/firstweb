@@ -41,16 +41,27 @@
                         placeholder="your_email@example.com"
                         type="email"
                         required
+                        autocomplete="off"
                     />
                     <label class="labelPass">Password:</label>
                     <input
                         id="password"
                         class="inputPassword"
-                        placeholder="••••••••"
+                        placeholder="Enter your password"
                         type="password"
                         required
+                        autocomplete="off"
                     />
-                    <button class="btnLogin" onclick="onLogIn()">Log In</button>
+                    <button type="button" class="btnLogin" onclick="onLogIn()">Log In</button>
+                    <h5 class="heading">Demo account login credentials:</h5>
+                    <table class="loginAccount" id="account">
+                      <tbody>
+                        <tr>
+                          <td class="textTd">demouser@example.com</td>
+                          <td class="textTd">Test@user1</td>
+                        </tr>
+                      </tbody>
+                    </table>
                 </div>
             </div>
         </div>
