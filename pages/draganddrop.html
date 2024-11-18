@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/draganddrop.css">
+    <title>Drag And Drop</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./contact.html">Contact</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a href="../pages/calculator.html">Calculator</a></li>
+                        <li><a href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a href="../pages/draganddrop.html">Drag & Drop</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="drop-targets">
+                <div class="item" id="item" draggable="true"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="footer">
+                &copy; Copyright by Ngô Thị Kim Duyên
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="../js/menu.js"></script>
+    <script src="../js/draganddrop.js"></script>
+</body>
+
+</html>
