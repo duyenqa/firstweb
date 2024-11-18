@@ -7,12 +7,12 @@ function onLogIn() {
 
     if (!email || !password) {
         alert('Please fill out both fields.');
-        return; 
+        return;
     }
 
     if (!isValidEmail(email)) {
         alert('Please enter a valid email address.');
-        return; 
+        return;
     }
 
     if (!isValidPassword(password)) {
@@ -23,13 +23,12 @@ function onLogIn() {
     if (email === emailValid && password === passwordValid) {
         console.log("Login successful");
         localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
-    
+
         window.location.href = "dashboard.html"; // Redirect to dashboard
     } else {
         alert("Invalid email or password.");
     }
 }
-
 
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -54,4 +53,28 @@ function isValidPassword(password) {
     const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
     return hasUpperCase && hasLowerCase && hasDigit && hasSpecialChar;
+}
+
+function onCopyUserName() {
+    let copyText = document.getElementById("valueUsername");
+    let notifyMessage = document.getElementById("notifyUsername");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyText.value);
+
+    notifyMessage.innerHTML = "copied username";
+}
+
+function onCopyUserPassword() {
+    let copyText = document.getElementById("valuePassword");
+    let notifyMessage = document.getElementById("notifyPassword");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyText.value);
+
+    notifyMessage.innerHTML = "copied password";
 }

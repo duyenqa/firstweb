@@ -57,8 +57,20 @@
                     <table class="loginAccount" id="account">
                       <tbody>
                         <tr>
-                          <td class="textTd">demouser@example.com</td>
-                          <td class="textTd">Test@user1</td>
+                          <td class="textTd">
+                            <p id="notifyUsername" class="tooltiptext" style="color: #808080;font-weight: 700;"></p>
+                            <input type="text" value="demouser@example.com" id="valueUsername"/>
+                          </td>
+                          <td>
+                            <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserName()"></i>
+                          </td>
+                          <td class="textTd">
+                            <p id="notifyPassword" class="tooltiptext" style="color: #808080;font-weight: 700;"></p>
+                            <input type="text" value="Test@user1" id="valuePassword"/>
+                          </td>
+                          <td>
+                            <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserPassword()"></i>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
