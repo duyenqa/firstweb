@@ -235,4 +235,5 @@ input[type=submit]:hover {
     text-align: center;
     padding: 15px 0;
     border-radius: 0.5rem;
+    font-size: 13px;
 }
