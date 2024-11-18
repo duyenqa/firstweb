@@ -33,8 +33,11 @@
     padding: 1.5rem 0;
 }
 
-.loading {
-    color: green;
+.buttonload {
+    background: transparent;
+    border: none; 
+    color: green; 
+    font-size: 16px 
 }
 
 .box {
