@@ -211,6 +211,7 @@
 
     .image > img{
         width: 100%;
+        display: none;
     }
 
     .logIn{
