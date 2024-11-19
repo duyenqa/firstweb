@@ -139,6 +139,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    height: 80vh;
     background-color: #fff;
 }
 
@@ -150,12 +151,6 @@
 .labelEmail, .labelPass {
     margin: 0.5rem 0;
     display: block;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 80vh;
 }
 
 .form > .inputEmail {
@@ -180,7 +175,6 @@
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    margin: 10px 0;
 }
 
 .heading{
