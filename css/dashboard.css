@@ -275,6 +275,16 @@
     color: white;
 }
 
+@media (max-width: 768px) {
+    #customers tr { 
+        display: flex; flex-wrap: wrap; 
+    }
+  
+    #customers td { 
+        width: 50%; 
+    }
+  }
+
 /*-------------footer---------------*/
 .footer {
     background-color: #000;
