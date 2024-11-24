@@ -107,10 +107,6 @@
 }
 
 @media (min-width: 800px) {
-    .wraperMenu {
-        min-width: 300px;
-    }
-
     .wrap-img {
         height: 46%;
     }
@@ -136,11 +132,6 @@
 
     .wraper {
         width: 100%;
-        padding: 0 24px;
-    }
-
-    .wraperMenu {
-        min-width: 378px;
         padding: 0 24px;
     }
 
