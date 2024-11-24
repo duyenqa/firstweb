@@ -4,21 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/shoppingcart.css">
     <title>Shopping cart</title>
 </head>
 
 <body onload="init()">
-    <input type="hidden" id="ProductsModels" />
-    <input type="hidden" id="CartModels" />
-    <div class="home">
-        <h1>Products</h1>
-        <ul id="ProductsView"></ul>
+    <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./translatepage.html">Translate page</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
+        <div class="wraper">
+            <input type="hidden" id="ProductsModels" />
+            <input type="hidden" id="CartModels" />
+            <div class="home">
+                <h1>Products</h1>
+                <ul class="listCart" id="ProductsView"></ul>
+            </div>
+            <div class="cart">
+                <h2>Cart</h2>
+                <p>Tổng số lượng sản phẩm: <span id="CartSize"></span></p>
+                <ul id="CartView"></ul>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="footer">
+                &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
+        </div>
     </div>
-    <div class="cart">
-        <h2>Cart</h2>
-        <p>Tổng số lượng sản phẩm: <span id="CartSize"></span></p>
-        <ul id="CartView"></ul>
-    </div>
+    <script src="../js/menu.js"></script>
     <script src="../js/cart.js"></script>
 </body>
 

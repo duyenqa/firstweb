@@ -4,46 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/calculator.css">
     <title>Calculator Simple</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <input class="result" id="Result" type="text" />
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./shoppingcart.html">Cart</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./translatepage.html">Translate page</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
         </div>
-        <div class="row">
-            <input class="btn" type="button" value="AC" onclick="Result.value = ''" />
-            <input class="btn" type="button" value="Del"
-                onclick="Result.value=Result.value.substr(0,Result.value.length-1)" />
-            <input class="btn" type="button" value="%" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="0" onclick="Result.value += this.value" />
+
+        <div class="calculator">
+            <div class="row">
+                <input class="result" id="Result" type="text" />
+            </div>
+            <div class="row">
+                <input class="btn" type="button" value="AC" onclick="Result.value = ''" />
+                <input class="btn" type="button" value="Del"
+                    onclick="Result.value=Result.value.substr(0,Result.value.length-1)" />
+                <input class="btn" type="button" value="%" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="0" onclick="Result.value += this.value" />
+            </div>
+            <div class="row">
+                <input class="btn" type="button" value="7" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="8" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="9" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="+" onclick="Result.value += this.value" />
+            </div>
+            <div class="row">
+                <input class="btn" type="button" value="4" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="5" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="6" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="-" onclick="Result.value += this.value" />
+            </div>
+            <div class="row">
+                <input class="btn" type="button" value="1" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="2" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="3" onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="*" onclick="Result.value += this.value" />
+            </div>
+            <div class="row">
+                <input class="btn" id="btnequal" type="button" value="=" onclick="Result.value = eval(Result.value)" />
+                <input class="btn" type="button" value="." onclick="Result.value += this.value" />
+                <input class="btn" type="button" value="/" onclick="Result.value += this.value" />
+            </div>
         </div>
-        <div class="row">
-            <input class="btn" type="button" value="7" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="8" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="9" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="+" onclick="Result.value += this.value" />
-        </div>
-        <div class="row">
-            <input class="btn" type="button" value="4" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="5" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="6" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="-" onclick="Result.value += this.value" />
-        </div>
-        <div class="row">
-            <input class="btn" type="button" value="1" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="2" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="3" onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="*" onclick="Result.value += this.value" />
-        </div>
-        <div class="row">
-            <input class="btn" id="btnequal" type="button" value="=" onclick="Result.value = eval(Result.value)" />
-            <input class="btn" type="button" value="." onclick="Result.value += this.value" />
-            <input class="btn" type="button" value="/" onclick="Result.value += this.value" />
+        <div class="wraper">
+            <div class="footer">
+                &copy; Copyright by Ngô Thị Kim Duyên
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+            </div>
         </div>
     </div>
+    <script src="../js/menu.js"></script>
 </body>
 
 </html>
