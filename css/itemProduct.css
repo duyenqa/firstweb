@@ -107,6 +107,11 @@
 }
 
 @media (min-width: 800px) {
+    .wraper {
+        width: 100%;
+        padding: 0 10px;
+    }
+
     .wrap-img {
         height: 46%;
     }
@@ -132,7 +137,7 @@
 
     .wraper {
         width: 100%;
-        padding: 0 24px;
+        padding: 0 10px;
     }
 
     .products {
