@@ -123,6 +123,10 @@
     transition: 0.5s;
 }
 
+.sidenav > .name{
+    padding: 0 24px;
+}
+
 .closebtn {
     position: absolute;
     top: 10px;
