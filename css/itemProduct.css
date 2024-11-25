@@ -16,7 +16,7 @@
 }
 
 .wraperMenu {
-    width: 100%;
+    width: 89%;
     margin: 0 auto;
 }
 
@@ -175,6 +175,11 @@
 @media (max-width: 928px) {
     .container {
         padding: 0;
+    }
+
+    .wraperMenu{
+        width: 100%;
+        padding: 0 5px;
     }
 
     .wraper {

@@ -5,6 +5,12 @@
     font-family: Arial, sans-serif;
 }
 
+.titleBanner{
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase
+}
+
 .header {
     margin: 10px 0;
     background-image: url("../images/background.jpg");
@@ -25,8 +31,8 @@ h3 {
 .boxCategoryTwo {
     width: 150px;
     height: 150px;
-    color: cornflowerblue;
-    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
     border-radius: 8px;
     position: absolute;
     transform: translateX(-103%);
@@ -34,20 +40,23 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: darkblue;
 }
 
 .boxCategoryOne {
-    background-color: antiquewhite;
     left: 50%;
 }
 
 .boxCategoryTwo {
-    background-color: antiquewhite;
     left: 50%;
     margin-left: 160px;
 }
 
 @media (max-width: 768px) {
+    .titleBanner{
+        font-size: 30px;
+    }
+
     .header {
         width: 100%;
         height: 40vh;
