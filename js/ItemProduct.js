@@ -19,11 +19,13 @@ axios.get('https://fakestoreapi.com/products')
                         </div>
                         <div class="product-details">
                             <h4 class="name-product">${product.title}</h4>
+                            <p class="type" style="display: none;">${product.category}</p>
+                            <p class="info" style="display: none;">${product.description}</p>
                             <p class="price">$${product.price}</p>
                         </div>
                         <div class="buttons">
-                            <button class="buy-button">Mua ngay</button>
-                            <button class="cart-button">Giỏ hàng</button>
+                            <button class="buy-button">Detail</button>
+                            <button class="cart-button">Add Cart</button>
                         </div>
                     </div>
                 `;
@@ -40,7 +42,12 @@ axios.get('https://fakestoreapi.com/products')
             button.addEventListener('click', () => {
                 productItem.style.width = "300px";
                 const productTitle = button.closest('.box').querySelector('.name-product').textContent;
+                const productDescription = button.closest('.box').querySelector('.info').textContent;
+                const productCategory = button.closest('.box').querySelector('.type').textContent;
+
                 document.getElementById("nameProduct").innerHTML = `${productTitle}`
+                document.getElementById("detailProduct").innerHTML = `${productDescription}`
+                document.getElementById("typeCategory").innerHTML = `${productCategory}`
             });
         });
     })
