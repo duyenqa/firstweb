@@ -40,7 +40,7 @@ axios.get('https://fakestoreapi.com/products')
         const productItem = document.getElementById('mySidenav');
         buyButtons.forEach(button => {
             button.addEventListener('click', () => {
-                productItem.style.width = "300px";
+                productItem.style.width = "350px";
                 const productTitle = button.closest('.box').querySelector('.name-product').textContent;
                 const productDescription = button.closest('.box').querySelector('.info').textContent;
                 const productCategory = button.closest('.box').querySelector('.type').textContent;
