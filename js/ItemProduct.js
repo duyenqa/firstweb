@@ -1,5 +1,4 @@
 const productList = document.getElementById('product-list');
-const productDetail = document.getElementById('nameProduct');
 productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;Loading Product...</button>';
 
 axios.get('https://fakestoreapi.com/products')
