@@ -4,7 +4,7 @@ productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-not
 axios.get('https://fakestoreapi.com/products')
     .then(response => {
         const products = response.data.slice(0, 8);
-        
+
         if (products.length === 0) {
             productList.innerHTML = '<p>No products available.</p>';
             return;
@@ -33,8 +33,20 @@ axios.get('https://fakestoreapi.com/products')
         }).join('');
 
         productList.innerHTML = productsHtml;
+
+        const buyButtons = document.querySelectorAll('.buy-button');
+        const productItem = document.getElementById('mySidenav');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                productItem.style.width = "300px";
+            });
+        });
     })
     .catch(error => {
         console.error('Error fetching data:', error);
         productList.innerHTML = '<p>Unable to load products at the moment. Please try again later.</p>';
     });
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
