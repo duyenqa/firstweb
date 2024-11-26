@@ -15,7 +15,6 @@
     margin: 10px 0;
     background-image: url("../images/background.jpg");
     width: 100%;
-    background-size: 100% 100%;
     height: 50vh;
     position: relative;
     display: flex;
@@ -29,14 +28,15 @@ h3 {
 
 .boxCategoryOne,
 .boxCategoryTwo,
-.boxCategoryThree {
+.boxCategoryThree,
+.boxCategoryFour {
     width: 150px;
     height: 150px;
     color: #fff;
     font-weight: 600;
     border-radius: 8px;
     position: absolute;
-    transform: translateX(-150%);
+    transform: translateX(-214%);
     bottom: -30px;
     display: flex;
     align-items: center;
@@ -55,6 +55,11 @@ h3 {
 
 .boxCategoryThree{
     left: 62%;
+    margin-left: 160px;
+}
+
+.boxCategoryFour{
+    left: 74%;
     margin-left: 160px;
 }
 
