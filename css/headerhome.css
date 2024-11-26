@@ -28,14 +28,15 @@ h3 {
 }
 
 .boxCategoryOne,
-.boxCategoryTwo {
+.boxCategoryTwo,
+.boxCategoryThree {
     width: 150px;
     height: 150px;
     color: #fff;
     font-weight: 600;
     border-radius: 8px;
     position: absolute;
-    transform: translateX(-103%);
+    transform: translateX(-150%);
     bottom: -30px;
     display: flex;
     align-items: center;
@@ -49,6 +50,11 @@ h3 {
 
 .boxCategoryTwo {
     left: 50%;
+    margin-left: 160px;
+}
+
+.boxCategoryThree{
+    left: 62%;
     margin-left: 160px;
 }
 
@@ -67,12 +73,9 @@ h3 {
     }
 
     .boxCategoryOne,
-    .boxCategoryTwo {
+    .boxCategoryTwo,
+    .boxCategoryThree {
         display: none;
-    }
-
-    .boxCategoryTwo {
-        margin-left: 120px;
     }
 }
 
@@ -87,11 +90,8 @@ h3 {
     }
 
     .boxCategoryOne,
-    .boxCategoryTwo {
+    .boxCategoryTwo,
+    .boxCategoryThree {
         display: none;
-    }
-
-    .boxCategoryTwo {
-        margin-left: 80px;
     }
 }

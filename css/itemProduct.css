@@ -131,7 +131,7 @@
 }
 
 .detail > .typeItem{
-    width: 120px;
+    width: 130px;
     text-align: center;
     padding: 2px 0;
     background-color: green;
@@ -139,6 +139,7 @@
     border-radius: 5px;
     white-space: nowrap;
 }
+
 .closebtn {
     position: absolute;
     top: 10px;

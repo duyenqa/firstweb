@@ -3,14 +3,16 @@ productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-not
 
 axios.get('https://fakestoreapi.com/products')
     .then(response => {
-        const products = response.data.slice(0, 8);
+        const products = response.data;
 
         if (products.length === 0) {
             productList.innerHTML = '<p>No products available.</p>';
             return;
         }
 
-        const productsHtml = products.map(product => {
+        const shuffledProducts = products .map(product => ({ product, sort: Math.random() })) .sort((a, b) => a.sort - b.sort) .map(({ product }) => product);
+
+        const productsHtml = shuffledProducts.map(product => {
             if (product) {
                 return `
                     <div class="box">
@@ -40,7 +42,7 @@ axios.get('https://fakestoreapi.com/products')
         const productItem = document.getElementById('mySidenav');
         buyButtons.forEach(button => {
             button.addEventListener('click', () => {
-                productItem.style.width = "350px";
+                productItem.style.width = "280px";
                 const productTitle = button.closest('.box').querySelector('.name-product').textContent;
                 const productDescription = button.closest('.box').querySelector('.info').textContent;
                 const productCategory = button.closest('.box').querySelector('.type').textContent;
