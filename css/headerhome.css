@@ -79,7 +79,8 @@ h3 {
 
     .boxCategoryOne,
     .boxCategoryTwo,
-    .boxCategoryThree {
+    .boxCategoryThree,
+    .boxCategoryFour {
         display: none;
     }
 }
@@ -96,7 +97,8 @@ h3 {
 
     .boxCategoryOne,
     .boxCategoryTwo,
-    .boxCategoryThree {
+    .boxCategoryThree,
+    .boxCategoryFour {
         display: none;
     }
 }
