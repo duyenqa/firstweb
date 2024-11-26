@@ -5,22 +5,58 @@
     font-family: Arial, sans-serif;
 }
 /*--------------Search---------------*/
-.search {
-    padding: 1.5rem 0;
+.searchProduct {
+    margin: 1.5rem 0;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
 }
 
-.inputSearch {
-    width: 30%;
-    font-size: 16px;
-    padding: 12px 5px;
+.logoHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    color: #f80;
+}
+
+.searchProduct > .logoHeader > span{
+    color: blue;
+    font-size: 18px;
+}
+
+.textSearch {
+    width: 50%;
+    height: 48px;
+    padding: 0 5px;
     border: 1px solid #dadada;
     border-radius: 0.5rem;
-}
-
-.inputSearch:focus {
-    width: 50%;
     border: 1px solid #13afdf;
     outline: none;
+}
+
+.searchProduct > .cartIcon{
+    background: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .searchProduct {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .textSearch {
+        width: 100%;
+    }
 }
