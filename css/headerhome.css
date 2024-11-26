@@ -63,7 +63,7 @@ h3 {
     }
 
     .boxCategories {
-        margin-top: 200px;
+        margin-top: 150px;
     }
 
     .boxCategory {
@@ -91,8 +91,10 @@ h3 {
 }
 
 @media (min-width: 1000px) {
-    .boxCategories {
-        margin-top: 170px;
+    .boxCategory {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
     }
 
     .header {
