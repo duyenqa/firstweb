@@ -49,6 +49,11 @@
     cursor: pointer;
 }
 
+.searchProduct > .cartIcon:hover{
+    background-color: rgb(248, 221, 190);
+    color: #f80;
+}
+
 @media (max-width: 768px) {
     .searchProduct {
         flex-direction: column;
