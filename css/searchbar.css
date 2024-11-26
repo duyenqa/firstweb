@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/*--------------Search---------------*/
+.search {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.inputSearch {
+    width: 30%;
+    font-size: 16px;
+    padding: 12px 5px;
+    border: 1px solid #dadada;
+    border-radius: 0.5rem;
+}
+
+.inputSearch:focus {
+    width: 50%;
+    border: 1px solid #13afdf;
+    outline: none;
+}
