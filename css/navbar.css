@@ -5,9 +5,19 @@
     font-family: Arial, sans-serif;
 }
 
+.wraperMenu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
 .topnav {
     background-color: #f80;
     border-radius: 0.5rem;
+    width: 89%;
+    margin: 0 auto;
 }
 
 .topnav a {
