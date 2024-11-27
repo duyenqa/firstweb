@@ -1,5 +1,7 @@
 const productList = document.getElementById('product-list');
 const productSearch = document.getElementById('productSearch');
+const quantity = document.getElementById("qtyCart");
+
 
 productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;Loading Products...</button>';
 
@@ -11,6 +13,11 @@ axios.get('https://fakestoreapi.com/products')
             productList.innerHTML = '<p>No products available.</p>';
             return;
         }
+
+        let cartCount = 0;
+        const displayCartNumber = () => {
+            quantity.innerHTML = cartCount;
+        };
 
         const displayProducts = (filteredProducts) => {
             const productsHtml = filteredProducts.map(product => {
@@ -34,6 +41,14 @@ axios.get('https://fakestoreapi.com/products')
             }).join('');
 
             productList.innerHTML = productsHtml;
+
+            const cartButtons = document.querySelectorAll('.cart-button');
+            cartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    cartCount++; 
+                    displayCartNumber(); 
+                });
+            });
 
             const buyButtons = document.querySelectorAll('.buy-button');
             const productItem = document.getElementById('mySidenav');
@@ -71,6 +86,17 @@ axios.get('https://fakestoreapi.com/products')
             }
             displayProducts(filteredProducts);
         });
+
+        // const displayCartNumber = (initialNumber) => {
+        //     const cartButtons = document.getElementById("cart-button");
+        //     quantity.innerHTML = `${initialNumber}`; 
+
+        //     cartButtons.addEventListener('click', () => {
+        //         initialNumber++; 
+        //         quantity.innerHTML = `${initialNumber}`; 
+        //     });
+        // };
+        // displayCartNumber(0);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
