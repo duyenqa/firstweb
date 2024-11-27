@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 /*--------------Search---------------*/
 .searchProduct {
     margin: 1.5rem 0;
@@ -13,7 +14,7 @@
     background-color: #fff;
 }
 
-.logoHeader{
+.logoHeader {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@
     color: #f80;
 }
 
-.searchProduct > .logoHeader > span{
+.searchProduct>.logoHeader>span {
     color: blue;
     font-size: 18px;
 }
@@ -38,7 +39,7 @@
     outline: none;
 }
 
-.searchProduct > .cartIcon{
+.searchProduct>.cartIcon {
     background: transparent;
     width: 50px;
     height: 50px;
@@ -47,11 +48,20 @@
     outline: none;
     border: none;
     cursor: pointer;
-}
-
-.searchProduct > .cartIcon:hover{
+    position: relative;
     background-color: rgb(248, 221, 190);
     color: #f80;
+}
+
+.searchProduct>.cartIcon>.badge {
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    font-size: 1rem;
+    padding: 3px 8px;
+    border-radius: 50%;
+    background: red;
+    color: white;
 }
 
 @media (max-width: 768px) {
