@@ -86,17 +86,6 @@ axios.get('https://fakestoreapi.com/products')
             }
             displayProducts(filteredProducts);
         });
-
-        // const displayCartNumber = (initialNumber) => {
-        //     const cartButtons = document.getElementById("cart-button");
-        //     quantity.innerHTML = `${initialNumber}`; 
-
-        //     cartButtons.addEventListener('click', () => {
-        //         initialNumber++; 
-        //         quantity.innerHTML = `${initialNumber}`; 
-        //     });
-        // };
-        // displayCartNumber(0);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
