@@ -18,7 +18,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 4vw; 
+    font-weight: bold;
     color: #000;
     text-transform: uppercase;
     mix-blend-mode: screen;
@@ -55,7 +56,6 @@ h3 {
 
 @media (max-width: 1000px) {
     .titleBanner{
-        font-size: 30px;
         text-align: center;
     }
 
