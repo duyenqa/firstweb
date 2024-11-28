@@ -1,5 +1,11 @@
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
 
+if (carts.length == 0) {
+    document.getElementById('checkoutButton').style.cursor = "not-allowed";
+    document.getElementById('checkoutButton').style.opacity = 0.6;
+    document.getElementById('checkoutButton').disabled = true;
+}
+
 const displayCart = () => {
     const cartItemsContainer = document.getElementById('cartItems');
     const totalItems = document.getElementById('totalItems');
