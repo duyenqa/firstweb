@@ -1,7 +1,7 @@
 const productList = document.getElementById('product-list');
 const productSearch = document.getElementById('productSearch');
 const quantity = document.getElementById("qtyCart");
-
+let carts = JSON.parse(localStorage.getItem('cart')) || [];
 
 productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;Loading Products...</button>';
 
@@ -16,6 +16,7 @@ axios.get('https://fakestoreapi.com/products')
 
         let cartCount = 0;
         const displayCartNumber = () => {
+            cartCount = carts.reduce((total, item) => total + item.quantity, 0);
             quantity.innerHTML = cartCount;
         };
 
@@ -45,8 +46,30 @@ axios.get('https://fakestoreapi.com/products')
             const cartButtons = document.querySelectorAll('.cart-button');
             cartButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    cartCount++; 
-                    displayCartNumber(); 
+                    const productItem = button.closest('.box');
+                    const productTitle = productItem.querySelector('.name-product').textContent;
+                    const productPrice = productItem.querySelector('.price').textContent.replace('$', '');
+                    const productImage = productItem.querySelector('img').src;
+
+                    // Find product by title to avoid duplicates
+                    const existingProductIndex = carts.findIndex(item => item.title === productTitle);
+
+                    if (existingProductIndex === -1) {
+                        // If the product is not already in the cart, add it
+                        carts.push({
+                            title: productTitle,
+                            price: productPrice,
+                            image: productImage,
+                            quantity: 1
+                        });
+                    } else {
+                        // If product exists in cart, increment the quantity
+                        carts[existingProductIndex].quantity++;
+                    }
+                    //Save cart in localStorage
+                    localStorage.setItem('cart', JSON.stringify(carts));
+                
+                    displayCartNumber();
                 });
             });
 
@@ -94,4 +117,8 @@ axios.get('https://fakestoreapi.com/products')
 
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+}
+
+function onCheckout() {
+    window.location.href = "pages/checkout.html"; // Redirect to checkout
 }
