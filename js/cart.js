@@ -79,3 +79,7 @@ document.getElementById('clearCartButton').addEventListener('click', () => {
 });
 
 displayCart();
+
+function onCheckout() {
+    window.location.href = "checkout.html"; // Redirect to checkout
+}

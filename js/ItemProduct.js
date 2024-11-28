@@ -120,5 +120,5 @@ function closeNav() {
 }
 
 function onCart() {
-    window.location.href = "pages/cart.html"; // Redirect to checkout
+    window.location.href = "pages/cart.html"; // Redirect to cart
 }
