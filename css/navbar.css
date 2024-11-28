@@ -70,9 +70,10 @@
     display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 900px) {
     .topnav {
         overflow: hidden;
+        width: 98%;
     }
 
     .topnav a {
