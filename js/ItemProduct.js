@@ -119,6 +119,6 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
-function onCheckout() {
-    window.location.href = "pages/checkout.html"; // Redirect to checkout
+function onCart() {
+    window.location.href = "pages/cart.html"; // Redirect to checkout
 }
