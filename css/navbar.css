@@ -93,6 +93,7 @@
 
     .topnav.responsive {
         position: relative;
+        width: 100%;
     }
 
     .topnav.responsive .icon {
