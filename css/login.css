@@ -198,6 +198,8 @@
 }
 
 .textAccount{
+    width: 100%;
+    font-size: 15px;
     height: 30px;
 }
 .iconCopy{
