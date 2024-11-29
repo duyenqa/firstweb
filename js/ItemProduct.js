@@ -35,7 +35,7 @@ axios.get('https://fakestoreapi.com/products')
                             </div>
                             <div class="buttons">
                                 <button class="buy-button">Detail</button>
-                                <button class="cart-button">Add Cart</button>
+                                <button class="cart-button">Buy</button>
                             </div>
                         </div>
                     `;
