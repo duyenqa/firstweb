@@ -2,105 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <title>Cart Page</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <title>Cart Page</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 
 <body>
-    <div class="container">
-        <div class="wraper">
-            <div class="topnav" id="myTopnav">
-                <a href="../index.html">Home</a>
-                <a href="./todo.html">To do</a>
-                <a href="./shoppingcart.html">Cart</a>
-                <a href="./contact.html">Contact</a>
-                <a href="./translatepage.html">Translate</a>
-                <div class="dropdown">
-                    <button onclick="onDropdown()" class="dropbtn">Dropdown
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <ul id="myDropdown" class="dropdown-content">
-                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
-                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
-                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
-                    </ul>
-                </div>
+  <div class="container">
+    <div class="wraper">
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Home</a>
+        <a href="./todo.html">To do</a>
+        <a href="./shoppingcart.html">Cart</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./translatepage.html">Translate</a>
+        <div class="dropdown">
+          <button onclick="onDropdown()" class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <ul id="myDropdown" class="dropdown-content">
+            <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+            <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+            <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+          </ul>
+        </div>
 
-                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
-                <a href="./login.html">Sign In</a>
-            </div>
-        </div>
-        <div class="wraper">
-            <div class="title">
-                <h2>Your Cart</h2>
-                <button id="clearCartButton" class="btn danger">Clear Cart</button>
-            </div>
-            <table id="tableCart">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Title Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="cartItems"></tbody>
-                <tfoot>
-                    <tr>
-                        <td>
-                            <p>Total Items: <strong id="totalItems">0</strong></p>
-                        </td>
-                        <td colspan="4">
-                            <p style="text-align: right;">Total Price: $<strong id="totalPrice">0.00</strong></p>
-                        </td>
-                      </tr>
-                </tfoot>
-            </table>
-        </div>
-        <div class="wraper">
-            <div class="title">
-              <h2>Customer details</h2>
-            </div>
-            <form>
-              <div class="row">
-                <label for="fullname">Name customer</label>
-                <input type="text" id="fullname" name="fullname" placeholder="Full name.." autocomplete="off" />
-              </div>
-              <div class="row">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" name="phone" placeholder="Your phone" autocomplete="off" />
-              </div>
-              <div class="row">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Your address" autocomplete="off" />
-              </div>
-              <div class="row">
-                <label for="description">Note:</label>
-                <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
-              </div>
-              <div class="btnNavigate">
-                <button id="checkoutButton" class="btnCheckout" onclick="onCheckout()">Checkout</button>
-            </div>
-            </form>
-          </div>
-        <div class="wraper">
-            <div class="footer">
-             <p>
-                &copy; Copyright by Ngô Thị Kim Duyên 2024 -
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
-             </p>
-            </div>
-          </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+        <a href="./login.html">Sign In</a>
+      </div>
     </div>
-    <script src="../js/menu.js"></script>
-    <script src="../js/cart.js"></script>
+    <div class="wraper">
+      <div class="title">
+        <h2>Your Cart</h2>
+        <button id="clearCartButton" class="btn danger">Clear Cart</button>
+      </div>
+      <table id="tableCart">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="cartItems"></tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <p>Total Items: <strong id="totalItems">0</strong></p>
+            </td>
+            <td colspan="4">
+              <p style="text-align: right;">Total Price: $<strong id="totalPrice">0.00</strong></p>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="wraper">
+      <div class="title">
+        <h2>Customer details</h2>
+      </div>
+      <!-- <form> -->
+        <div class="row">
+          <label for="fullname">Name customer</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Full name.." autocomplete="off" />
+        </div>
+        <div class="row">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" placeholder="Your phone" autocomplete="off" />
+        </div>
+        <div class="row">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" placeholder="Your address" autocomplete="off" />
+        </div>
+        <div class="row">
+          <label for="description">Note:</label>
+          <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+        <div class="btnNavigate">
+          <button id="checkoutButton" class="btnCheckout" onclick="onCheckout()">Checkout</button>
+        </div>
+      <!-- </form> -->
+    </div>
+    <div class="wraper">
+      <div class="footer">
+        <p>
+          &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="../js/menu.js"></script>
+  <script src="../js/cart.js"></script>
 </body>
 
 </html>

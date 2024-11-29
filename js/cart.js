@@ -1,4 +1,5 @@
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
+const fullname = document.getElementById("fullname");
 
 if (carts.length == 0) {
     document.getElementById('checkoutButton').style.cursor = "not-allowed";
@@ -87,5 +88,6 @@ document.getElementById('clearCartButton').addEventListener('click', () => {
 displayCart();
 
 function onCheckout() {
+    localStorage.setItem("username", fullname.value);
     window.location.href = "checkout.html"; // Redirect to checkout
 }
