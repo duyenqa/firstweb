@@ -146,12 +146,44 @@
     border-radius: 16px;
 }
 
-.success {background-color: #04AA6D;}
-.success:hover {background-color: #46a049;}
+.success {
+    background-color: #04AA6D;
+}
+
+.success:hover {
+    background-color: #46a049;
+}
+
+.envelope {
+    padding: 1em;
+	border: 16px solid transparent;
+	border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,
+	              #58a 0, #58a 3em, transparent 0, transparent 4em);
+	
+	max-width: 50em;
+    background-color: #fceae8;
+    margin: 0 auto;
+}
+
+.envelope > p{
+    color: #da3d2b;
+    font-size: 18px;
+}
+
+.info{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 @media (max-width: 600px) {
     .wraper {
         background: inherit;
+    }
+    .info{
+        flex-direction: column;
+        row-gap: 20px;
     }
 }
 

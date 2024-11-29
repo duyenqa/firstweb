@@ -1,5 +1,8 @@
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
 const fullname = document.getElementById("fullname");
+const email = document.getElementById("email");
+const address = document.getElementById("address");
+const phone = document.getElementById("phone");
 
 if (carts.length == 0) {
     document.getElementById('checkoutButton').style.cursor = "not-allowed";
@@ -88,6 +91,12 @@ document.getElementById('clearCartButton').addEventListener('click', () => {
 displayCart();
 
 function onCheckout() {
-    localStorage.setItem("username", fullname.value);
+    const user = {
+        name: fullname.value,
+        email: email.value,
+        address: address.value,
+        phone: phone.value
+    };
+    localStorage.setItem("username", JSON.stringify(user));
     window.location.href = "checkout.html"; // Redirect to checkout
 }
