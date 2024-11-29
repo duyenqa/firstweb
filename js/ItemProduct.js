@@ -77,7 +77,17 @@ axios.get('https://fakestoreapi.com/products')
             const productItem = document.getElementById('mySidenav');
             buyButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    productItem.style.width = "280px";
+                    const screenWidth = window.innerWidth;
+
+                    if (screenWidth <= 600) {
+                        productItem.style.width = "100%";  // For mobile devices
+                    } else if (screenWidth <= 1024) {
+                        productItem.style.width = "100%";  // For tablets
+                    } else {
+                        productItem.style.width = "280px";  // For desktops
+                    }
+
+                    // productItem.style.width = "280px";
                     const productTitle = button.closest('.box').querySelector('.name-product').textContent;
                     const productDescription = button.closest('.box').querySelector('.info').textContent;
                     const productCategory = button.closest('.box').querySelector('.type').textContent;
