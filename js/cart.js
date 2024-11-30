@@ -127,7 +127,6 @@ function onCheckout() {
     
     if (carts.length != 0) {
         if (isFullNameValid && isEmailValid && isPhoneValid && isAddressValid) {
-            alert("User input is valid.");
             localStorage.setItem("username", JSON.stringify(user));
             window.location.href = "checkout.html"; // Redirect to checkout
         }else {
