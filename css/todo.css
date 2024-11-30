@@ -141,16 +141,8 @@
     background-color: #fafafa;
 }
 
-.box {
-    text-align: center;
-}
-
-.row {
-    margin: 15px 0;
-}
-
 .inputText {
-    width: 50%;
+    width: 80%;
     height: 40px;
     padding-left: 10px;
     border: 1px solid #13afdf;
@@ -179,28 +171,6 @@
     box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
 
-.showList {
-    font-size: 20px;
-}
-
-.showList li {
-    display: flex;
-    justify-content: space-around;
-    padding: 5px 0;
-}
-
-.nameTodo {
-    flex: 3;
-}
-
-.actions {
-    flex: 1;
-}
-
-i {
-    cursor: pointer;
-}
-
 .result {
     position: fixed;
     top: 50px;
@@ -220,12 +190,45 @@ i {
     transition: opacity 0.5s ease-in-out;
 }
 
+/* -------------------table cart------------------- */
+#todoTable {
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#todoTable td,
+#todoTable th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+#todoTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#todoTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+}
+
 @media (max-width: 768px) {
     .wraper {
         background: inherit;
     }
 
-    .box,
+    #todoTable tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #todoTable td {
+        width: 100%;
+    }
+
     .inputText {
         width: 100%;
     }
