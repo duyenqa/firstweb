@@ -131,7 +131,6 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
-    background-color: #fafafa;
 }
 
 .btn {
@@ -148,6 +147,8 @@
 
 .success {
     background-color: #04AA6D;
+    display: block; 
+    margin: 0 auto;
 }
 
 .success:hover {
@@ -162,7 +163,7 @@
 	
 	max-width: 50em;
     background-color: #fceae8;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .envelope > p{
