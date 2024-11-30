@@ -130,7 +130,19 @@ function onCheckout() {
             localStorage.setItem("username", JSON.stringify(user));
             window.location.href = "checkout.html"; // Redirect to checkout
         }else {
-            alert("User input is invalid!");
+            if(!isFullNameValid && !isEmailValid && !isPhoneValid && !isAddressValid){
+                alert("All fields are required!");
+            }
+
+            if (!isFullNameValid) {
+                document.getElementById("notifyName").innerHTML = `The username must be more than two words.`;
+            }else if(!isEmailValid){
+                document.getElementById("notifyEmail").innerHTML = `The email is invalid.`;
+            }else if(!isPhoneValid){
+                document.getElementById("notifyPhone").innerHTML = `Phone number must be 10 digits.`;
+            }else if(!isAddressValid){
+                document.getElementById("notifyAddress").innerHTML = `The address is invalid`;
+            }
         }
     }
 }

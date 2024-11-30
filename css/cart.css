@@ -198,6 +198,13 @@ form {
     margin: 15px 0;
 }
 
+.notify{
+    display: block;
+    padding: 3px 0;
+    color:#da190b;
+    font-size: 14px;
+}
+
 input[type=text],
 input[type=email],
 input[type=tel],
