@@ -90,6 +90,28 @@ document.getElementById('clearCartButton').addEventListener('click', () => {
 
 displayCart();
 
+// Full Name Validation
+function validateFullName(fullname) {
+    return fullname.trim().split(" ").length >= 2; // Check if there are at least two words (first and last name)
+}
+
+// Email Validation
+function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email); // Check if email matches pattern
+}
+
+// Phone Number Validation
+function validatePhone(phone) {
+    const phonePattern = /^[0-9]{10}$/; // Assuming a 10-digit phone number format (e.g., USA)
+    return phonePattern.test(phone); // Check if phone number matches the pattern
+}
+
+// Address Validation
+function validateAddress(address) {
+    return address.trim().length > 0; // Check if address is not empty
+}
+
 function onCheckout() {
     const user = {
         name: fullname.value,
@@ -97,6 +119,19 @@ function onCheckout() {
         address: address.value,
         phone: phone.value
     };
-    localStorage.setItem("username", JSON.stringify(user));
-    window.location.href = "checkout.html"; // Redirect to checkout
+    
+    const isFullNameValid = validateFullName(user.name);
+    const isEmailValid = validateEmail(user.email);
+    const isPhoneValid = validatePhone(user.phone);
+    const isAddressValid = validateAddress(user.address);
+    
+    if (carts.length != 0) {
+        if (isFullNameValid && isEmailValid && isPhoneValid && isAddressValid) {
+            alert("User input is valid.");
+            localStorage.setItem("username", JSON.stringify(user));
+            window.location.href = "checkout.html"; // Redirect to checkout
+        }else {
+            alert("User input is invalid!");
+        }
+    }
 }
