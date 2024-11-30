@@ -25,7 +25,7 @@ axios.get('https://fakestoreapi.com/products')
                 return `
                         <div class="box">
                             <div class="wrap-img">
-                                <img class="pic" src="${product.image}" alt="${product.title}">
+                                <img class="pic" src="${product.image}" alt="${product.title}" loading="lazy" />
                             </div>
                             <div class="product-details">
                                 <h4 class="name-product">${product.title}</h4>
