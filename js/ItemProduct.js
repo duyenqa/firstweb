@@ -2,6 +2,7 @@ const productList = document.getElementById('product-list');
 const productSearch = document.getElementById('productSearch');
 const quantity = document.getElementById("qtyCart");
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
+let hearts = JSON.parse(localStorage.getItem('likes')) || [];
 
 productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-notch fa-spin"></i>&nbsp;Loading Products...</button>';
 
@@ -20,10 +21,17 @@ axios.get('https://fakestoreapi.com/products')
             quantity.innerHTML = cartCount;
         };
 
+        const displayHeartNumber = () => {
+            document.getElementById('qtyLike').innerHTML = `${hearts.length}`;
+        }
+
         const displayProducts = (filteredProducts) => {
             const productsHtml = filteredProducts.map(product => {
                 return `
                         <div class="box">
+                            <button class="likeItem" data-id="${product.id}">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </button>
                             <div class="wrap-img">
                                 <img class="pic" src="${product.image}" alt="${product.title}" loading="lazy" />
                             </div>
@@ -43,6 +51,34 @@ axios.get('https://fakestoreapi.com/products')
 
             productList.innerHTML = productsHtml;
 
+            const heartButtons = document.querySelectorAll('.likeItem');
+            heartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const icon = button.querySelector('i');
+                    const productId = button.getAttribute('data-id');
+                    
+                    if (icon.classList.contains('fa-heart-o')) {
+                        icon.classList.remove('fa-heart-o');
+                        icon.classList.add('fa-heart');
+                        icon.style.color = 'red';
+
+                        hearts.push(productId);
+                        console.log("heart list: ", hearts);
+                    } else {
+                        icon.classList.remove('fa-heart');
+                        icon.classList.add('fa-heart-o');
+                        icon.style.color = '';
+
+                        hearts = hearts.filter(id => id !== productId);
+                        console.log("update heart list: ", hearts);
+                    }
+                    localStorage.setItem('likes', JSON.stringify(hearts));
+                    
+                    displayHeartNumber();
+                });
+            });
+            
+            
             const cartButtons = document.querySelectorAll('.cart-button');
             cartButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -87,7 +123,6 @@ axios.get('https://fakestoreapi.com/products')
                         productItem.style.width = "280px";  // For desktops
                     }
 
-                    // productItem.style.width = "280px";
                     const productTitle = button.closest('.box').querySelector('.name-product').textContent;
                     const productDescription = button.closest('.box').querySelector('.info').textContent;
                     const productCategory = button.closest('.box').querySelector('.type').textContent;
@@ -100,7 +135,6 @@ axios.get('https://fakestoreapi.com/products')
         };
 
         displayProducts(products);
-
         productSearch.addEventListener('input', () => {
             const searchQuery = productSearch.value.toLowerCase();
 
