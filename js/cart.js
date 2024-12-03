@@ -86,6 +86,7 @@ document.getElementById('clearCartButton').addEventListener('click', () => {
     localStorage.removeItem('cart');
     carts = [];
     displayCart();
+    window.location.href = "../index.html"; // Redirect to home page
 });
 
 displayCart();
@@ -135,9 +136,9 @@ function onCheckout() {
             }
 
             if (!isFullNameValid) {
-                document.getElementById("notifyName").innerHTML = `The username must be more than two words.`;
+                document.getElementById("notifyName").innerHTML = `The username must be more than one word.`;
             }else if(!isEmailValid){
-                document.getElementById("notifyEmail").innerHTML = `The email is invalid.`;
+                document.getElementById("notifyEmail").innerHTML = `The email address is invalid`;
             }else if(!isPhoneValid){
                 document.getElementById("notifyPhone").innerHTML = `Phone number must be 10 digits.`;
             }else if(!isAddressValid){
