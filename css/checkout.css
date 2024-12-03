@@ -175,16 +175,21 @@
     margin: 10px 0;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-@media (max-width: 600px) {
+#infoDelivery > p {
+    width: 300px;
+    overflow-wrap: break-word;
+}
+@media (max-width: 768px) {
     .wraper {
         background: inherit;
     }
     .info{
         flex-direction: column;
-        row-gap: 20px;
+        gap: 20px;
     }
 }
 
