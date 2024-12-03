@@ -6,7 +6,7 @@ function onLogIn() {
     const passwordValid = "Test@user1";
 
     if (!email || !password) {
-        alert('Please fill out both fields.');
+        alert('Required field');
         return;
     }
 
@@ -21,12 +21,12 @@ function onLogIn() {
     }
 
     if (email === emailValid && password === passwordValid) {
-        console.log("Login successful");
+        // console.log("Login successful");
         localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
 
         window.location.href = "dashboard.html"; // Redirect to dashboard
     } else {
-        alert("Invalid email or password.");
+        alert("Invalid email or password. Please try again!");
     }
 }
 
