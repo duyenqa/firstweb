@@ -1,3 +1,13 @@
+function showHidePassword() {
+    let password = document.getElementById("password");
+
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+
 function onLogIn() {
     const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;

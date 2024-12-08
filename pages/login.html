@@ -1,95 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <title>Log in</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>Log in</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
+
 <body>
-    <div class="container">
-        <div class="wraper">
-            <div class="topnav" id="myTopnav">
-              <a href="../index.html">Home</a>
-              <a href="./todo.html">To do</a>
-              <a href="./contact.html">Contact</a>
-              <a href="./translatepage.html">Translate</a>
-              <div class="dropdown">
-                <button onclick="onDropdown()" class="dropbtn">Dropdown
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <ul id="myDropdown" class="dropdown-content">
-                  <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
-                  <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
-                  <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
-                </ul>
-              </div>
-      
-              <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
-            </div>
+  <div class="container">
+    <div class="wraper">
+      <div class="topnav" id="myTopnav">
+        <a href="../index.html">Home</a>
+        <a href="./todo.html">To do</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./translatepage.html">Translate</a>
+        <div class="dropdown">
+          <button onclick="onDropdown()" class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <ul id="myDropdown" class="dropdown-content">
+            <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+            <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+            <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+          </ul>
         </div>
-        <div class="wraper">
-            <div class="logIn">
-                <div class="image">
-                    <img src="../images/bg-login.png" alt="login background" />
-                </div>
-                <div class="form">
-                    <label class="labelEmail">Email:</label>
-                    <input
-                        id="username"
-                        class="inputEmail"
-                        placeholder="your_email@example.com"
-                        type="email"
-                        required
-                        autocomplete="off"
-                    />
-                    <label class="labelPass">Password:</label>
-                    <input
-                        id="password"
-                        class="inputPassword"
-                        placeholder="Enter your password"
-                        type="password"
-                        required
-                        autocomplete="off"
-                    />
-                    <input type="checkbox" id="remember" name="remember" style="transform: scale(1.5); margin: 20px 0;" /> Remember me ?
-                    <button type="button" class="btnLogin" onclick="onLogIn()">Log In</button>
-                    <h5 class="heading">Demo account login credentials:</h5>
-                    <table class="loginAccount" id="account">
-                      <tbody>
-                        <tr>
-                          <td class="textTd">
-                            <p id="notifyUsername" style="color: #808080;font-weight: 700;"></p>
-                            <input class="textAccount" type="text" value="demouser@example.com" id="valueUsername" />
-                          </td>
-                          <td class="iconCopy">
-                            <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserName()"></i>
-                          </td>
-                          <td class="textTd">
-                            <p id="notifyPassword" style="color: #808080;font-weight: 700;"></p>
-                            <input class="textAccount" type="text" value="Test@user1" id="valuePassword" />
-                          </td>
-                          <td class="iconCopy">
-                            <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserPassword()"></i>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="wraper">
-            <div class="footer">
-              &copy; Copyright by Ngô Thị Kim Duyên 2024 -
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-            </div>
-          </div>
+
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+      </div>
     </div>
-    <script src="../js/menu.js"></script>
-    <script src="../js/login.js"></script>
+    <div class="wraper">
+      <div class="logIn">
+        <div class="image">
+          <img src="../images/bg-login.png" alt="login background" />
+        </div>
+        <div class="form">
+          <label class="labelEmail">Email:</label>
+          <input id="username" class="inputEmail" placeholder="your_email@example.com" type="email" required
+            autocomplete="off" />
+          <label class="labelPass">Password:</label>
+
+          <div class="input-container">
+            <input id="password" class="inputPassword" placeholder="Enter your password" type="password" required
+              autocomplete="off" />
+            <i id="iconPass" class="fa fa-eye-slash" aria-hidden="true" onclick="showHidePassword()"></i>
+          </div>
+
+          <input type="checkbox" id="remember" name="remember" style="transform: scale(1.5); margin: 20px 0;" />
+          Remember me ?
+          <button type="button" class="btnLogin" onclick="onLogIn()">Log In</button>
+          <h5 class="heading">Demo account login credentials:</h5>
+          <table class="loginAccount" id="account">
+            <tbody>
+              <tr>
+                <td class="textTd">
+                  <p id="notifyUsername" style="color: #808080;font-weight: 700;"></p>
+                  <input class="textAccount" type="text" value="demouser@example.com" id="valueUsername" />
+                </td>
+                <td class="iconCopy">
+                  <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserName()"></i>
+                </td>
+                <td class="textTd">
+                  <p id="notifyPassword" style="color: #808080;font-weight: 700;"></p>
+                  <input class="textAccount" type="text" value="Test@user1" id="valuePassword" />
+                </td>
+                <td class="iconCopy">
+                  <i class="fa fa-clone" aria-hidden="true" onclick="onCopyUserPassword()"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="wraper">
+      <div class="footer">
+        &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+    </div>
+  </div>
+  <script src="../js/menu.js"></script>
+  <script src="../js/login.js"></script>
 </body>
+
 </html>
