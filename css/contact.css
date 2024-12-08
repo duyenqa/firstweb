@@ -148,6 +148,7 @@ form {
 }
 
 input[type=text],
+input[type=email],
 input[type=date],
 select,
 textarea {
@@ -156,6 +157,10 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+}
+
+input[type=email]{
+    opacity: 0.7;
 }
 
 label {
