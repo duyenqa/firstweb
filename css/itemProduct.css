@@ -11,7 +11,7 @@
 
 .products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
 }
 
@@ -36,6 +36,7 @@
 
 .box {
     padding: 0.75rem;
+    background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     position: relative;
@@ -52,8 +53,8 @@
     cursor: pointer;
 }
 
-.box:hover {
-    border: 1px solid aqua;
+.box:hover .wrap-img .pic{
+    transform: scale(1.1);
 }
 
 .wrap-img {
@@ -61,12 +62,19 @@
     justify-content: center;
     align-items: center;
     height: 55%;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
     cursor: pointer;
     background-color: #fff;
 }
 
 .wrap-img .pic {
-    width: 30%;
+    width: 25%;
+    height: auto;
     object-fit: cover;
 }
 
