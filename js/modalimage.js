@@ -1,17 +1,19 @@
+const openModalImage = document.getElementById("imagesModal");
+
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("img-preview").onclick = function () {
-        document.getElementById("myModal").style.display = "block";
+        openModalImage.style.display = "block";
         document.getElementById("img01").src = this.src;
         document.getElementById("caption").innerHTML = this.alt;
     }
 
     document.getElementById("close").onclick = function () {        
-        document.getElementById("myModal").style.display = "none";
+        openModalImage.style.display = "none";
     }
 
     window.onclick = function (event) {
-        if (event.target == document.getElementById("myModal")) {
-            document.getElementById("myModal").style.display = "none";
+        if (event.target == document.getElementById("imagesModal")) {
+            openModalImage.style.display = "none";
         }
     };
 });

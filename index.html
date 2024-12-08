@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/brandlogos.css">
   <link rel="stylesheet" href="./css/accordion.css">
   <link rel="stylesheet" href="./css/galleryimage.css">
+  <link rel="stylesheet" href="./css/popupsale.css">
   <link rel="stylesheet" href="./css/footer.css">
   <title>Demo My Web</title>
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
@@ -45,25 +46,20 @@
         <a class="logoHeader" href="./index.html">Shopping
           <span>Better & Faster</span>
         </a>
-        
-        <input 
-          class="textSearch" 
-          id="productSearch" 
-          type="text" 
-          placeholder="search product..."
-        />
+
+        <input class="textSearch" id="productSearch" type="text" placeholder="search product..." />
         <div class="buttonActions">
           <button type="button" class="heartIcon">
             <i class="fa fa-heart" aria-hidden="true"></i>
             <span class="badge" id="qtyLike">0</span>
           </button>
-  
+
           <button type="button" class="cartIcon" onclick="onCart()">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             <span class="badge" id="qtyCart">0</span>
           </button>
         </div>
-    </div>
+      </div>
     </div>
     <div class="wraper">
       <div class="header">
@@ -142,7 +138,7 @@
             <label for="file-input">Upload Image</label>
             <input accept="image/*" type="file" id="file-input" />
           </div>
-          <div id="myModal" class="modal">
+          <div id="imagesModal" class="modal">
             <span id="close">&times;</span>
             <img class="modal-content" id="img01">
             <div id="caption"></div>
@@ -160,7 +156,6 @@
         </div>
       </div>
     </div>
-
     <div class="wraper">
       <div class="footer">
         <p>
@@ -171,6 +166,18 @@
         </p>
       </div>
     </div>
+    <div id="popup" class="popUpSale">
+      <div class="coupon">
+        <span id="closeSale" class="close">&times;</span>
+        <div class="imgGift">
+          <img src="./images/ubaid-e-alyafizi-vKDX3z4hclw-unsplash.jpg" alt="Avatar" style="width:100%;">
+        </div>
+        <div class="bodySale">
+          <h2><b>20<sup>%</sup> Off</b></h2>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="./js/menu.js"></script>
@@ -178,6 +185,7 @@
   <script src="./js/accordion.js"></script>
   <script src="./js/uploadfile.js"></script>
   <script src="./js/modalimage.js"></script>
+  <script src="./js/popupsale.js"></script>
 </body>
 
 </html>
