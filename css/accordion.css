@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .accordions {
@@ -33,6 +33,9 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .panel>p {
