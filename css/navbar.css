@@ -125,11 +125,16 @@
     .topnav a {
         float: left;
         display: block;
+        color: #fff;
     }
 
     .topnav a:not(:first-child),
     .dropdown .dropbtn {
         display: none;
+    }
+
+    .dropbtn {
+        color: #fff;
     }
 
     .topnav a.icon {
@@ -140,6 +145,7 @@
     .topnav.responsive {
         position: relative;
         width: 100%;
+        height: auto;
     }
 
     .topnav.responsive .icon {
@@ -167,7 +173,6 @@
     }
 
     .dropdown-content li {
-        max-width: 473px;
         border-bottom: 1px solid #fafafa;
     }
 
@@ -175,5 +180,6 @@
         display: block;
         width: 100%;
         text-align: left;
+        padding: 0 12px;
     }
 }
