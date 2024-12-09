@@ -135,17 +135,22 @@
 }
 
 .logIn{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    background-image: url("../images/bg-login.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    background-color: #fff;
 }
 
-.image {
-    margin-left: auto;
-    margin-right: auto;
+.form{
+    background: #ffffff3f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 70px 0 70px 0;
 }
 
 .labelEmail, .labelPass {
@@ -170,7 +175,7 @@
     transform: translateY(-50%); 
     cursor: pointer;        
     font-size: 18px;         
-    color: #555;             
+    color: #555555;             
     transition: color 0.3s ease-in-out;
 }
 
@@ -189,6 +194,9 @@
 .heading{
     text-align: center;
     padding: 5px 0;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .loginAccount{
@@ -196,7 +204,7 @@
     border-spacing: inherit;
     width: 100%;
     margin-bottom: 1rem;
-    color: #212529;
+    background-color: #ffc600;
 }
 
 .textTd{
@@ -212,20 +220,13 @@
 }
 .iconCopy{
     text-align: center;
+    color: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 928px) {
     .wraper {
         background: inherit;
-    }
-
-    .image > img{
-        width: 100%;
-        display: none;
-    }
-
-    .logIn{
-        grid-template-columns: repeat(1, 1fr);
     }
 
     tr { 
