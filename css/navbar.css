@@ -13,11 +13,7 @@
 }
 
 .topnav {
-    border-top: 2px solid #f80;
-    border-bottom: 2px solid #f80;
-    border-left: none;
-    border-right: none;
-    background-color: rgb(245, 213, 176);
+    background-color: #f80;
     width: 89%;
     margin: 0 auto;
 }
@@ -30,26 +26,6 @@
     letter-spacing: 0.5px;
     padding: 0 10px;
     position: relative;
-}
-
-.topnav a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 0;
-    background-color: #ff3c78;
-    transition: 0.5s ease-in-out;
-}
-
-.topnav a:hover{
-    color: #f80;
-    font-weight: 600;
-}
-
-.topnav a:hover::after{
-    width: 100%;
 }
 
 .topnav .icon {
@@ -95,10 +71,55 @@
     display: block;
 }
 
+@media (min-width: 900px) {
+    .topnav {
+        border-top: 2px solid #f80;
+        border-bottom: 2px solid #f80;
+        border-left: none;
+        border-right: none;
+        background-color: rgb(245, 213, 176);
+        width: 89%;
+        margin: 0 auto;
+    }
+    
+    .topnav a {
+        color: #000;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+        position: relative;
+    }
+    
+    .topnav a::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        height: 2px;
+        width: 0;
+        background-color: #ff3c78;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .topnav a:hover{
+        color: #f80;
+        font-weight: 600;
+    }
+    
+    .topnav a:hover::after{
+        width: 100%;
+    }
+}
+
 @media (max-width: 900px) {
     .topnav {
         overflow: hidden;
         width: 98%;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 5px;
     }
 
     .topnav a {
