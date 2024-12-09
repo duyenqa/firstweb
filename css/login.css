@@ -204,7 +204,6 @@
     border-spacing: inherit;
     width: 100%;
     margin-bottom: 1rem;
-    background-color: #ffc600;
 }
 
 .textTd{
@@ -222,6 +221,7 @@
 .iconCopy{
     text-align: center;
     color: #fff;
+    font-size: 20px;
     cursor: pointer;
 }
 
