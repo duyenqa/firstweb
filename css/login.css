@@ -156,6 +156,7 @@
 .labelEmail, .labelPass {
     margin: 0.5rem 0;
     display: block;
+    font-weight: 600;
 }
 
 .inputEmail, .inputPassword {
@@ -168,9 +169,14 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-input:hover{
+.inputEmail:hover, .inputPassword:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 15px #0000004d;
+}
+
+.rememberMe{
+    transform: scale(1.5); 
+    margin: 20px 0;
 }
 
 .input-container {
