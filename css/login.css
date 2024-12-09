@@ -218,6 +218,7 @@
     font-size: 15px;
     height: 30px;
 }
+
 .iconCopy{
     text-align: center;
     color: #fff;
@@ -236,6 +237,10 @@
 
     td { 
         width: 50%; 
+    }
+
+    .textAccount{
+        width: 100%;
     }
 
     .iconCopy{
