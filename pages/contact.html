@@ -37,58 +37,67 @@
       <div class="title">
         <h2>Contact me</h2>
       </div>
-      <form>
-        <div class="row">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off" />
+      <div class="contact">
+        <div class="pic">
+          <img src="../images/map.jpg" alt="contact image" style="width:100%">
         </div>
-        <div class="row">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off" />
+        <div class="formContact">
+          <div class="row">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off" />
+          </div>
+          <div class="row">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off" />
+          </div>
+          <div class="row">
+            <label for="email">Email author:</label>
+            <input type="email" id="email" name="email" value="ntduyen255@gmail.com" readonly />
+          </div>
+          <div class="row">
+            <label for="country">Select Country:</label>
+            <select class="selectCountry" id="country" name="country">
+              <option value="all">None</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="author">Select Author:</label>
+            <select class="selectAuthor" id="author" name="author">
+            </select>
+          </div>
+          <div class="row">
+            <label for="gender">What is your gender?</label>
+            <input type="radio" name="gender" value="male" style="transform: scale(1.5);" /> Male
+            <input type="radio" name="gender" value="female" style="transform: scale(1.5); margin-left: 10px;" /> Female
+          </div>
+          <div class="row">
+            <label for="colors">What are your colors ?</label>
+            <input type="checkbox" name="color" value="red" style="transform: scale(1.5);" /> Red
+            <input type="checkbox" name="color" value="orange" style="transform: scale(1.5); margin-left: 10px;" />
+            Orange
+            <input type="checkbox" name="color" value="light sky" style="transform: scale(1.5); margin-left: 10px;" />
+            Light Sky
+            <input type="checkbox" name="color" value="yellow" style="transform: scale(1.5); margin-left: 10px;" />
+            Yellow
+            <input type="checkbox" name="color" value="white" style="transform: scale(1.5); margin-left: 10px;" /> White
+          </div>
+          <div class="row">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Write something.."
+              style="height:200px"></textarea>
+          </div>
+          <div class="row">
+            <label for="datepicker">Choose Date:</label>
+            <input type="date" id="datepicker" />
+          </div>
+          <div class="action">
+            <input type="submit" value="Submit" onclick="showAlert()">
+          </div>
         </div>
-        <div class="row">
-          <label for="email">Email author:</label>
-          <input type="email" id="email" name="email" value="ntduyen255@gmail.com" readonly />
-        </div>
-        <div class="row">
-          <label for="country">Select Country:</label>
-          <select class="selectCountry" id="country" name="country">
-            <option value="all">None</option>
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-        </div>
-        <div class="row">
-          <label for="author">Select Author:</label>
-          <select class="selectAuthor" id="author" name="author">
-          </select>
-        </div>
-        <div class="row">
-          <label for="gender">What is your gender?</label>
-          <input type="radio" name="gender" value="male" style="transform: scale(1.5);" /> Male
-          <input type="radio" name="gender" value="female" style="transform: scale(1.5); margin-left: 10px;" /> Female
-        </div>
-        <div class="row">
-          <label for="colors">What are your colors ?</label>
-          <input type="checkbox" name="color" value="red" style="transform: scale(1.5);" /> Red
-          <input type="checkbox" name="color" value="orange" style="transform: scale(1.5); margin-left: 10px;" /> Orange
-          <input type="checkbox" name="color" value="light sky" style="transform: scale(1.5); margin-left: 10px;" /> Light Sky
-          <input type="checkbox" name="color" value="yellow" style="transform: scale(1.5); margin-left: 10px;" /> Yellow
-          <input type="checkbox" name="color" value="white" style="transform: scale(1.5); margin-left: 10px;" /> White
-        </div>
-        <div class="row">
-          <label for="description">Description</label>
-          <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
-        </div>
-        <div class="row">
-          <label for="datepicker">Choose Date:</label>
-          <input type="date" id="datepicker"/>
-        </div>
-        <div class="action">
-          <input type="submit" value="Submit" onclick="showAlert()">
-        </div>
-      </form>
+      </div>
     </div>
     <div class="wraper">
       <div class="footer">

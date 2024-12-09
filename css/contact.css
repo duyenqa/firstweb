@@ -131,9 +131,18 @@
     margin: 0 auto;
 }
 
-form {
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.pic {
+    margin-top: 15px;
+}
+
+.formContact {
     width: 100%;
-    display: block;
 }
 
 .row {
@@ -159,7 +168,7 @@ textarea {
     resize: vertical;
 }
 
-input[type=email]{
+input[type=email] {
     opacity: 0.7;
 }
 
@@ -191,27 +200,34 @@ input[type=submit]:hover {
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-  }
+}
 
-  .selectCountry option {
+.selectCountry option {
     background-color: #fff;
     color: #333;
     padding: 10px;
     font-size: 14px;
-  }
+}
 
-  .selectCountry option:hover {
+.selectCountry option:hover {
     background-color: #f1f1f1;
     color: #000;
-  }
+}
 
 @media (max-width: 928px) {
-    label{
-        width: 100%;
+    .contact {
+        flex-direction: column;
     }
-    .action{
+
+    label {
+        margin-top: 5px;
+        display: block;
+    }
+
+    .action {
         text-align: center;
     }
+
     input[type=submit] {
         width: 50%;
         margin-top: 0;
@@ -224,7 +240,6 @@ input[type=submit]:hover {
 
     .row {
         width: 100%;
-        margin: 5px 0;
     }
 }
 
