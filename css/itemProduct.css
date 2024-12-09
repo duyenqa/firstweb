@@ -42,6 +42,34 @@
     position: relative;
 }
 
+.box:hover::before, .box:hover::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: conic-gradient(from 0deg, transparent 70%, blue);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    border-radius: 1rem;
+    transition: all 0.35s linear;
+    animation: spin 4s linear infinite;
+    background-size: 400%;
+}
+
+@keyframes spin{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+ }
+
 .likeItem{
     position: absolute;
     top: 10px;
