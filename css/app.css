@@ -4,7 +4,12 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h2{
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
     color: #f80;
 }
 
@@ -17,11 +22,11 @@ h2{
     margin: 0 auto;
 }
 
-.title{
+.title {
     margin-top: 30px;
 }
 
-.bgApp{
+.bgApp {
     background-color: #fceae8;
     display: flex;
     flex-direction: row;
@@ -31,7 +36,7 @@ h2{
     padding: 30px 0;
 }
 
-.phone{
+.phone {
     width: 200px;
     background-color: #000;
     overflow: hidden;
@@ -40,13 +45,13 @@ h2{
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-.phone:hover{
+.phone:hover {
     transform-origin: center;
     transform: rotateX(20deg) rotateY(-35deg);
     box-shadow: 0px 0px 0px 10px #333355, 15px 10px 0px 10px #444466, 80px 60px 80px #00000066;
 }
 
-.app{
+.app {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -60,12 +65,53 @@ h2{
     justify-content: center;
 }
 
-@media (max-width: 768px){
-    .bgApp{
+/* -----------Vertical menu----------- */
+.submenu {
+    position: fixed;
+    bottom: 10rem;
+    right: 0;
+}
+
+.vertical-menu {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.vertical-menu>a {
+    background-color: #000;
+    border: none;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.vertical-menu a>img {
+    filter: invert(100%) sepia(5%) saturate(7492%) hue-rotate(292deg) brightness(99%) contrast(94%);
+}
+
+.vertical-menu a:hover>img {
+    animation: rotation 4s linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .bgApp {
         flex-direction: column;
         align-items: center;
     }
-    .descApp{
+
+    .descApp {
         width: 100%;
     }
 }
