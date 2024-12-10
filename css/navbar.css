@@ -116,7 +116,6 @@
 @media (max-width: 900px) {
     .topnav {
         overflow: hidden;
-        width: 98%;
         height: 50px;
         line-height: 50px;
         border-radius: 5px;
