@@ -242,6 +242,10 @@
     .buttons {
         height: 19%;
     }
+
+    .name-product{
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 1000px) {
