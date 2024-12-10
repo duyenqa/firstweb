@@ -93,7 +93,6 @@
     border-radius: 1rem;
     margin-bottom: 20px;
     border-radius: 5px;
-    padding: 20px;
     overflow: hidden;
     cursor: pointer;
     background-color: #fff;
@@ -231,12 +230,17 @@
         width: 100%;
     }
 
-    .wrap-img {
-        padding: 1.5rem;
+    .product-details {
+        height: 30%;
     }
 
-    .wrap-img .pic {
-        max-width: 30%;
+    .wrap-img {
+        padding: 1.5rem;
+        height: 45%;
+    }
+
+    .buttons {
+        height: 19%;
     }
 }
 
