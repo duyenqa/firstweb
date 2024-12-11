@@ -245,6 +245,10 @@
         background: inherit;
     }
 
+    .form{
+        padding: 14px;
+    }
+
     tr { 
         display: flex; 
         flex-wrap: wrap; 
