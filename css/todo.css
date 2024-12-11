@@ -5,7 +5,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-ol,ul{
+ol,
+ul {
     padding: 0 20px;
 }
 
@@ -125,7 +126,7 @@ ol,ul{
     }
 }
 
-/*-----------form to do list--------------*/
+/*-----------to do list--------------*/
 .container {
     width: 100%;
     padding: 0 24px;
@@ -145,7 +146,7 @@ ol,ul{
     background-color: #fafafa;
 }
 
-.editor{
+.editor {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -190,7 +191,7 @@ ol,ul{
     transition: opacity 0.5s ease-in-out;
 }
 
-/* -------------------table cart------------------- */
+/* -------------------table to do------------------- */
 #todoTable {
     border-collapse: collapse;
     width: 70%;
@@ -215,16 +216,71 @@ ol,ul{
     background-color: #04AA6D;
 }
 
+/* -------------tabs--------------- */
+.tabs{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.multi{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6 {
+    padding: 5px 10px 5px 10px;
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#tab1:hover,
+#tab2:hover,
+#tab3:hover,
+#tab4:hover,
+#tab5:hover,
+#tab6:hover {
+    background: #ecade4;
+}
+
+#tab1Content,
+#tab2Content,
+#tab3Content,
+#tab4Content,
+#tab5Content,
+#tab6Content {
+    width: 100%;
+    border: 1px solid #b00098;
+    border-radius: 5px 5px 0 0;
+}
+
+#tab2Content,
+#tab3Content,
+#tab4Content,
+#tab5Content,
+#tab6Content {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .wraper {
         background: inherit;
     }
 
-    .editor{
+    .editor {
         width: 100%;
     }
 
-    #todoTable{
+    #todoTable {
         width: 100%;
     }
 
