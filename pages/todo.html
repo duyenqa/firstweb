@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/todo.css">
   <title>To Do Page</title>
+  <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 
@@ -37,21 +38,30 @@
       <div class="title">
         <h2>To Do List</h2>
       </div>
+      <div class="editor">
+        <textarea id="richtext" name="myeditor"></textarea>
+        <button class="buttonAdd" type="button" onclick="addTodo()">Add</button>
+        <script>
+          CKEDITOR.replace('richtext');
+        </script>
+      </div>
+    </div>
+
+    <div class="wraper">
       <table id="todoTable">
-        <tbody id="todolist">
+        <thead>
           <tr>
-            <td>
-              <input type="text" class="inputText" id="myInput" placeholder="Enter text">
-            </td>
-            <td>
-              <button class="buttonAdd" type="button" onclick="addTodo()">Add</button>
-            </td>
+            <th>ID</th>
+            <th>Text</th>
+            <th>Action</th>
           </tr>
-        </tbody>
+        </thead>
+        <tbody id="todolist"></tbody>
       </table>
       <!-- toast message -->
       <div class="result" id="notification"></div>
     </div>
+
     <div class="wraper">
       <div class="footer">
         &copy; Copyright by Ngô Thị Kim Duyên 2024 -

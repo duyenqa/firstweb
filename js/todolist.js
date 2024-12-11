@@ -1,6 +1,6 @@
 function addTodo() {
     let message = document.getElementById("notification");
-    let inputValue = document.getElementById("myInput").value;
+    let inputValue = CKEDITOR.instances.richtext.getData();    
     let id = Date.now();
 
     if (inputValue == '') {
@@ -9,13 +9,14 @@ function addTodo() {
         const tr = document.createElement("tr");
         tr.setAttribute("data-id", `${id}`);
         tr.innerHTML += `
+            <td>${id}</td>
             <td>${inputValue}</td>
             <td><i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i></td>
         `;
         document.getElementById("todolist").appendChild(tr);
 
         //After created successfully, delete data of input tag
-        document.getElementById("myInput").value = " ";
+        CKEDITOR.instances.richtext.setData() = " ";
 
         //Show message
         message.innerHTML += `
