@@ -114,4 +114,9 @@ h2 {
     .descApp {
         width: 100%;
     }
+
+    .vertical-menu {
+        width: 50px;
+        height: 50px;
+    }
 }
