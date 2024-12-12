@@ -194,16 +194,28 @@
     transition: color 0.3s ease-in-out;
 }
 
-.btnLogin {
+.vertical-center{
+    display: grid;
+    place-content: center;
+} 
+
+.vertical-center > .btnLogin {
     display: block;
-    background-color: #0E927A;
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    border:solid 1px #f39c12;
+    background:#e67e22;
+    box-shadow: 0px 6px 0px #d35400;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+.btnLogin:active {
+    box-shadow: 0px 2px 0px #d35400;
 }
 
 .heading{
@@ -218,7 +230,7 @@
     border-collapse: separate;
     border-spacing: inherit;
     width: 100%;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .textTd{
