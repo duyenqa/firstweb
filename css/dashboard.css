@@ -192,6 +192,52 @@
     padding: 16px;
 }
 
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.popup > .logout{
+    position: relative;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 22%);
+    background-color: #fff;
+    padding: 10px;
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.confirmButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.cancelbtn, .escbtn{
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #e7e7e7; 
+    color: black;
+}
+
+.cancelbtn:hover, .escbtn:hover{
+    background: #ddd;
+}
+
 @media (max-width: 600px) {
     .wraper {
         background: inherit;
