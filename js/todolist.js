@@ -35,11 +35,26 @@ function addTodo() {
 }
 
 function deleteOneitem(id) {
-    const trToDelete = document.querySelector(`tr[data-id='${id}']`);
+    document.getElementById("popupDelete").style.display = "block";
+
+    document.getElementById("close").addEventListener("click", () => {
+        document.getElementById("popupDelete").style.display = "none";
+    })
+
+    document.getElementById("closebtn").addEventListener("click", () => {
+        document.getElementById("popupDelete").style.display = "none";
+    })
+
+    document.getElementById("okbtn").addEventListener("click", () => {
+        const trToDelete = document.querySelector(`tr[data-id='${id}']`);
     
-    if (trToDelete) {
-        trToDelete.remove();
-    }
+        if (trToDelete) {
+            trToDelete.remove();
+            document.getElementById("popupDelete").style.display = "none";
+        }
+    })
+
+    
 }
 
 function onClose() {
