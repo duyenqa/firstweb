@@ -318,6 +318,12 @@ ul {
     background: #ddd;
 }
 
+@media (min-width: 768px) {
+    .popup {
+        width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
     .wraper {
         background: inherit;
@@ -376,6 +382,10 @@ ul {
     #tab5,
     #tab6{
         font-size: 14px;
+    }
+
+    .popup {
+        width: 60%;
     }
 }
 
