@@ -65,6 +65,11 @@ h2 {
     justify-content: center;
 }
 
+.descApp > p{
+    text-align: justify;
+    line-height: 2;
+}
+
 /* -----------Vertical menu----------- */
 .submenu {
     position: fixed;
@@ -113,6 +118,7 @@ h2 {
 
     .descApp {
         width: 100%;
+        padding: 0 10px;
     }
 
     .vertical-menu {
