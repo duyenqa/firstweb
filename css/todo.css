@@ -217,16 +217,16 @@ ul {
 #todoTable th {
     border: 2px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
 
-#todoTable tr:nth-child(even) {
+#todoTable tr {
     background-color: #f2f2f2;
 }
 
 #todoTable th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #f80;
     color: #fff;
 }
