@@ -211,6 +211,7 @@ ul {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
 }
 
 #todoTable td,
@@ -229,6 +230,14 @@ ul {
     padding-bottom: 12px;
     background-color: #f80;
     color: #fff;
+}
+
+input[type='checkbox']{
+    transform: scale(1.5);
+}
+.completed {
+    text-decoration: line-through;
+    color: #888;
 }
 
 /* -------------tabs--------------- */
@@ -388,6 +397,7 @@ ul {
 
     #todoTable {
         width: 100%;
+        font-size: 14px;
     }
 
     .multi{

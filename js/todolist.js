@@ -1,5 +1,4 @@
 function addTodo() {
-    let message = document.getElementById("notification");
     let inputValue = CKEDITOR.instances.richtext.getData();    
     let id = Date.now();
 
@@ -9,7 +8,9 @@ function addTodo() {
         const tr = document.createElement("tr");
         tr.setAttribute("data-id", `${id}`);
         tr.innerHTML += `
-            <td>${id}</td>
+            <td>
+                <input type="checkbox" onchange="toggleComplete(this)">
+            </td>
             <td>${inputValue}</td>
             <td><i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i></td>
         `;
@@ -17,21 +18,16 @@ function addTodo() {
 
         //After created successfully, delete data of input tag
         CKEDITOR.instances.richtext.setData() = " ";
-
-        //Show message
-        message.innerHTML += `
-        <p id="result" class="message-success">
-            <i class="fa fa-check" aria-hidden="true"></i>
-            You created successfully
-            <span id="close" onclick="onClose()">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </span>
-        </p>`;
     }
-    
-    setTimeout(() => {
-        document.querySelector(".message-success").classList.add('show');
-    }, 2000);
+}
+
+function toggleComplete(checkbox) {
+    const taskItem = checkbox.parentElement.nextElementSibling;
+    if (checkbox.checked) {
+        taskItem.classList.add("completed");
+    } else {
+        taskItem.classList.remove("completed");
+    }
 }
 
 function deleteOneitem(id) {
@@ -53,10 +49,4 @@ function deleteOneitem(id) {
             document.getElementById("popupDelete").style.display = "none";
         }
     })
-
-    
-}
-
-function onClose() {
-    document.getElementById('result').remove();
 }
