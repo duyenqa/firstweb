@@ -50,3 +50,8 @@ function deleteOneitem(id) {
         }
     })
 }
+
+document.getElementById("sheetjsexport").addEventListener('click', function() {
+    let wb = XLSX.utils.table_to_book(document.getElementById("todoTable"));
+    XLSX.writeFile(wb, "data.xlsx");
+});
