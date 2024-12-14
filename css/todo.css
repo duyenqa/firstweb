@@ -413,6 +413,10 @@ input[type='checkbox']{
         width: 100%;
     }
 
+    input[type='checkbox']{
+        transform: scale(1);
+    }
+
     .inputText {
         width: 100%;
     }
@@ -426,16 +430,6 @@ input[type='checkbox']{
 
     .buttonAdd {
         width: 100%;
-    }
-
-    .result {
-        top: 51px;
-        right: 0;
-    }
-
-    .message-success {
-        font-size: 12px;
-        padding: 5px 2px;
     }
 
     #tab1,
