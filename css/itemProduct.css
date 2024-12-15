@@ -98,10 +98,11 @@
     background-color: #fff;
 }
 
-.wrap-img .pic {
+.wrap-img > .pic {
     width: 25%;
     height: auto;
     object-fit: cover;
+    mix-blend-mode: multiply;
 }
 
 .product-details {
