@@ -165,7 +165,7 @@ ul {
 }
 
 
-.buttonAdd {
+.buttonAdd, .buttonCancle {
     width: 100%;
     outline: none;
     padding: 12px 0;
@@ -182,27 +182,8 @@ ul {
     font-size: 15px;
 }
 
-.buttonAdd:hover {
+.buttonAdd:hover, .buttonCancle:hover {
     box-shadow: 0 0 6px rgba(35, 173, 278, 1);
-}
-
-.result {
-    position: fixed;
-    top: 50px;
-    right: 24px;
-}
-
-.message-success {
-    color: green;
-    background-color: greenyellow;
-    padding: 10px 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.message-success.show {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 }
 
 /* -------------------table to do------------------- */
@@ -235,6 +216,7 @@ ul {
 input[type='checkbox']{
     transform: scale(1.5);
 }
+
 .completed {
     text-decoration: line-through;
     color: #888;

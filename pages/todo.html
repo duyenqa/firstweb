@@ -41,6 +41,7 @@
       <div class="editor">
         <textarea id="richtext" name="myeditor"></textarea>
         <button href="#" class="buttonAdd" type="button" onclick="addTodo()">Add Item</button>
+        <button href="#" class="buttonCancle" type="button" onclick="cancelTodo()">Cancel</button>
         <script>
           CKEDITOR.replace('richtext');
         </script>
@@ -56,6 +57,7 @@
           <tr>
             <th></th>
             <th>Text</th>
+            <th>Status</th>
             <th>Action</th>
           </tr>
         </thead>

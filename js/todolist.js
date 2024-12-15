@@ -12,6 +12,7 @@ function addTodo() {
                 <input type="checkbox" onchange="toggleComplete(this)">
             </td>
             <td>${inputValue}</td>
+            <td class="task-status">To do</td>
             <td><i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i></td>
         `;
         document.getElementById("todolist").appendChild(tr);
@@ -22,11 +23,16 @@ function addTodo() {
 }
 
 function toggleComplete(checkbox) {
-    const taskItem = checkbox.parentElement.nextElementSibling;
+    const taskRow = checkbox.closest("tr");
+    const taskCell = taskRow.querySelector("td:nth-child(2)");
+    const status = taskRow.querySelector(".task-status");
+
     if (checkbox.checked) {
-        taskItem.classList.add("completed");
+        taskCell.classList.add("completed");
+        status.textContent = "Completed";
     } else {
-        taskItem.classList.remove("completed");
+        taskCell.classList.remove("completed");
+        status.textContent = "To do";
     }
 }
 
@@ -49,6 +55,10 @@ function deleteOneitem(id) {
             document.getElementById("popupDelete").style.display = "none";
         }
     })
+}
+
+function cancelTodo(){
+    CKEDITOR.instances.richtext.setData() = " ";
 }
 
 document.getElementById("sheetjsexport").addEventListener('click', function() {
