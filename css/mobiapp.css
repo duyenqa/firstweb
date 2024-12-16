@@ -305,12 +305,30 @@ a {
     }
 }
 
+@media (min-width: 768px){
+    .downloadApp > a{
+        width: fit-content;
+    }
+}
+
 @media (max-width: 768px){
+    .slideshow{
+        min-height: 750px;
+    }
+    .downloadApp > a{
+        width: fit-content;
+        font-size: 12px;
+        padding: 0.25rem 0.5rem;
+    }
     .information{
         justify-content: center;
     }
     .caption {
         margin-left: 0;
+    }
+    .dotSlide{
+        width: 100%;
+        text-align: center;
     }
 }
 /*-------------footer---------------*/
