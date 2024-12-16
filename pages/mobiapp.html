@@ -1,11 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/mobiapp.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <title>App Cats</title>
 </head>
+
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="../pages/todo.html">To do</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a href="../pages/translatepage.html">Translate</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="slideshow">
+                <div class="slide fade">
+                    <div class="numberSlide">1/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/sign-up light.jpg" alt="sign-up" />
+                            </div>
+                            <div class="caption">
+                                <h1>Register Screen</h1>
+                                <p>Light Theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">2/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/sign-up dark.jpg" alt="sign-up" />
+                            </div>
+                            <div class="caption">
+                                <h1>Register Screen</h1>
+                                <p>Dark theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">3/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/sign-in light.jpg" alt="sign-in">
+                            </div>
+                            <div class="caption">
+                                <h1>Log In Screen</h1>
+                                <p>Light Theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">4/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/sign-in dark.jpg" alt="sign-in">
+                            </div>
+                            <div class="caption">
+                                <h1>Log In Screen</h1>
+                                <p>Dark theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">5/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/dashboard light.jpg" alt="dashboard">
+                            </div>
+                            <div class="caption">
+                                <h1>Dashboard Screen</h1>
+                                <p>Light Theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">6/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/dashboard dark.jpg" alt="dashboard">
+                            </div>
+                            <div class="caption">
+                                <h1>Dashboard Screen</h1>
+                                <p>Dark theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">7/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/detail light.jpg" alt="detail">
+                            </div>
+                            <div class="caption">
+                                <h1>Detail Screen</h1>
+                                <p>Light Theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="numberSlide">8/8</div>
+                    <div class="content">
+                        <div class="information">
+                            <div class="phone">
+                                <img class="pic" src="../images/detail dark.jpg" alt="detail">
+                            </div>
+                            <div class="caption">
+                                <h1>Detail Screen</h1>
+                                <p>Dark theme</p>
+                                <div class="downloadApp">
+                                    <a href="https://drive.google.com/drive/folders/1DNU2RT-yuA4jAmcx_Bcf7mlDx55WbAOY" target="_blank" rel="noopener noreferrer">Download APK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="prev" href="#" onclick="plusSlides(-1)">&#10094</a>
+                <a class="next" href="#" onclick="plusSlides(1)">&#10095</a>
+
+                <div class="dotSlide">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="footer">
+              &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+              <script>
+                new Date().getFullYear() > 2017 && document.write(new Date().getFullYear());
+              </script>
+            </div>
+          </div>
+    </div>
+    <script src="../js/menu.js"></script>
+    <script src="../js/slideshow.js"></script>
 </body>
+
 </html>
