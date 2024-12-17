@@ -139,7 +139,8 @@ a {
 
 .slideshow {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 720px;
     background: linear-gradient(45deg, #ff512f, #dd2476, blue);
     color: #fff;
     position: relative;
@@ -179,6 +180,7 @@ a {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    padding: 2rem 0;
 }
 
 .phone {
@@ -205,6 +207,7 @@ a {
     margin-left: 20px;
     padding: 10px;
 }
+
 .downloadApp{
     margin: 10px 0;
 }
@@ -311,10 +314,7 @@ a {
     }
 }
 
-@media (max-width: 768px){
-    .slideshow{
-        min-height: 750px;
-    }
+@media (max-width: 800px){
     .downloadApp > a{
         width: fit-content;
         font-size: 12px;
@@ -325,6 +325,12 @@ a {
     }
     .caption {
         margin-left: 0;
+    }
+    .caption > h1{
+        font-size: 20px;
+    }
+    .caption > p{
+        font-size: 15px;
     }
     .dotSlide{
         width: 100%;
