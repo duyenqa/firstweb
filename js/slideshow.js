@@ -1,23 +1,9 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
     let slides = document.getElementsByClassName("slide");
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
