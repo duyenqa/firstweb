@@ -283,14 +283,14 @@ a {
 .dotSlide > .dot {
     height: 15px;
     width: 15px;
-    background-color: #bbb;
+    background-color: #fff;
     border-radius: 50%;
     display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-    background-color: #717171;
+.dot.active {
+    background-color: #bbb;
 }
 
 .fade {
