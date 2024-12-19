@@ -177,18 +177,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-#infoDelivery > p {
-    width: 300px;
-    overflow-wrap: break-word;
+#infopayment{
+    width: 200px;
 }
+
+#infoDelivery{
+    flex-grow: 1;
+}
+
 @media (max-width: 768px) {
     .wraper {
         background: inherit;
     }
     .info{
-        flex-direction: column;
         gap: 20px;
     }
 }

@@ -4,6 +4,8 @@ const dataDeliveries = [
     { label: 'Name', value: data.name },
     { label: 'Email', value: data.email },
     { label: 'Address', value: data.address },
+    { label: 'District', value: data.district },
+    {label: 'Province', value: data.province},
     { label: 'Phone', value: data.phone }
 ];
 
@@ -17,13 +19,13 @@ document.getElementById("name").innerHTML = `<strong>${data.name}</strong>`;
 
 dataPayments.forEach(field => {
     const p = document.createElement('p');
-    p.innerHTML = `<span>${field.label}: ${field.value}</span>`;
+    p.innerHTML = `<span><strong>${field.label}:</strong> ${field.value}</span>`;
     document.getElementById("infopayment").appendChild(p);
 });
 
 dataDeliveries.forEach(field => {
     const p = document.createElement('p');
-    p.innerHTML = `<span>${field.label}: ${field.value}</span>`;
+    p.innerHTML = `<span><strong>${field.label}:</strong> ${field.value}</span>`;
     document.getElementById("infoDelivery").appendChild(p);
 });
 
