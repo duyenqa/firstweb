@@ -113,6 +113,46 @@ function validateAddress(address) {
     return address.trim().length > 0; // Check if address is not empty
 }
 
+function setFullName(textName){    
+    const isFullNameValid = validateFullName(textName);
+        
+    if (!isFullNameValid) {
+        document.getElementById("notifyName").innerHTML = `The username must be more than one word.`;
+    }else{
+        document.getElementById("notifyName").innerHTML = ``;
+    }
+}
+
+function setEmail(textEmail){    
+    const isEmailValid = validateEmail(textEmail);
+        
+    if (!isEmailValid) {
+        document.getElementById("notifyEmail").innerHTML = `The email address is invalid`;
+    }else{
+        document.getElementById("notifyEmail").innerHTML = ``;
+    }
+}
+
+function setPhone(textPhone){    
+    const isPhoneValid = validatePhone(textPhone);
+        
+    if (!isPhoneValid) {
+        document.getElementById("notifyPhone").innerHTML = `Phone number must be 10 digits.`;
+    }else{
+        document.getElementById("notifyPhone").innerHTML = ``;
+    }
+}
+
+function setAddress(textAddress) {
+    const isAddressValid = validateAddress(textAddress);
+
+    if (!isAddressValid) {
+        document.getElementById("notifyAddress").innerHTML = `The address is invalid`;
+    }else{
+        document.getElementById("notifyAddress").innerHTML = ``;
+    }
+}
+
 function onCheckout() {
     const user = {
         name: fullname.value,
@@ -133,16 +173,6 @@ function onCheckout() {
         }else {
             if(!isFullNameValid && !isEmailValid && !isPhoneValid && !isAddressValid){
                 alert("All fields are required!");
-            }
-
-            if (!isFullNameValid) {
-                document.getElementById("notifyName").innerHTML = `The username must be more than one word.`;
-            }else if(!isEmailValid){
-                document.getElementById("notifyEmail").innerHTML = `The email address is invalid`;
-            }else if(!isPhoneValid){
-                document.getElementById("notifyPhone").innerHTML = `Phone number must be 10 digits.`;
-            }else if(!isAddressValid){
-                document.getElementById("notifyAddress").innerHTML = `The address is invalid`;
             }
         }
     }
