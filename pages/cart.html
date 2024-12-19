@@ -119,6 +119,11 @@
         />
       </div>
       <div class="row">
+        <label for="province">Province<span style="color: red; margin-left: 3px;">*</span></label>
+        <span class="notify" id="notifyPProvince"></span>
+        <select class="selectProvince" id="province" name="province"></select>
+      </div>
+      <div class="row">
         <label for="description">Note:</label>
         <textarea id="description" name="description" placeholder="Write something.." style="height:200px"></textarea>
       </div>
@@ -137,8 +142,10 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/menu.js"></script>
   <script src="../js/cart.js"></script>
+  <script src="../js/dropdownprovinces.js"></script>
 </body>
 
 </html>
