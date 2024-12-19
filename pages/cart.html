@@ -119,9 +119,28 @@
         />
       </div>
       <div class="row">
+        <label for="district">District<span style="color: red; margin-left: 3px;">*</span></label>
+        <span class="notify" id="notifyDistrict"></span>
+        <input 
+          type="text" 
+          id="district" 
+          name="district" 
+          placeholder="Your district" 
+          onchange="setDistrict(this.value)"
+          autocomplete="off" 
+          required 
+        />
+      </div>
+      <div class="row">
         <label for="province">Province<span style="color: red; margin-left: 3px;">*</span></label>
-        <span class="notify" id="notifyPProvince"></span>
-        <select class="selectProvince" id="province" name="province"></select>
+        <span class="notify" id="notifyProvince"></span>
+        <select 
+          class="selectProvince" 
+          id="province" 
+          name="province" 
+          onchange="setProvince(this.value)"
+          onblur="setProvince(this.value)">
+      </select>
       </div>
       <div class="row">
         <label for="description">Note:</label>
