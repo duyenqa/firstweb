@@ -36,19 +36,20 @@
     <div class="wraper">
       <div class="logIn">
         <div class="form">
-          <label class="labelEmail">Email:</label>
-          <input id="username" class="inputEmail" placeholder="your_email@example.com" type="email" required
-            autocomplete="off" />
-          <label class="labelPass">Password:</label>
-
           <div class="input-container">
-            <input id="password" class="inputPassword" placeholder="Enter your password" type="password" required
-              autocomplete="off" />
+            <input id="username" class="inputAccount" placeholder=" " type="email" required autocomplete="off" />
+            <label class="labelEmail">Email:</label>
+          </div>
+          
+          <div class="input-container">
+            <input id="password" class="inputAccount" placeholder=" " type="password" required autocomplete="off" />
+            <label class="labelPass">Password:</label>
             <i id="iconPass" class="fa fa-eye-slash" aria-hidden="true" onclick="showHidePassword()"></i>
           </div>
 
-          <input class="rememberMe" type="checkbox" id="remember" name="remember" />
-          Remember me ?
+          <div class="rememberMe">
+            <input type="checkbox" id="remember" name="remember" />Remember me ?
+          </div>
           <div class="vertical-center">
             <button type="button" class="btnLogin" onclick="onLogIn()">Log In</button>
           </div>
