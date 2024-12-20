@@ -44,38 +44,42 @@
         </div>
         <div class="formContact">
           <div class="row">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off" />
+            <div class="input-container">
+              <input type="text" id="fname" name="firstname" placeholder=" " autocomplete="off" />
+              <label for="fname">First Name</label>
+            </div>
           </div>
           <div class="row">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off" />
+            <div class="input-container">
+              <input type="text" id="lname" name="lastname" placeholder=" " autocomplete="off" />
+              <label for="lname">Last Name</label>
+            </div>
           </div>
           <div class="row">
-            <label for="email">Email author:</label>
-            <input type="email" id="email" name="email" value="ntduyen255@gmail.com" readonly />
+            <div class="input-container">
+              <select class="selectCountry" id="country" name="country">
+                <option value="all">None</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="country">Select Country:</label>
+            </div>
           </div>
           <div class="row">
-            <label for="country">Select Country:</label>
-            <select class="selectCountry" id="country" name="country">
-              <option value="all">None</option>
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
+            <div class="input-container">
+              <select class="selectAuthor" id="author" name="author">
+              </select>
+              <label for="author">Select Author:</label>
+            </div>
           </div>
           <div class="row">
-            <label for="author">Select Author:</label>
-            <select class="selectAuthor" id="author" name="author">
-            </select>
-          </div>
-          <div class="row">
-            <label for="gender">What is your gender?</label>
+            <p>What is your gender?</p>
             <input type="radio" name="gender" value="male" style="transform: scale(1.5);" /> Male
             <input type="radio" name="gender" value="female" style="transform: scale(1.5); margin-left: 10px;" /> Female
           </div>
           <div class="row">
-            <label for="colors">What are your colors ?</label>
+            <p>What are your colors ?</p>
             <input type="checkbox" name="color" value="red" style="transform: scale(1.5);" /> Red
             <input type="checkbox" name="color" value="orange" style="transform: scale(1.5); margin-left: 10px;" />
             Orange
@@ -86,13 +90,16 @@
             <input type="checkbox" name="color" value="white" style="transform: scale(1.5); margin-left: 10px;" /> White
           </div>
           <div class="row">
-            <label for="description">Description</label>
-            <textarea id="description" name="description" placeholder="Write something.."
-              style="height:200px"></textarea>
+            <div class="input-container">
+              <textarea id="description" name="description" placeholder=" " style="height:200px"></textarea>
+              <label for="description">Description</label>
+            </div>
           </div>
           <div class="row">
-            <label for="datepicker">Choose Date:</label>
-            <input type="date" id="datepicker" />
+            <div class="input-container">
+              <input type="date" id="datepicker" />
+              <label for="datepicker">Choose Date:</label>
+            </div>
           </div>
           <div class="action">
             <input type="submit" value="Submit" onclick="showAlert()">
