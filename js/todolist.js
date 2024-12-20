@@ -11,9 +11,13 @@ function addTodo() {
             <td>
                 <input type="checkbox" onchange="toggleComplete(this)">
             </td>
-            <td>${inputValue}</td>
+            <td class="task-name">${inputValue}</td>
             <td class="task-status">To do</td>
-            <td><i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i></td>
+            <td>
+                <i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i>
+                &nbsp;
+                <i class="fa fa-pencil" aria-hidden="true" onclick="updateOneitem(${id})"></i>
+            </td>
         `;
         document.getElementById("todolist").appendChild(tr);
 
@@ -55,6 +59,17 @@ function deleteOneitem(id) {
             document.getElementById("popupDelete").style.display = "none";
         }
     })
+}
+
+function updateOneitem(id){
+    const taskRow = document.querySelector(`tr[data-id="${id}"]`);
+    const taskNameCell = taskRow.querySelector('.task-name');
+    
+    const newTaskName = prompt("Edit the task description:", taskNameCell.innerText);
+
+    if (newTaskName !== null && newTaskName !== "") {
+        taskNameCell.innerText = newTaskName;
+    }
 }
 
 function cancelTodo(){
