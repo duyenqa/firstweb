@@ -1,5 +1,4 @@
 function addTodo() {
-    // let inputValue = CKEDITOR.instances.richtext.getData();
     let inputValue = window.editor.getData();    
     let id = Date.now();
 
