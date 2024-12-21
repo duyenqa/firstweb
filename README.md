@@ -13,5 +13,8 @@
 ## Excel
 - [Output Excel File](https://docs.sheetjs.com/docs/)
 
+## CKEditor
+- [Editor](https://ckeditor.com/docs/)
+
 ## Author:
 Ngô Thị Kim Duyên 2024
