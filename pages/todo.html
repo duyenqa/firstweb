@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/todo.css">
   <title>To Do Page</title>
-  <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
   <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 
@@ -40,12 +39,9 @@
         <h2 class="text">To Do List</h2>
       </div>
       <div class="editor">
-        <textarea id="richtext" name="myeditor"></textarea>
+        <textarea id="editor"></textarea>
         <button href="#" class="buttonAdd" type="button" onclick="addTodo()">Add Item</button>
         <button href="#" class="buttonCancle" type="button" onclick="cancelTodo()">Cancel</button>
-        <script>
-          CKEDITOR.replace('richtext');
-        </script>
       </div>
     </div>
 
@@ -126,6 +122,17 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+  <script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
   <script src="../js/menu.js"></script>
   <script src="../js/todolist.js"></script>
   <script src="../js/tabs.js"></script>

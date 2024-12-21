@@ -1,5 +1,6 @@
 function addTodo() {
-    let inputValue = CKEDITOR.instances.richtext.getData();    
+    // let inputValue = CKEDITOR.instances.richtext.getData();
+    let inputValue = window.editor.getData();    
     let id = Date.now();
 
     if (inputValue == '') {
@@ -22,7 +23,7 @@ function addTodo() {
         document.getElementById("todolist").appendChild(tr);
 
         //After created successfully, delete data of input tag
-        CKEDITOR.instances.richtext.setData() = " ";
+        window.editor.setData(" ");
     }
 }
 
@@ -73,7 +74,7 @@ function updateOneitem(id){
 }
 
 function cancelTodo(){
-    CKEDITOR.instances.richtext.setData() = " ";
+    window.editor.setData(" ");
 }
 
 document.getElementById("sheetjsexport").addEventListener('click', function() {
