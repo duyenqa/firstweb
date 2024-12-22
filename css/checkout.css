@@ -161,15 +161,13 @@
 	border: 16px solid transparent;
 	border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,
 	              #58a 0, #58a 3em, transparent 0, transparent 4em);
-	
-	max-width: 50em;
     background-color: #fceae8;
     margin: 20px auto;
+    max-width: 60em;
 }
 
 .envelope > p{
     color: #da3d2b;
-    font-size: 18px;
 }
 
 .info{
@@ -178,7 +176,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 #infopayment{
@@ -195,6 +192,11 @@
     }
     .info{
         gap: 20px;
+    }
+
+    .envelope{
+        font-size: 13px;
+        word-break: break-all;
     }
 }
 

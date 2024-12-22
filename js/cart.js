@@ -143,7 +143,7 @@ function setPhone(textPhone){
     const isPhoneValid = validatePhone(textPhone);
         
     if (!isPhoneValid) {
-        document.getElementById("notifyPhone").innerHTML = "Phone number is invalid.";
+        document.getElementById("notifyPhone").innerHTML = "Phone number is invalid";
     }else{
         document.getElementById("notifyPhone").innerHTML = "";
     }
