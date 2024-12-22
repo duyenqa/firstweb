@@ -33,7 +33,9 @@ function onLogIn() {
     if (email === emailValid && password === passwordValid) {
         localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
         window.location.href = "dashboard.html"; // Redirect to dashboard
-    } else {
+    } else if ((isValidEmail(email) && email != "demouser@example.com") || password === passwordValid) {
+        alert("This email account doesn't exist");
+    }else{
         alert("Invalid email or password. Please try again!");
     }
 }
