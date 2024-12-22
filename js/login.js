@@ -26,7 +26,7 @@ function onLogIn() {
     }
 
     if (!isValidPassword(password)) {
-        alert('Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.');
+        alert('Password must be at least 10 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.');
         return;
     }
 
@@ -44,7 +44,7 @@ function isValidEmail(email) {
 }
 
 function isValidPassword(password) {
-    if (password.length < 8 || password.length > 8) {
+    if (password.length < 10 || password.length > 10) {
         return false;
     }
 
