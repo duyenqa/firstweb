@@ -100,13 +100,13 @@ function validateFullName(fullname) {
 
 // Email Validation
 function validateEmail(email) {
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailPattern.test(email); // Check if email matches pattern
 }
 
 // Phone Number Validation
 function validatePhone(phone) {
-    const phonePattern = /^[0-9]{10}$/; // Assuming a 10-digit phone number format (e.g., USA)
+    const phonePattern = /(84|0[3|5|7|8|9])+([0-9]{8})\b/;
     return phonePattern.test(phone); // Check if phone number matches the pattern
 }
 
@@ -143,7 +143,7 @@ function setPhone(textPhone){
     const isPhoneValid = validatePhone(textPhone);
         
     if (!isPhoneValid) {
-        document.getElementById("notifyPhone").innerHTML = "Phone number must be 10 digits.";
+        document.getElementById("notifyPhone").innerHTML = "Phone number is invalid.";
     }else{
         document.getElementById("notifyPhone").innerHTML = "";
     }

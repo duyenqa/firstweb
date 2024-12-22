@@ -57,20 +57,22 @@
           </div>
           <div class="row">
             <div class="input-container">
+              <input type="email" id="email" name="email" placeholder=" " autocomplete="off" />
+              <label for="email">Your Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-container">
               <select class="selectCountry" id="country" name="country">
                 <option value="all">None</option>
                 <option value="australia">Australia</option>
                 <option value="canada">Canada</option>
                 <option value="usa">USA</option>
+                <option value="germany">Germany</option>
+                <option value="singapore">Singapore</option>
+                <option value="vietnam">Việt Nam</option>
               </select>
               <label for="country">Select Country:</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-container">
-              <select class="selectAuthor" id="author" name="author">
-              </select>
-              <label for="author">Select Author:</label>
             </div>
           </div>
           <div class="row">
@@ -118,7 +120,6 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="../js/menu.js"></script>
-  <script src="../js/dropdownAuthor.js"></script>
   <script src="../js/formContact.js"></script>
 </body>
 
