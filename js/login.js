@@ -31,9 +31,7 @@ function onLogIn() {
     }
 
     if (email === emailValid && password === passwordValid) {
-        // console.log("Login successful");
         localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
-
         window.location.href = "dashboard.html"; // Redirect to dashboard
     } else {
         alert("Invalid email or password. Please try again!");
@@ -41,12 +39,12 @@ function onLogIn() {
 }
 
 function isValidEmail(email) {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(email);
 }
 
 function isValidPassword(password) {
-    if (password.length < 8) {
+    if (password.length < 8 || password.length > 8) {
         return false;
     }
 

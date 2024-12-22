@@ -194,7 +194,8 @@ label {
 }
 
 .rememberMe{
-    text-align: right;
+    text-align: left;
+    color: #fff;
 }
 
 .rememberMe > input{
