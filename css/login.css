@@ -196,6 +196,7 @@ label {
 .rememberMe{
     text-align: left;
     color: #fff;
+    font-weight: 700;
 }
 
 .rememberMe > input{
@@ -231,6 +232,7 @@ label {
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .btnLogin:active {
