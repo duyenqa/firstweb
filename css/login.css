@@ -151,8 +151,8 @@
     background: #ffffff3f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     padding: 25px;
-    border-radius: 70px 0 70px 0;
-    width: 30%;
+    border-radius: 50px 0 50px 0;
+    width: 45%;
     display: none;
 }
 .form-login.active, .form-otp.active{
@@ -320,24 +320,8 @@ label {
   display: none;
 }
 
-@media (min-width: 768px) {
-    .form-login, .form-otp {
-        padding: 10px;
-        border-radius: 30px 0 30px 0;
-        width: 50%;
-    }
-}
 
-@media (max-width: 768px) {
-    .wraper {
-        background: inherit;
-    }
-
-    .form {
-        padding: 14px;
-        border-radius: 50px 0 50px 0;
-    }
-
+@media (max-width: 968px) {
     tr {
         display: flex;
         flex-wrap: wrap;
@@ -367,7 +351,7 @@ label {
     .form-login, .form-otp {
         padding: 10px;
         border-radius: 30px 0 30px 0;
-        width: 60%;
+        width: 80%;
     }
 }
 
