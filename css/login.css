@@ -147,11 +147,16 @@
     align-items: center;
 }
 
-.form {
+.form-login, .form-otp {
     background: #ffffff3f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     padding: 25px;
     border-radius: 70px 0 70px 0;
+    width: 30%;
+    display: none;
+}
+.form-login.active, .form-otp.active{
+    display: block;
 }
 
 .input-container {
@@ -193,14 +198,21 @@ label {
     padding: 0 5px;
 }
 
-.rememberMe{
-    text-align: left;
+.acts{
+    display: flex;
+    justify-content: space-between;
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
 }
 
-.rememberMe > input{
+.acts > .rememberMe > input{
     transform: scale(1.5);
+}
+
+.acts > .sms, .form-otp > a{
+    color: #fff;
+    text-decoration: underline;
+    text-align: left;
 }
 
 #iconPass {
@@ -214,12 +226,7 @@ label {
     transition: color 0.3s ease-in-out;
 }
 
-.vertical-center {
-    display: grid;
-    place-content: center;
-}
-
-.vertical-center>.btnLogin {
+.btnLogin, .btnOtp {
     display: block;
     padding: 0.5rem 1rem;
     border: none;
@@ -233,9 +240,11 @@ label {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
+    width: 100%;
+    margin: 15px 0;
 }
 
-.btnLogin:active {
+.btnLogin:active, .btnOtp:active {
     box-shadow: 0px 2px 0px #d35400;
 }
 
@@ -251,7 +260,8 @@ label {
     border-collapse: separate;
     border-spacing: inherit;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 auto;
+    place-content: stretch;
 }
 
 .textTd {
@@ -263,6 +273,7 @@ label {
 
 .textAccount {
     font-size: 15px;
+    width: 100%;
     height: 30px;
 }
 
@@ -271,6 +282,41 @@ label {
     color: #fff;
     font-size: 20px;
     cursor: pointer;
+}
+
+.form-otp > h3{
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    font-weight: 600;
+}
+.input-otp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.input-otp > input{
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.input-otp > input:focus{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-otp > input::-webkit-inner-spin-button,
+.input-otp > input::-webkit-outer-spin-button {
+  display: none;
 }
 
 @media (max-width: 928px) {
@@ -289,7 +335,9 @@ label {
     }
 
     td {
-        width: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .textAccount {
@@ -300,6 +348,17 @@ label {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .acts{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-login, .form-otp {
+        padding: 10px;
+        border-radius: 30px 0 30px 0;
+        width: 100%;
     }
 }
 

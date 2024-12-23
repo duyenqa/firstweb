@@ -8,7 +8,7 @@ function showHidePassword() {
     }
 }
 
-function onLogIn() {
+function onSubmit() {
     const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
@@ -87,4 +87,17 @@ function onCopyUserPassword() {
     navigator.clipboard.writeText(copyText.value);
 
     notifyMessage.innerHTML = "copied password";
+}
+
+const login = document.querySelector(".form-login");
+const loginSMS = document.querySelector(".form-otp");
+
+function onLoginSMS() {
+    loginSMS.classList.add("active");
+    login.classList.remove("active");
+}
+
+function onLogin(){
+    login.classList.add("active");
+    loginSMS.classList.remove("active");
 }
