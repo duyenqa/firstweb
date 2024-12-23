@@ -101,3 +101,13 @@ function onLogin(){
     login.classList.add("active");
     loginSMS.classList.remove("active");
 }
+
+
+function getValueOTP() {
+    let otpList = " ";
+    document.querySelectorAll('.otp').forEach((number) => {
+         const newValue = number.value;
+        otpList += newValue;
+    })
+    alert("OTP value: " + otpList);
+}
