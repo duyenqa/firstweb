@@ -142,8 +142,8 @@ function getValueOTP() {
         localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
         window.location.href = "dashboard.html"; // Redirect to dashboard
     }else{
-        console.log("otp invalid");
-        
+        alert("OTP invalid!");
     }
+    
 }
 
