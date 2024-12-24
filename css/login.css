@@ -212,8 +212,12 @@ label {
 
 .acts > .sms, .form-otp > a{
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
     text-align: left;
+}
+
+.acts > .sms:hover, .form-otp > a:hover{
+    text-decoration: underline;
 }
 
 #iconPass {
@@ -320,8 +324,25 @@ label {
   display: none;
 }
 
+.generatorOTP{
+    text-align: center;
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+.generatorOTP > p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid #fff;
+    padding: 10px 15px;
+}
+
 
 @media (max-width: 968px) {
+    .wraper {
+        width: 100%;
+    }
+    
     tr {
         display: flex;
         flex-wrap: wrap;
