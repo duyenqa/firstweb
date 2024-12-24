@@ -103,10 +103,23 @@ function onLogin(){
 }
 
 
+function validDigit(number) {
+    number.value = number.value.replace(/[^0-9]/g, '');
+}
+
+function changeInput(inputValue, index){
+   const inputs = document.querySelectorAll('.otp');
+   if (inputValue.value != "") {
+    inputs[index + 1]?.focus();
+   } else {
+    inputs[index - 1]?.focus();
+   }
+}
+
 function getValueOTP() {
     let otpList = " ";
-    document.querySelectorAll('.otp').forEach((number) => {
-         const newValue = number.value;
+    document.querySelectorAll('.inputOtp').forEach((number) => {
+        let newValue = number.value;
         otpList += newValue;
     })
     alert("OTP value: " + otpList);
