@@ -125,7 +125,12 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
   <script>
     ClassicEditor
-        .create(document.querySelector('#editor'))
+        .create(document.querySelector('#editor'), {
+          toolbar: {
+            items : ['heading', 'bold', 'italic', 'Link','blockQuote', 'undo', 'redo', '-', 'numberedList', 'bulletedList'],
+            shouldNotGroupWhenFull: false
+        }
+        })
         .then(editor => {
             window.editor = editor;
         })

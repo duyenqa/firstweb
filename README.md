@@ -15,6 +15,8 @@
 
 ## CKEditor
 - [Editor](https://ckeditor.com/docs/)
+- [Feature Editor](https://ckeditor.com/ckeditor-5/features/)
+- [Toolbar](https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/toolbar.html)
 
 ## CDN Hover Effects
 - [Install](https://cdnjs.com/libraries/vanilla-tilt)
