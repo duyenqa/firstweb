@@ -116,11 +116,34 @@ function changeInput(inputValue, index){
    }
 }
 
+function randomOTP() {
+    const numbers = "0123456789";
+    let newOTP = "";
+    for (let i = 0; i < 6; i++) {
+        const random = Math.floor(Math.random() * 10);
+        newOTP += numbers[random];
+    }
+    return newOTP;
+}
+
+let validOtp = randomOTP();
+document.getElementById("oneTimeOTP").innerHTML = `${validOtp}`;
+
 function getValueOTP() {
     let otpList = " ";
+
     document.querySelectorAll('.inputOtp').forEach((number) => {
         let newValue = number.value;
         otpList += newValue;
     })
-    alert("OTP value: " + otpList);
+    
+    if (otpList.trim() == validOtp.trim()) {
+        console.log(typeof(otpList) == typeof(validOtp));
+        localStorage.setItem('isLoggedIn', 'true'); // Save login in localStorage
+        window.location.href = "dashboard.html"; // Redirect to dashboard
+    }else{
+        console.log("otp invalid");
+        
+    }
 }
+
