@@ -108,7 +108,7 @@ function validDigit(number) {
 }
 
 function changeInput(inputValue, index){
-   const inputs = document.querySelectorAll('.otp');
+   const inputs = document.querySelectorAll('.inputOtp');
    if (inputValue.value != "") {
     inputs[index + 1]?.focus();
    } else {
