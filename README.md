@@ -22,5 +22,10 @@
 - [Install](https://cdnjs.com/libraries/vanilla-tilt)
 - [Demo](https://micku7zu.github.io/vanilla-tilt.js/)
 
+## CDN Particle Effects
+- [Install](https://www.jsdelivr.com/package/npm/particles.js)
+- [Usage](https://github.com/VincentGarreau/particles.js)
+- [Demo](https://vincentgarreau.com/particles.js/)
+
 ## Author:
 Ngô Thị Kim Duyên 2024

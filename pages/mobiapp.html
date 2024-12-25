@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="wraper">
-            <div class="slideshow">
+            <div id="particles-js" class="slideshow">
                 <div class="slide fade">
                     <div class="numberSlide">1/8</div>
                     <div class="content">
@@ -193,6 +193,12 @@
           </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', '../particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
     <script src="../js/menu.js"></script>
     <script src="../js/slideshow.js"></script>
 </body>
