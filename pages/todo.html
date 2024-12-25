@@ -35,56 +35,63 @@
       </div>
     </div>
     <div class="wraper">
-      <div class="title">
-        <h2 class="text">To Do List</h2>
-      </div>
-      <div class="editor">
-        <textarea id="editor"></textarea>
-        <button href="#" class="buttonAdd" type="button" onclick="addTodo()">Add Item</button>
-        <button href="#" class="buttonCancle" type="button" onclick="cancelTodo()">Cancel</button>
-      </div>
-    </div>
+      <div id="particles-js">
+        <div class="todo">
+          <div class="title">
+            <h2 class="text">To Do List</h2>
+          </div>
+          <div class="editor">
+            <textarea id="editor"></textarea>
+            <button href="#" class="buttonAdd" type="button" onclick="addTodo()">Add Item</button>
+            <button href="#" class="buttonCancle" type="button" onclick="cancelTodo()">Cancel</button>
+          </div>
+          <div class="title">
+            <h2 class="resultList">Result List</h2>
+          </div>
+          <table id="todoTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Text</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="todolist"></tbody>
+          </table>
+          <div class="exportFile">
+            <button id="sheetjsexport">Export Table</button>
+          </div>
 
-    <div class="wraper">
-      <div class="title">
-        <h2 class="resultList">Result List</h2>
-      </div>
-      <table id="todoTable">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Text</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="todolist"></tbody>
-      </table>
-      <div class="exportFile">
-        <button id="sheetjsexport">Export Table</button>
-      </div>
-    </div>
+          <div class="title">
+            <h2 class="text">Tabs Form</h2>
+          </div>
+          <div class="multi">
+            <div class="tabs">
+              <div id="tab1" onClick="selectTab(1)">Tab 1</div>
+              <div id="tab2" onClick="selectTab(2)">Tab 2</div>
+              <div id="tab3" onClick="selectTab(3)">Tab 3</div>
+              <div id="tab4" onClick="selectTab(4)">Tab 4</div>
+              <div id="tab5" onClick="selectTab(5)">Tab 5</div>
+              <div id="tab6" onClick="selectTab(6)">Tab 6</div>
+            </div>
 
-    <div class="wraper">
-      <div class="title">
-        <h2 class="text">Tabs Form</h2>
-      </div>
-      <div class="multi">
-        <div class="tabs">
-          <div id="tab1" onClick="selectTab(1)">Tab 1</div>
-          <div id="tab2" onClick="selectTab(2)">Tab 2</div>
-          <div id="tab3" onClick="selectTab(3)">Tab 3</div>
-          <div id="tab4" onClick="selectTab(4)">Tab 4</div>
-          <div id="tab5" onClick="selectTab(5)">Tab 5</div>
-          <div id="tab6" onClick="selectTab(6)">Tab 6</div>
+            <textarea id="tab1Content" placeholder="Enter your text 1..."></textarea>
+            <textarea id="tab2Content" placeholder="Enter your text 2..."></textarea>
+            <textarea id="tab3Content" placeholder="Enter your text 3..."></textarea>
+            <textarea id="tab4Content" placeholder="Enter your text 4..."></textarea>
+            <textarea id="tab5Content" placeholder="Enter your text 5..."></textarea>
+            <textarea id="tab6Content" placeholder="Enter your text 6..."></textarea>
+          </div>
+
         </div>
-
-        <textarea id="tab1Content" rows="10" cols="70" placeholder="Enter your text 1..."></textarea>
-        <textarea id="tab2Content" rows="10" cols="70" placeholder="Enter your text 2..."></textarea>
-        <textarea id="tab3Content" rows="10" cols="70" placeholder="Enter your text 3..."></textarea>
-        <textarea id="tab4Content" rows="10" cols="70" placeholder="Enter your text 4..."></textarea>
-        <textarea id="tab5Content" rows="10" cols="70" placeholder="Enter your text 5..."></textarea>
-        <textarea id="tab6Content" rows="10" cols="70" placeholder="Enter your text 6..."></textarea>
+      </div>
+      <!-- footer -->
+      <div class="footer">
+        &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
       </div>
     </div>
 
@@ -98,15 +105,6 @@
           <button type="button" id="closebtn" class="cancelbtn">Cancel</button>
           <button type="button" id="okbtn" class="escbtn">Ok</button>
         </div>
-      </div>
-    </div>
-
-    <div class="wraper">
-      <div class="footer">
-        &copy; Copyright by Ngô Thị Kim Duyên 2024 -
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
       </div>
     </div>
 
@@ -125,24 +123,30 @@
   <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
   <script>
     ClassicEditor
-        .create(document.querySelector('#editor'), {
-          toolbar: {
-            items : ['heading', 'bold', 'italic', 'Link','blockQuote', 'undo', 'redo', '-', 'numberedList', 'bulletedList','insertTable'],
-            shouldNotGroupWhenFull: false
-          }
-        })
-        .then(editor => {
-            window.editor = editor;
-        })
-        .catch(error => {
-            console.error(error);
-        });
-</script>
+      .create(document.querySelector('#editor'), {
+        toolbar: {
+          items: ['heading', 'bold', 'italic', 'Link', 'blockQuote', 'undo', 'redo', '-', 'numberedList', 'bulletedList', 'insertTable'],
+          shouldNotGroupWhenFull: false
+        }
+      })
+      .then(editor => {
+        window.editor = editor;
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
   <script src="../js/menu.js"></script>
   <script src="../js/todolist.js"></script>
   <script src="../js/tabs.js"></script>
   <script src="../js/changebackground.js"></script>
   <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', '../particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 </body>
 
 </html>
