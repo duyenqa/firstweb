@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -146,40 +147,42 @@ ul {
     margin: 0 auto;
 }
 
-#particles-js{
+#particles-js {
     width: 100%;
     height: 840px;
     position: relative;
 }
 
-.todo{
+.todo {
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
     width: 100%;
     max-width: 100em;
 }
 
-.text{
+.text {
     color: coral;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 30px;
     letter-spacing: 5px;
 }
 
-.resultList{
+.resultList {
     color: #fff;
     text-shadow: 0px 0px 10px rgb(255, 0, 187), 0px 0px 20px rgb(255, 0, 187), 0px 0px 40px rgb(255, 0, 187), 0px 0px 80px rgb(255, 0, 187);
     letter-spacing: 5px;
 }
 
-.editor, .multi {
+.editor,
+.multi {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
 
-.buttonAdd, .buttonCancle {
+.buttonAdd,
+.buttonCancle {
     width: 100%;
     outline: none;
     padding: 12px 0;
@@ -196,7 +199,8 @@ ul {
     font-size: 15px;
 }
 
-.buttonAdd:hover, .buttonCancle:hover {
+.buttonAdd:hover,
+.buttonCancle:hover {
     box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 }
 
@@ -227,7 +231,7 @@ ul {
     color: #fff;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     transform: scale(1.5);
 }
 
@@ -236,14 +240,14 @@ input[type='checkbox']{
     color: #888;
 }
 
-.exportFile{
+.exportFile {
     width: 70%;
     margin: 10px auto;
     display: flex;
     justify-content: flex-end;
 }
 
-.exportFile > button {
+.exportFile>button {
     border: none;
     color: #fff;
     background-color: green;
@@ -259,7 +263,7 @@ input[type='checkbox']{
 }
 
 /* -------------tabs--------------- */
-.tabs{
+.tabs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -313,7 +317,7 @@ input[type='checkbox']{
     display: none;
 }
 
-.popup{
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -321,7 +325,7 @@ input[type='checkbox']{
     display: none;
 }
 
-.popup > .deleteItem{
+.popup>.deleteItem {
     position: relative;
     border: 1px solid #bbb;
     border-radius: 5px;
@@ -330,14 +334,14 @@ input[type='checkbox']{
     padding: 10px;
 }
 
-.close{
+.close {
     display: flex;
     justify-content: flex-end;
     font-size: 30px;
     cursor: pointer;
 }
 
-.confirmButtons{
+.confirmButtons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,27 +349,29 @@ input[type='checkbox']{
     margin-top: 10px;
 }
 
-.cancelbtn, .escbtn{
+.cancelbtn,
+.escbtn {
     border: none;
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #e7e7e7; 
+    background-color: #e7e7e7;
     color: black;
 }
 
-.cancelbtn:hover, .escbtn:hover{
+.cancelbtn:hover,
+.escbtn:hover {
     background: #ddd;
 }
 
-.palette{
+.palette {
     position: fixed;
     bottom: 5rem;
     right: 0;
 }
 
-.palette > .colors{
+.palette>.colors {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -374,7 +380,7 @@ input[type='checkbox']{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.color-s{
+.color-s {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -383,31 +389,40 @@ input[type='checkbox']{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.color-s:hover{
+.color-s:hover {
     transform: scale(1.1);
-    
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1300px) {
+    #particles-js {
+        height: 900px;
+    }
+
     .popup {
         width: 50%;
     }
 }
 
-@media (max-width: 768px) {
-    #particles-js{
-        height: 900px;
+@media (max-width: 1300px) {
+    #particles-js {
+        height: 845px;
     }
-    
-    .todo{
-        /* width: 78%;
-        min-width: 456px; */
+
+    #tab1Content,
+    #tab2Content,
+    #tab3Content,
+    #tab4Content,
+    #tab5Content,
+    #tab6Content {
+        height: 20vh;
     }
-    .palette > .colors{
+
+    .palette>.colors {
         padding: 10px;
     }
 
-    .color-s{
+    .color-s {
         width: 25px;
         height: 25px;
     }
@@ -421,7 +436,7 @@ input[type='checkbox']{
         font-size: 14px;
     }
 
-    .multi{
+    .multi {
         width: 100%;
     }
 
@@ -434,7 +449,7 @@ input[type='checkbox']{
         width: 100%;
     }
 
-    input[type='checkbox']{
+    input[type='checkbox'] {
         transform: scale(1);
     }
 
@@ -453,7 +468,7 @@ input[type='checkbox']{
         width: 100%;
     }
 
-    .exportFile > button{
+    .exportFile>button {
         font-size: 0.75rem;
         font-weight: 500;
     }
@@ -463,7 +478,7 @@ input[type='checkbox']{
     #tab3,
     #tab4,
     #tab5,
-    #tab6{
+    #tab6 {
         font-size: 15px;
     }
 
