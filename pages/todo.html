@@ -127,9 +127,9 @@
     ClassicEditor
         .create(document.querySelector('#editor'), {
           toolbar: {
-            items : ['heading', 'bold', 'italic', 'Link','blockQuote', 'undo', 'redo', '-', 'numberedList', 'bulletedList'],
+            items : ['heading', 'bold', 'italic', 'Link','blockQuote', 'undo', 'redo', '-', 'numberedList', 'bulletedList','insertTable'],
             shouldNotGroupWhenFull: false
-        }
+          }
         })
         .then(editor => {
             window.editor = editor;
