@@ -238,7 +238,7 @@ input[type='checkbox'] {
     color: #888;
 }
 
-.exportFile {
+/* .exportFile {
     width: 70%;
     margin: 10px auto;
     display: flex;
@@ -258,7 +258,7 @@ input[type='checkbox'] {
     border-radius: 16px;
     font-size: 1rem;
     font-weight: 600;
-}
+} */
 
 .popup {
     position: fixed;
@@ -341,6 +341,7 @@ input[type='checkbox'] {
 .pagination-container {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .pagination{

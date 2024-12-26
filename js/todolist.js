@@ -4,13 +4,12 @@ const itemsPerPage = 3;
 
 function addTodo() {
     let inputValue = window.editor.getData();
-    let id = Date.now();
 
     if (inputValue == '') {
         alert("You must write something!");
     } else {
         todos.push({
-            id: id,
+            id: Date.now(),
             name: inputValue,
             status: 'To do'
         });
@@ -31,9 +30,9 @@ function displayTodos() {
     const paginatedTodos = todos.slice(start, end);
 
     paginatedTodos.forEach(todo => {
-            const tr = document.createElement("tr");
-            tr.setAttribute("data-id", `${todo.id}`);
-            tr.innerHTML += `
+        const tr = document.createElement("tr");
+        tr.setAttribute("data-id", `${todo.id}`);
+        tr.innerHTML += `
             <td>
                 <input type="checkbox" onchange="toggleComplete(this)">
             </td>
@@ -50,7 +49,7 @@ function displayTodos() {
     displayPageNumbers();
 }
 
-const displayPageNumbers = () =>{
+const displayPageNumbers = () => {
     let totalPages = Math.ceil(todos.length / itemsPerPage);
     const pageNumbers = document.getElementById("pageNumbers");
     pageNumbers.innerHTML = "";
@@ -59,12 +58,12 @@ const displayPageNumbers = () =>{
         let pageNumberElement = document.createElement("a");
         pageNumberElement.setAttribute('href', "#");
         pageNumberElement.textContent = i;
-        
-        pageNumberElement.addEventListener("click", function() {
-            currentPage = i;  
+
+        pageNumberElement.addEventListener("click", function () {
+            currentPage = i;
             displayTodos();
         });
-        
+
         pageNumbers.appendChild(pageNumberElement);
     }
 };
@@ -94,14 +93,15 @@ function deleteOneitem(id) {
         document.getElementById("popupDelete").style.display = "none";
     })
 
-    document.getElementById("okbtn").addEventListener("click", () => {
-        const trToDelete = document.querySelector(`tr[data-id='${id}']`);
+    const index = todos.findIndex(todo => todo.id == id);
 
-        if (trToDelete) {
-            trToDelete.remove();
+    if (index !== -1) {
+        document.getElementById("okbtn").addEventListener("click", () => {
+            todos.splice(index, 1);
             document.getElementById("popupDelete").style.display = "none";
-        }
-    })
+            displayTodos();
+        })
+    }
 }
 
 function updateOneitem(id) {
@@ -112,6 +112,11 @@ function updateOneitem(id) {
 
     if (newTaskName !== null && newTaskName !== "") {
         taskNameCell.innerText = newTaskName;
+        const task = todos.find(todo => todo.id == id);
+        if (task) {
+            task.name = newTaskName;
+        }
+        displayTodos();
     }
 }
 
@@ -119,7 +124,7 @@ function cancelTodo() {
     window.editor.setData(" ");
 }
 
-document.getElementById("sheetjsexport").addEventListener('click', function () {
-    let wb = XLSX.utils.table_to_book(document.getElementById("todoTable"));
-    XLSX.writeFile(wb, "data.xlsx");
-});
+// document.getElementById("sheetjsexport").addEventListener('click', function () {
+//     let wb = XLSX.utils.table_to_book(document.getElementById("todoTable"));
+//     XLSX.writeFile(wb, "data.xlsx");
+// });
