@@ -1,30 +1,73 @@
+let todos = [];
+let currentPage = 1;
+const itemsPerPage = 3;
+
 function addTodo() {
-    let inputValue = window.editor.getData();    
+    let inputValue = window.editor.getData();
     let id = Date.now();
 
     if (inputValue == '') {
         alert("You must write something!");
     } else {
-        const tr = document.createElement("tr");
-        tr.setAttribute("data-id", `${id}`);
-        tr.innerHTML += `
+        todos.push({
+            id: id,
+            name: inputValue,
+            status: 'To do'
+        });
+
+        //After created successfully, delete data of editor
+        window.editor.setData(" ");
+
+        displayTodos();
+    }
+}
+
+function displayTodos() {
+    const todoTable = document.getElementById("todolist");
+    todoTable.innerHTML = "";
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = currentPage * itemsPerPage;
+    const paginatedTodos = todos.slice(start, end);
+
+    paginatedTodos.forEach(todo => {
+            const tr = document.createElement("tr");
+            tr.setAttribute("data-id", `${todo.id}`);
+            tr.innerHTML += `
             <td>
                 <input type="checkbox" onchange="toggleComplete(this)">
             </td>
-            <td class="task-name">${inputValue}</td>
-            <td class="task-status">To do</td>
+            <td class="task-name">${todo.name}</td>
+            <td class="task-status">${todo.status}</td>
             <td>
-                <i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${id})"></i>
+                <i class="fa fa-trash" aria-hidden="true" onclick="deleteOneitem(${todo.id})"></i>
                 &nbsp;
-                <i class="fa fa-pencil" aria-hidden="true" onclick="updateOneitem(${id})"></i>
+                <i class="fa fa-pencil" aria-hidden="true" onclick="updateOneitem(${todo.id})"></i>
             </td>
         `;
-        document.getElementById("todolist").appendChild(tr);
-
-        //After created successfully, delete data of input tag
-        window.editor.setData(" ");
-    }
+        todoTable.appendChild(tr);
+    });
+    displayPageNumbers();
 }
+
+const displayPageNumbers = () =>{
+    let totalPages = Math.ceil(todos.length / itemsPerPage);
+    const pageNumbers = document.getElementById("pageNumbers");
+    pageNumbers.innerHTML = "";
+
+    for (let i = 1; i <= totalPages; i++) {
+        let pageNumberElement = document.createElement("a");
+        pageNumberElement.setAttribute('href', "#");
+        pageNumberElement.textContent = i;
+        
+        pageNumberElement.addEventListener("click", function() {
+            currentPage = i;  
+            displayTodos();
+        });
+        
+        pageNumbers.appendChild(pageNumberElement);
+    }
+};
 
 function toggleComplete(checkbox) {
     const taskRow = checkbox.closest("tr");
@@ -53,7 +96,7 @@ function deleteOneitem(id) {
 
     document.getElementById("okbtn").addEventListener("click", () => {
         const trToDelete = document.querySelector(`tr[data-id='${id}']`);
-    
+
         if (trToDelete) {
             trToDelete.remove();
             document.getElementById("popupDelete").style.display = "none";
@@ -61,10 +104,10 @@ function deleteOneitem(id) {
     })
 }
 
-function updateOneitem(id){
+function updateOneitem(id) {
     const taskRow = document.querySelector(`tr[data-id="${id}"]`);
     const taskNameCell = taskRow.querySelector('.task-name');
-    
+
     const newTaskName = prompt("Edit the task description:", taskNameCell.innerText);
 
     if (newTaskName !== null && newTaskName !== "") {
@@ -72,11 +115,11 @@ function updateOneitem(id){
     }
 }
 
-function cancelTodo(){
+function cancelTodo() {
     window.editor.setData(" ");
 }
 
-document.getElementById("sheetjsexport").addEventListener('click', function() {
+document.getElementById("sheetjsexport").addEventListener('click', function () {
     let wb = XLSX.utils.table_to_book(document.getElementById("todoTable"));
     XLSX.writeFile(wb, "data.xlsx");
 });

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -193,7 +194,7 @@
     padding: 16px;
 }
 
-.popup{
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -201,7 +202,7 @@
     display: none;
 }
 
-.popup > .logout{
+.popup>.logout {
     position: relative;
     border: 1px solid #bbb;
     border-radius: 5px;
@@ -210,14 +211,14 @@
     padding: 10px;
 }
 
-.close{
+.close {
     display: flex;
     justify-content: flex-end;
     font-size: 30px;
     cursor: pointer;
 }
 
-.confirmButtons{
+.confirmButtons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,21 +226,84 @@
     margin-top: 10px;
 }
 
-.cancelbtn, .escbtn{
+.cancelbtn,
+.escbtn {
     border: none;
     color: #fff;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #e7e7e7; 
+    background-color: #e7e7e7;
     color: black;
 }
 
-.cancelbtn:hover, .escbtn:hover{
+.cancelbtn:hover,
+.escbtn:hover {
     background: #ddd;
 }
 
-@media (max-width: 600px) {
+/* ---------tabs--------- */
+.multi {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6 {
+    padding: 5px 10px 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: deeppink;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#tab1:hover,
+#tab2:hover,
+#tab3:hover,
+#tab4:hover,
+#tab5:hover,
+#tab6:hover {
+    background: #ecade4;
+}
+
+#tab1Content,
+#tab2Content,
+#tab3Content,
+#tab4Content,
+#tab5Content,
+#tab6Content {
+    width: 100%;
+    height: 25vh;
+    border: 2px solid #808080;
+}
+
+#tab2Content,
+#tab3Content,
+#tab4Content,
+#tab5Content,
+#tab6Content {
+    display: none;
+}
+
+@media (max-width: 768px) {
     .wraper {
         background: inherit;
     }
@@ -254,6 +318,19 @@
 
     .column {
         width: 100%;
+    }
+
+    .multi {
+        width: 100%;
+    }
+
+    #tab1,
+    #tab2,
+    #tab3,
+    #tab4,
+    #tab5,
+    #tab6 {
+        font-size: 15px;
     }
 }
 
@@ -323,14 +400,15 @@
 }
 
 @media (max-width: 768px) {
-    #customers tr { 
-        display: flex; flex-wrap: wrap; 
+    #customers tr {
+        display: flex;
+        flex-wrap: wrap;
     }
-  
-    #customers td { 
-        width: 50%; 
+
+    #customers td {
+        width: 50%;
     }
-  }
+}
 
 /*-------------footer---------------*/
 .footer {
