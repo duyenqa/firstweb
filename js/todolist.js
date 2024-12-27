@@ -34,7 +34,7 @@ function displayTodos() {
         tr.setAttribute("data-id", `${todo.id}`);
         tr.innerHTML += `
             <td>
-                <input type="checkbox" onchange="toggleComplete(this)">
+                <input type="checkbox" onchange="toggleComplete(this)" ${todo.status === 'Completed' ? 'checked' : ''}>
             </td>
             <td class="task-name">${todo.name}</td>
             <td class="task-status">${todo.status}</td>
@@ -70,16 +70,22 @@ const displayPageNumbers = () => {
 
 function toggleComplete(checkbox) {
     const taskRow = checkbox.closest("tr");
-    const taskCell = taskRow.querySelector("td:nth-child(2)");
     const status = taskRow.querySelector(".task-status");
+    const taskId = taskRow.getAttribute("data-id");
+    const task = todos.find(todo => todo.id == taskId);
+
+    if (!task) {
+        return;
+    }
 
     if (checkbox.checked) {
-        taskCell.classList.add("completed");
+        task.status = "Completed";
         status.textContent = "Completed";
     } else {
-        taskCell.classList.remove("completed");
+        task.status = "To do";
         status.textContent = "To do";
     }
+    displayTodos();
 }
 
 function deleteOneitem(id) {
