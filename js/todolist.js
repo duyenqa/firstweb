@@ -88,7 +88,7 @@ function toggleComplete(checkbox) {
     displayTodos();
 }
 
-function deleteOneitem(id) {
+function deleteOneitem(todoId) {
     document.getElementById("popupDelete").style.display = "block";
 
     document.getElementById("close").addEventListener("click", () => {
@@ -99,16 +99,19 @@ function deleteOneitem(id) {
         document.getElementById("popupDelete").style.display = "none";
     })
 
-    const index = todos.findIndex(todo => todo.id == id);
+    document.getElementById("okbtn").addEventListener("click", () => {
+        todos = todos.filter(todo => todo.id !== todoId);
+        document.getElementById("popupDelete").style.display = "none";
 
-    if (index !== -1) {
-        document.getElementById("okbtn").addEventListener("click", () => {
-            todos.splice(index, 1);
-            document.getElementById("popupDelete").style.display = "none";
-            displayTodos();
-        })
-    }
+        const totalPages = Math.ceil(todos.length / itemsPerPage);
+
+        if (currentPage > totalPages) {
+            currentPage = totalPages;
+        }
+        displayTodos();
+    })
 }
+
 
 function updateOneitem(id) {
     const taskRow = document.querySelector(`tr[data-id="${id}"]`);
