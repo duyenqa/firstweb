@@ -46,9 +46,10 @@
 .btnReset{
     position: absolute;
     margin-left: -23px;
-    margin-top: 10px;
-    background: transparent;
+    margin-top: 1.5em;
+    background: none;
     outline: none;
+    border:none;
 }
 
 .btnSearch{
@@ -63,6 +64,7 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 15px;
+    border:none;
 }
 
 .buttonActions{
@@ -107,5 +109,12 @@
 
     .textSearch {
         width: 100%;
+    }
+
+    .btnReset{
+        position: static;
+        background-color: #f80;
+        padding: 12px 15px;
+        color: #fff;
     }
 }
