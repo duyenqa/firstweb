@@ -34,6 +34,10 @@
     outline: none;
 }
 
+.buttonActions{
+    display: flex;
+}
+
 .cartIcon, .heartIcon {
     background: transparent;
     width: 50px;
