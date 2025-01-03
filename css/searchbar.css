@@ -7,6 +7,7 @@
     align-items: center;
     background-color: #fff;
     padding: 20px 0;
+    text-align: center;
 }
 
 .logoHeader {
@@ -24,6 +25,10 @@
     font-size: 18px;
 }
 
+.search{
+    width: 100%;
+}
+
 .textSearch {
     width: 50%;
     height: 48px;
@@ -32,6 +37,32 @@
     border-radius: 0.5rem;
     border: 1px solid #13afdf;
     outline: none;
+}
+.iconSearch{
+    position: relative;
+    display: inline;
+}
+
+.btnReset{
+    position: absolute;
+    margin-left: -23px;
+    margin-top: 10px;
+    background: transparent;
+    outline: none;
+}
+
+.btnSearch{
+    border: none;
+    color: #fff;
+    background-color: #f80;
+    padding: 13px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 .buttonActions{

@@ -1,5 +1,6 @@
 const productList = document.getElementById('product-list');
-const productSearch = document.getElementById('productSearch');
+const productSearch = document.getElementById('dataSearch');
+const resetButton = document.getElementById("resetSearch");
 const quantity = document.getElementById("qtyCart");
 let carts = JSON.parse(localStorage.getItem('cart')) || [];
 let hearts = JSON.parse(localStorage.getItem('likes')) || [];
@@ -9,6 +10,7 @@ productList.innerHTML = '<button class="buttonload"><i class="fa fa-circle-o-not
 axios.get('https://fakestoreapi.com/products')
     .then(response => {
         const products = response.data;
+        let displayedProducts = products;
 
         if (products.length === 0) {
             productList.innerHTML = '<p>No products available.</p>';
@@ -143,13 +145,8 @@ axios.get('https://fakestoreapi.com/products')
         };
 
         displayProducts(products);
-        productSearch.addEventListener('input', () => {
+        document.getElementById("buttonSearch").addEventListener('click', () => {
             const searchQuery = productSearch.value.toLowerCase();
-
-            if (!searchQuery) {
-                displayProducts(products);
-                return;
-            }
 
             const filteredProducts = products.filter(item =>
                 item.title.toLowerCase().includes(searchQuery)
@@ -160,6 +157,15 @@ axios.get('https://fakestoreapi.com/products')
                 return;
             }
             displayProducts(filteredProducts);
+        });
+
+        resetButton.addEventListener("click", () => {
+            // Clear the search input field
+            productSearch.value = '';
+            
+            // Reset the displayed products to show all products
+            displayedProducts = products;
+            displayProducts(products);
         });
     })
     .catch(error => {
