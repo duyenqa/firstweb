@@ -169,24 +169,25 @@ label {
   position: relative;
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
-  gap: 20px;
   flex-wrap: wrap;
 }
 
-figure{
-  width: 45%;
+#list-images > a{
+  border: 1px solid #ccc;
+  width: 30%;
+  height: fit-content;
+  flex: 50%;
+  text-decoration: none;
 }
-
-img{
-  width: 100%;
-  cursor: pointer;
-}
-
-figcaption{
+.caption{
+  padding: 15px;
   text-align: center;
-  font-size: 15px;
-  margin-top: 0.5rem;
+  overflow-wrap: break-word;
+  color: #000;
+}
+
+#list-images > a > img{
+  width: 100%;
 }
 
 @media (max-width: 600px){
@@ -195,6 +196,9 @@ figcaption{
   }
   label{
     padding: 13px 0;
+  }
+  #list-images > a{
+    width: 100%;
   }
 }
 /*-------------footer---------------*/
