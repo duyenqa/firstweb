@@ -22,11 +22,11 @@ axios.get('https://fakestoreapi.com/products')
             cartCount = carts.reduce((total, item) => total + item.quantity, 0);
             if (cartCount > 0) {
                 quantity.innerHTML = `
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
                 <span class="badge">${cartCount}</span>`;
             } else {
                 quantity.innerHTML = `
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
                 <span class="badge">0</span>`;
             }
         };

@@ -45,11 +45,13 @@
 
 .btnReset{
     position: absolute;
-    margin-left: -23px;
+    margin-left: -52px;
     margin-top: 1.5em;
+    color:#13afdf;
     background: none;
     outline: none;
     border:none;
+    cursor: pointer;
 }
 
 .btnSearch{
@@ -114,7 +116,15 @@
     .btnReset{
         position: static;
         background-color: #f80;
-        padding: 12px 15px;
         color: #fff;
+        padding: 13px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 15px;
+        border: none;
     }
 }
