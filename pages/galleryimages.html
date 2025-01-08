@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="My first web is only testing" />
+    <meta property="og:description" content="Website about shopping cart, to do list, app mobile" />
+    <meta property="og:image" content="../images/favicon.ico" />
+    <meta property="og:url" content="../images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/galleryimage.css">
+    <title>Multiple Image</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="wraper">
+            <div class="uploadFile">
+                <input type="file" id="file-input" onchange="preview()" accept="image/png, image/jpeg" multiple>
+                <label for="file-input">
+                    <i class="fa-solid fa-upload"></i>
+                    &nbsp; Choose A Photo
+                </label>
+                <p id="num-of-files">No Files Chosen</p>
+                <div id="list-images"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/uploadfile.js" defer></script>
+</body>
+</html>
