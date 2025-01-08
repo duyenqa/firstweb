@@ -2,6 +2,10 @@
 
 - [Font Website](https://fonts.google.com)
 
+## CDN Icon
+- [Install](https://cdnjs.com/libraries/font-awesome)
+- [Find icons](https://fontawesome.com/icons)
+
 ## Call API:
 - [Products - Home Page](https://fakestoreapi.com/products)
 - [Authors - Contact Page](https://jsonplaceholder.typicode.com/users)
