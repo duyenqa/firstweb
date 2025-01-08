@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,31 @@
     <title>Multiple Image</title>
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
+
 <body>
     <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./translatepage.html">Translate</a>
+                <a href="./mobiapp.html">My App Mobile</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myburger()">&#9776;</a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
         <div class="wraper">
             <div class="uploadFile">
                 <input type="file" id="file-input" onchange="preview()" accept="image/png, image/jpeg" multiple>
@@ -26,6 +50,16 @@
             </div>
         </div>
     </div>
+    <div class="wraper">
+        <div class="footer">
+            &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </div>
+    </div>
+    <script src="../js/menu.js" defer></script>
     <script src="../js/uploadfile.js" defer></script>
 </body>
+
 </html>
