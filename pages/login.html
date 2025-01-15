@@ -87,48 +87,24 @@
         <div class="form-otp">
           <h3>Enter OTP Code</h3>
           <div class="input-otp">
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 0)" 
-              />
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 1)" 
-              />
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 2)" 
-              />
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 3)" 
-              />
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 4)" 
-              />
-            <input 
-              class="inputOtp" 
-              type="text" maxlength="1" 
-              oninput="validDigit(this)" 
-              onkeyup="changeInput(this, 5)" 
-              />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 0)"
+              tabindex="1" />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 1)"
+              tabindex="2" />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 2)"
+              tabindex="3" />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 3)"
+              tabindex="4" />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 4)"
+              tabindex="5" />
+            <input class="inputOtp" type="text" maxlength="1" oninput="validDigit(this)" onkeyup="changeInput(this, 5)"
+              tabindex="6" />
           </div>
-          
+
           <div class="generatorOTP">
             <p id="oneTimeOTP" style="color:#fff"></p>
           </div>
-          
+
           <a href="#" onclick="onLogin()">Log in with password</a>
           <button class="btnOtp" onclick="getValueOTP()">Log In</button>
         </div>
