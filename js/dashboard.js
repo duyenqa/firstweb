@@ -22,3 +22,14 @@ function onLogOut() {
         window.location.href = "login.html";
     })
 }
+
+
+document.getElementById("rangeNumber").addEventListener("input", () => {
+    document.getElementById("boxGenerate").textContent = [];
+    for (let i = 0; i < document.getElementById("rangeNumber").value; i++) {
+        let box = document.createElement("div");
+        box.classList.add("box");
+        box.innerText = `${i}`;
+        document.getElementById("boxGenerate").appendChild(box);
+    }
+})

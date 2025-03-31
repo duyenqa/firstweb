@@ -91,29 +91,32 @@
                     </div>
 
                     <div class="section">
-                        <div class="title">
-                            <h2 class="text">Tabs Form</h2>
-                        </div>
-                        <div class="multi">
-                            <div class="tabs">
-                                <div id="tab1" onClick="selectTab(1)">Tab 1</div>
-                                <div id="tab2" onClick="selectTab(2)">Tab 2</div>
-                                <div id="tab3" onClick="selectTab(3)">Tab 3</div>
-                                <div id="tab4" onClick="selectTab(4)">Tab 4</div>
-                                <div id="tab5" onClick="selectTab(5)">Tab 5</div>
-                                <div id="tab6" onClick="selectTab(6)">Tab 6</div>
-                            </div>
-
-                            <textarea id="tab1Content" placeholder="Enter your text 1..."></textarea>
-                            <textarea id="tab2Content" placeholder="Enter your text 2..."></textarea>
-                            <textarea id="tab3Content" placeholder="Enter your text 3..."></textarea>
-                            <textarea id="tab4Content" placeholder="Enter your text 4..."></textarea>
-                            <textarea id="tab5Content" placeholder="Enter your text 5..."></textarea>
-                            <textarea id="tab6Content" placeholder="Enter your text 6..."></textarea>
-                        </div>
+                        <h3 class="text">Generate Items</h3>
+                        <input id="rangeNumber" type="range" value="0" min="0" max="20" />
+                        <div id="boxGenerate"></div>
                     </div>
 
                     <div class="section">
+                        <h3 class="text">Tabs Form</h3>
+                        <div class="tabs">
+                            <div id="tab1" onClick="selectTab(1)">Tab 1</div>
+                            <div id="tab2" onClick="selectTab(2)">Tab 2</div>
+                            <div id="tab3" onClick="selectTab(3)">Tab 3</div>
+                            <div id="tab4" onClick="selectTab(4)">Tab 4</div>
+                            <div id="tab5" onClick="selectTab(5)">Tab 5</div>
+                            <div id="tab6" onClick="selectTab(6)">Tab 6</div>
+                        </div>
+
+                        <textarea id="tab1Content" placeholder="Enter your text 1..."></textarea>
+                        <textarea id="tab2Content" placeholder="Enter your text 2..."></textarea>
+                        <textarea id="tab3Content" placeholder="Enter your text 3..."></textarea>
+                        <textarea id="tab4Content" placeholder="Enter your text 4..."></textarea>
+                        <textarea id="tab5Content" placeholder="Enter your text 5..."></textarea>
+                        <textarea id="tab6Content" placeholder="Enter your text 6..."></textarea>
+                    </div>
+
+                    <div class="section">
+                        <h3 class="text">Table List</h3>
                         <div class="search">
                             <input class="inputSearch" type="text" id="myInput" onkeyup="onSearchtext()"
                                 placeholder="Search company..." />

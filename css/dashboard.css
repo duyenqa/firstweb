@@ -21,18 +21,23 @@
 }
 
 .frame{
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px 1fr;
     gap: 20px;
 }
 
 #sidebar{
     background-color: #000;
-    width: 250px;
     height: 100vh;
     padding: 5px 1em;
     position: sticky;
     top: 0;
     align-self: start;
+}
+
+.main-content{
+    background-color: #eee;
+    padding: 0 1em;
 }
 
 #sidebar ul{
@@ -94,14 +99,14 @@
 .rotate .fa-caret-down{
     rotate: 180deg;
 }
-.main-content{
-    flex: 1 0 auto;
-    background-color: #eee;
-    padding: 0 1em;
-}
 
 .section{
     margin: 1em 0;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
 }
 
 .welcome {
@@ -131,6 +136,27 @@
     text-align: center;
     background-color: #444;
     color: white;
+}
+
+#boxGenerate{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+#rangeNumber{
+    width: 100%;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #04AA6D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup {
@@ -182,10 +208,6 @@
 }
 
 /* ---------tabs--------- */
-.multi {
-    width: 50%;
-}
-
 .tabs {
     display: flex;
     flex-direction: row;
