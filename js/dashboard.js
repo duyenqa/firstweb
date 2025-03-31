@@ -1,3 +1,8 @@
+function toggleSubmenu(button) {
+    button.nextElementSibling.classList.toggle("show");
+    button.classList.toggle("rotate");
+}
+
 function onLogOut() {
     document.getElementById("popupLogout").style.display = "block";
     

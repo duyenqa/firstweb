@@ -17,167 +17,159 @@
 <body>
     <div class="container">
         <div class="wraper">
-            <div class="topnav" id="myTopnav">
-                <a href="#">Item</a>
-                <div class="dropdown">
-                    <button onclick="onDropdown()" class="dropbtn">Dropdown
-                        <i class="fa-solid fa-caret-down"></i>
-                    </button>
-                    <ul id="myDropdown" class="dropdown-content">
-                        <li><a title="item" href="#">Item</a></li>
+            <div class="frame">
+                <nav id="sidebar">
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button class="dropdown-btn" onclick="toggleSubmenu(this)">
+                                <i class="fa-solid fa-gauge"></i>
+                                <span>Multiple Levels</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <ul class="sub-menu">
+                                <div class="items">
+                                    <li><a href="#">Level 1</a></li>
+                                    <li><a href="#">Level 2</a></li>
+                                    <li><a href="#">Level 3</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="onLogOut()">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
                     </ul>
-                </div>
-                <!-- Su dung cho man hinh nho -->
-                <a class="showhideLogout" href="#" onclick="onLogOut()">Log Out</a>
-                <!-- Ket thuc su dung cho man hinh nho -->
-                <a href="javascript:void(0);" class="icon" onclick="myburger()">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-                <!-- Su dung cho man hinh lon -->
-                <div class="itemRight">
-                    <div class="flex-item" onclick="onLogOut()">Log Out</div>
-                </div>
-                <!-- Ket thuc su dung cho man hinh lon -->
-            </div>
-        </div>
-        <div class="wraper">
-            <h3 class="welcome">Welcome to Dashboard</h3>
-        </div>
-        <div class="wraper">
-            <div class="title">
-                <h2>Counter</h2>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <p><i class="fa fa-user" style="font-size: 50px;"></i></p>
-                        <h3>11+</h3>
-                        <p>Partners</p>
+                </nav>
+                <div class="main-content">
+                    <div class="section">
+                        <h3 class="welcome">Welcome to Dashboard</h3>
+                    </div>
+
+                    <div class="section">
+                        <div class="row">
+                            <div class="column">
+                                <p><i class="fa fa-user" style="font-size: 50px;"></i></p>
+                                <p>Total Visits</p>
+                                <h3>11%</h3>
+                            </div>
+                            <div class="column">
+                                <p><i class="fa fa-user" style="font-size: 50px;"></i></p>
+                                <p>Total Page Views</p>
+                                <h3>100%</h3>
+                            </div>
+                            <div class="column">
+                                <p><i class="fa fa-user" style="font-size: 50px;"></i></p>
+                                <p>Unique Visitor</p>
+                                <h3>12%</h3>
+                            </div>
+                            <div class="column">
+                                <p><i class="fa fa-user" style="font-size: 50px;"></i></p>
+                                <p>Bounce Rate</p>
+                                <h3>33%</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="title">
+                            <h2 class="text">Tabs Form</h2>
+                        </div>
+                        <div class="multi">
+                            <div class="tabs">
+                                <div id="tab1" onClick="selectTab(1)">Tab 1</div>
+                                <div id="tab2" onClick="selectTab(2)">Tab 2</div>
+                                <div id="tab3" onClick="selectTab(3)">Tab 3</div>
+                                <div id="tab4" onClick="selectTab(4)">Tab 4</div>
+                                <div id="tab5" onClick="selectTab(5)">Tab 5</div>
+                                <div id="tab6" onClick="selectTab(6)">Tab 6</div>
+                            </div>
+
+                            <textarea id="tab1Content" placeholder="Enter your text 1..."></textarea>
+                            <textarea id="tab2Content" placeholder="Enter your text 2..."></textarea>
+                            <textarea id="tab3Content" placeholder="Enter your text 3..."></textarea>
+                            <textarea id="tab4Content" placeholder="Enter your text 4..."></textarea>
+                            <textarea id="tab5Content" placeholder="Enter your text 5..."></textarea>
+                            <textarea id="tab6Content" placeholder="Enter your text 6..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <div class="search">
+                            <input class="inputSearch" type="text" id="myInput" onkeyup="onSearchtext()"
+                                placeholder="Search company..." />
+                        </div>
+                        <table id="customers">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Company
+                                        <span onclick="sortData(0)">
+                                            <i class="fa fa-sort" aria-hidden="true"></i>
+                                        </span>
+                                    </th>
+                                    <th>Contact</th>
+                                    <th>Country</th>
+                                    <th>Date Created</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alfreds Futterkiste</td>
+                                    <td>Maria Anders</td>
+                                    <td>Germany</td>
+                                    <td>01/02/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Berglunds snabbkop</td>
+                                    <td>Christina Berglund</td>
+                                    <td>Sweden</td>
+                                    <td>14/04/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Centro comercial Moctezuma</td>
+                                    <td>Francisco Chang</td>
+                                    <td>Mexico</td>
+                                    <td>28/12/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>Austria</td>
+                                    <td>31/01/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Koniglich Essen</td>
+                                    <td>Philip Cramer</td>
+                                    <td>Germany</td>
+                                    <td>01/02/2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
-                <div class="column">
-                    <div class="card">
-                        <p><i class="fa fa-check" style="font-size: 50px;"></i></p>
-                        <h3>55+</h3>
-                        <p>Projects</p>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="card">
-                        <p><i class="fa fa-smile-o" style="font-size: 50px;"></i></p>
-                        <h3>100+</h3>
-                        <p style="white-space: nowrap;">Happy Clients</p>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="card">
-                        <p><i class="fa fa-coffee" style="font-size: 50px;"></i></p>
-                        <h3>100+</h3>
-                        <p>Meetings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="wraper">
-            <div class="title">
-                <h2>Testimonials</h2>
-            </div>
-            <div class="testimonials">
-                <img src="../images/bandmember.jpg" alt="Avatar" style="width:90px">
-                <div class="des">
-                    <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
-                    <p>John Doe saved us from a web disaster.</p>
-                </div>
-            </div>
-            <div class="testimonials">
-                <img src="../images/avatar_g2.jpg" alt="Avatar" style="width:90px">
-                <div class="des">
-                    <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                    <p>No one is better than John Doe.</p>
-                </div>
             </div>
         </div>
 
-        <div class="wraper">
-            <div class="search">
-                <input class="inputSearch" type="text" id="myInput" onkeyup="onSearchtext()"
-                    placeholder="Search company..." />
-            </div>
-            <table id="customers">
-                <thead>
-                    <tr>
-                        <th>
-                            Company
-                            <span onclick="sortData(0)">
-                                <i class="fa fa-sort" aria-hidden="true"></i>
-                            </span>
-                        </th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                        <th>Date Created</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                        <td>01/02/2024</td>
-                    </tr>
-                    <tr>
-                        <td>Berglunds snabbkop</td>
-                        <td>Christina Berglund</td>
-                        <td>Sweden</td>
-                        <td>14/04/2023</td>
-                    </tr>
-                    <tr>
-                        <td>Centro comercial Moctezuma</td>
-                        <td>Francisco Chang</td>
-                        <td>Mexico</td>
-                        <td>28/12/2022</td>
-                    </tr>
-                    <tr>
-                        <td>Ernst Handel</td>
-                        <td>Roland Mendel</td>
-                        <td>Austria</td>
-                        <td>31/01/2024</td>
-                    </tr>
-                    <tr>
-                        <td>Koniglich Essen</td>
-                        <td>Philip Cramer</td>
-                        <td>Germany</td>
-                        <td>01/02/2021</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="wraper">
-            <div class="title">
-                <h2 class="text">Tabs Form</h2>
-              </div>
-              <div class="multi">
-                <div class="tabs">
-                  <div id="tab1" onClick="selectTab(1)">Tab 1</div>
-                  <div id="tab2" onClick="selectTab(2)">Tab 2</div>
-                  <div id="tab3" onClick="selectTab(3)">Tab 3</div>
-                  <div id="tab4" onClick="selectTab(4)">Tab 4</div>
-                  <div id="tab5" onClick="selectTab(5)">Tab 5</div>
-                  <div id="tab6" onClick="selectTab(6)">Tab 6</div>
-                </div>
-    
-                <textarea id="tab1Content" placeholder="Enter your text 1..."></textarea>
-                <textarea id="tab2Content" placeholder="Enter your text 2..."></textarea>
-                <textarea id="tab3Content" placeholder="Enter your text 3..."></textarea>
-                <textarea id="tab4Content" placeholder="Enter your text 4..."></textarea>
-                <textarea id="tab5Content" placeholder="Enter your text 5..."></textarea>
-                <textarea id="tab6Content" placeholder="Enter your text 6..."></textarea>
-              </div>
-        </div>
-        
         <div class="wraper">
             <div class="footer">
                 &copy; Copyright by Ngô Thị Kim Duyên 2024 -
