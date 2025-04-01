@@ -138,6 +138,16 @@
     color: white;
 }
 
+.frameCharts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.chart{
+
+}
+
 #boxGenerate{
     display: flex;
     width: 100%;

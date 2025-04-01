@@ -91,7 +91,20 @@
                     </div>
 
                     <div class="section">
+                        <h3 class="text">Charts</h3>
+                        <div class="frameCharts">
+                            <div class="chart">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                            <div class="chart">
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
                         <h3 class="text">Generate Items</h3>
+                        <p></p>
                         <input id="rangeNumber" type="range" value="0" min="0" max="20" />
                         <div id="boxGenerate"></div>
                     </div>
@@ -206,6 +219,8 @@
             }
         };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/graph.js" defer></script>
     <script src="../js/menu.js" defer></script>
     <script src="../js/dashboard.js" defer></script>
     <script src="../js/search.js" defer></script>

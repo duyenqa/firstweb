@@ -31,5 +31,9 @@
 - [Usage](https://github.com/VincentGarreau/particles.js)
 - [Demo](https://vincentgarreau.com/particles.js/)
 
+## Chart.js
+- [Install](https://www.chartjs.org/docs/latest/getting-started/)
+- [Usage](https://www.chartjs.org/docs/latest/charts/bar.html)
+
 ## Author:
 Ngô Thị Kim Duyên 2024
