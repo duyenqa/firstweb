@@ -1,9 +1,46 @@
+.mainFooter{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    background-color: #000;
+    color:#fff;
+    padding: 1.5rem;
+}
 .footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #000;
     color: #fff;
     text-align: center;
+    margin: 1rem 0;
     padding: 15px 0;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    font-size: 13px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.headerFooter{
+    color: #7c7c7c;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.site-info{
+    padding: 0 4rem 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .mainFooter{
+        display: grid;
+        grid-template-columns: auto;
+    }
 }
