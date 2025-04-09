@@ -135,10 +135,18 @@
     background-color: #fafafa;
 }
 
-.demoFrame{
-    width: 100%;
-    height: 60vh;
-    border: none;
+.title{
+    color: #f80;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+#translateEng, #translateVN{
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    background: #ddd;
+    font-weight: 700;
 }
 
 @media (max-width: 600px) {
