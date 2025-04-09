@@ -35,7 +35,7 @@
 - [Install](https://www.chartjs.org/docs/latest/getting-started/)
 - [Usage](https://www.chartjs.org/docs/latest/charts/bar.html)
 
-## Read File JSON
+## Read file JSON in local or api link
 - [Usage](https://oxylabs.io/blog/javascript-read-json-file)
 
 ## Author:
