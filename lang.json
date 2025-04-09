@@ -1,0 +1,47 @@
+{
+    "translations": [
+      {
+        "source_language": "en",
+        "source_text": "Hello, how are you?",
+        "target_language": "vi",
+        "target_text": "Xin chào, bạn khỏe không?"
+      },
+      {
+        "source_language": "en",
+        "source_text": "Good morning!",
+        "target_language": "vi",
+        "target_text": "Chào buổi sáng!"
+      },
+      {
+        "source_language": "en",
+        "source_text": "What is your name?",
+        "target_language": "vi",
+        "target_text": "Tên bạn là gì?"
+      },
+      {
+        "source_language": "en",
+        "source_text": "Can you help me?",
+        "target_language": "vi",
+        "target_text": "Bạn có thể giúp tôi không?"
+      },
+      {
+        "source_language": "en",
+        "source_text": "I am very happy to meet you.",
+        "target_language": "vi",
+        "target_text": "Tôi rất vui khi được gặp bạn."
+      },
+      {
+        "source_language": "en",
+        "source_text": "Good night!",
+        "target_language": "vi",
+        "target_text": "Chúc bạn ngủ ngon!"
+      },
+      {
+        "source_language": "en",
+        "source_text": "Thank you for your help.",
+        "target_language": "vi",
+        "target_text": "Cảm ơn bạn đã giúp đỡ."
+      }
+    ]
+  }
+  
