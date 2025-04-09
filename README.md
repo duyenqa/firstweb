@@ -35,5 +35,8 @@
 - [Install](https://www.chartjs.org/docs/latest/getting-started/)
 - [Usage](https://www.chartjs.org/docs/latest/charts/bar.html)
 
+## Read File JSON
+- [Usage](https://oxylabs.io/blog/javascript-read-json-file)
+
 ## Author:
 Ngô Thị Kim Duyên 2024
