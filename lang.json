@@ -41,6 +41,48 @@
         "source_text": "Thank you for your help.",
         "target_language": "vi",
         "target_text": "Cảm ơn bạn đã giúp đỡ."
+      },
+      {
+        "source_language": "en",
+        "source_text": "Where are you from?",
+        "target_language": "vi",
+        "target_text": "Bạn đến từ đâu?"
+      },
+      {
+        "source_language": "en",
+        "source_text": "Have a nice day!",
+        "target_language": "vi",
+        "target_text": "Chúc bạn một ngày tốt lành!"
+      },
+      {
+        "source_language": "en",
+        "source_text": "Goodbye, see you later!",
+        "target_language": "vi",
+        "target_text": "Tạm biệt, hẹn gặp lại!"
+      },
+      {
+        "source_language": "en",
+        "source_text": "How much does this cost?",
+        "target_language": "vi",
+        "target_text": "Cái này giá bao nhiêu?"
+      },
+      {
+        "source_language": "en",
+        "source_text": "I don't understand.",
+        "target_language": "vi",
+        "target_text": "Tôi không hiểu."
+      },
+      {
+        "source_language": "en",
+        "source_text": "I am learning English.",
+        "target_language": "vi",
+        "target_text": "Tôi đang học tiếng Anh."
+      },
+      {
+        "source_language": "en",
+        "source_text": "This is delicious!",
+        "target_language": "vi",
+        "target_text": "Cái này ngon quá!"
       }
     ]
   }
