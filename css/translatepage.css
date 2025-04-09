@@ -132,7 +132,6 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
-    background-color: #fafafa;
 }
 
 .title{
@@ -140,17 +139,48 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-size: 30px;
     letter-spacing: 5px;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-#translateEng, #translateVN{
+#translateEng, #translateVN, #translateKorean{
     padding: 0.5rem 2rem;
     cursor: pointer;
-    background: #ddd;
+    background-color: #ddd;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btnTranslates{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#sentences{
+    background-color: lightcyan;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#sentences > p{
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
 }
 
 @media (max-width: 600px) {
     .wraper {
         background: inherit;
+    }
+    #sentences{
+        grid-template-columns: auto;
+    }
+    .btnTranslates{
+        justify-content: center;
+        margin: 1rem 0;
     }
 }

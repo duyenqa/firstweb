@@ -2,87 +2,101 @@
     "translations": [
       {
         "source_language": "en",
-        "source_text": "Hello, how are you?",
+        "en_text": "Hello, how are you ?",
         "target_language": "vi",
-        "target_text": "Xin chào, bạn khỏe không?"
+        "vn_text": "Xin chào, bạn khỏe không ?",
+        "korean_text": "Annyeonghaseyo, eotteoke jinaeseyo ?"
       },
       {
         "source_language": "en",
-        "source_text": "Good morning!",
+        "en_text": "Good morning!",
         "target_language": "vi",
-        "target_text": "Chào buổi sáng!"
+        "vn_text": "Chào buổi sáng!",
+        "korean_text": "Joeun achim!"
       },
       {
         "source_language": "en",
-        "source_text": "What is your name?",
+        "en_text": "What is your name ?",
         "target_language": "vi",
-        "target_text": "Tên bạn là gì?"
+        "vn_text": "Tên bạn là gì ?",
+        "korean_text": "Ireumi mwoyeyo ?"
       },
       {
         "source_language": "en",
-        "source_text": "Can you help me?",
+        "en_text": "Can you help me ?",
         "target_language": "vi",
-        "target_text": "Bạn có thể giúp tôi không?"
+        "vn_text": "Bạn có thể giúp tôi không ?",
+        "korean_text": "Dowajul su isseoyo ?"
       },
       {
         "source_language": "en",
-        "source_text": "I am very happy to meet you.",
+        "en_text": "I am very happy to meet you.",
         "target_language": "vi",
-        "target_text": "Tôi rất vui khi được gặp bạn."
+        "vn_text": "Tôi rất vui khi được gặp bạn.",
+        "korean_text": "Mannaseo jeongmal haengbokhaeyo."
       },
       {
         "source_language": "en",
-        "source_text": "Good night!",
+        "en_text": "Good night !",
         "target_language": "vi",
-        "target_text": "Chúc bạn ngủ ngon!"
+        "vn_text": "Chúc bạn ngủ ngon !",
+        "korean_text": "Joeun kkum kkuseyo !"
       },
       {
         "source_language": "en",
-        "source_text": "Thank you for your help.",
+        "en_text": "Thank you for your help.",
         "target_language": "vi",
-        "target_text": "Cảm ơn bạn đã giúp đỡ."
+        "vn_text": "Cảm ơn bạn đã giúp đỡ.",
+        "korean_text": "Dowajusyeoseo gamsahamnida."
       },
       {
         "source_language": "en",
-        "source_text": "Where are you from?",
+        "en_text": "Where are you from ?",
         "target_language": "vi",
-        "target_text": "Bạn đến từ đâu?"
+        "vn_text": "Bạn đến từ đâu ?",
+        "korean_text": "Eodieseo osyeosseoyo ?"
       },
       {
         "source_language": "en",
-        "source_text": "Have a nice day!",
+        "en_text": "Have a nice day !",
         "target_language": "vi",
-        "target_text": "Chúc bạn một ngày tốt lành!"
+        "vn_text": "Chúc bạn một ngày tốt lành !",
+        "korean_text": "Joeun haru doeseyo !"
       },
       {
         "source_language": "en",
-        "source_text": "Goodbye, see you later!",
+        "en_text": "Goodbye, see you later !",
         "target_language": "vi",
-        "target_text": "Tạm biệt, hẹn gặp lại!"
+        "vn_text": "Tạm biệt, hẹn gặp lại !",
+        "korean_text": "Annyeonghi gaseyo, najunge bwayo !"
       },
       {
         "source_language": "en",
-        "source_text": "How much does this cost?",
+        "en_text": "How much does this cost ?",
         "target_language": "vi",
-        "target_text": "Cái này giá bao nhiêu?"
+        "vn_text": "Cái này giá bao nhiêu ?",
+        "korean_text": "Igeo eolmaeyo ?"
       },
       {
         "source_language": "en",
-        "source_text": "I don't understand.",
+        "en_text": "I don't understand.",
         "target_language": "vi",
-        "target_text": "Tôi không hiểu."
+        "vn_text": "Tôi không hiểu.",
+        "korean_text": "Ihaehaji mothaeyo."
       },
       {
         "source_language": "en",
-        "source_text": "I am learning English.",
+        "en_text": "I am learning English.",
         "target_language": "vi",
-        "target_text": "Tôi đang học tiếng Anh."
+        "vn_text": "Tôi đang học tiếng Anh.",
+        "korean_text": "Jeoneun yeongeoreul baewugo isseoyo."
       },
       {
         "source_language": "en",
-        "source_text": "This is delicious!",
+        "en_text": "This is delicious !",
         "target_language": "vi",
-        "target_text": "Cái này ngon quá!"
+        "vn_text": "Cái này ngon quá !",
+        "korean_text": "Igeo masisseoyo !"
       }
     ]
   }
