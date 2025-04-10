@@ -38,5 +38,8 @@
 ## Read file JSON in local or api link
 - [Usage](https://oxylabs.io/blog/javascript-read-json-file)
 
+## Tools online
+- [Usage](https://front-end-tools.com/en/generateBorder/)
+
 ## Author:
 Ngô Thị Kim Duyên 2024
