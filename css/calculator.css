@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -135,7 +136,7 @@
     background-color: #fafafa;
 }
 
-.demoFrame{
+.demoFrame {
     width: 100%;
     height: 60vh;
     border: none;
@@ -147,14 +148,18 @@
     }
 }
 
-.calculator{
+.calculator {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 0px 10px #444466, 5px 5px 0px 10px #333355, 20px 20px 30px #00000099;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
     padding: 0 10px;
 }
-.result{
+
+.result {
     width: 100%;
     height: 3rem;
     font-size: 1.5rem;
@@ -164,7 +169,8 @@
     border-radius: 5px;
     text-align: right;
 }
-.row{
+
+.row {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -173,7 +179,8 @@
     margin: 6px 0;
 
 }
-.btn{
+
+.btn {
     width: 50%;
     height: 2.5rem;
     border-radius: 5px;
@@ -181,37 +188,35 @@
     font-size: 1.5rem;
     color: #000;
     border: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    background: #E9328D;
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-  }
+}
 
-.btnequal{
+.btnequal {
     width: 102px;
     height: 30px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 @media (min-width: 280px) {
-    .calculator{
+    .calculator {
         max-width: 250px;
         margin: 20px auto;
     }
-    .result{
+
+    .result {
         max-width: 280px;
         height: 4rem;
         font-size: 2rem;
     }
-    .row{
+
+    .row {
         max-width: 280px;
     }
 }
