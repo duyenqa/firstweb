@@ -378,7 +378,7 @@
 .scrollVertical{
     width: 100%;
     width: 400px;
-    max-height: 300px;
+    max-height: 350px;
     padding: 0.5rem;
     overflow-y: auto;
     overflow-x: hidden;
