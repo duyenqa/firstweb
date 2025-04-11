@@ -139,7 +139,7 @@
     color: white;
 }
 
-.frameCharts, .frameTableandTabs{
+.frameCharts, .frameTableandTabs, .frameListVertical{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -372,4 +372,37 @@
     #customers td {
         width: 50%;
     }
+}
+
+/* ------------------- List scroll dọc ------------------- */
+.scrollVertical{
+    width: 100%;
+    width: 400px;
+    max-height: 300px;
+    padding: 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+}
+
+.list02, .list03{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lineItem{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+}
+
+.lineItem > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
