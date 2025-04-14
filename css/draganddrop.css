@@ -132,36 +132,44 @@
     width: 90%;
     height: auto;
     margin: 0 auto;
-    background-color: #fafafa;
+}
+
+.scroll-horizontal{
+    max-width: 1250px;
+    overflow-x: auto;
 }
 
 .drop-targets {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-top: 1rem;
 }
 
 .box {
-    height: 150px;
-    width: 150px;
+    height: 300px;
+    min-height: fit-content;
     border: solid 3px #ccc;
-    margin: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    padding: 1rem;
 }
 
+.frame{
+    width: 100%;
+    border: solid 3px #ccc;
+    margin: 1rem 0;
+}
+
+img{
+    object-fit: contain;
+    aspect-ratio: 1;
+}
 
 .drag-over {
     border: dashed 3px red;
-}
-
-.item {
-    height: 75px;
-    width: 75px;
-    background-color: #F0DB4F;
-
 }
 
 .hide {
@@ -174,7 +182,6 @@
     }
 
     .drop-targets {
-        flex-direction: column;
-        margin-top: 10px;
+        grid-template-columns: auto;
     }
 }
