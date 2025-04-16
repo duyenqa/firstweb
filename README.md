@@ -21,6 +21,7 @@
 - [Editor](https://ckeditor.com/docs/)
 - [Feature Editor](https://ckeditor.com/ckeditor-5/features/)
 - [Toolbar](https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/toolbar.html)
+- [Usage](https://github.com/duyenqa/Use-CKEditor)
 
 ## CDN Hover Effects
 - [Install](https://cdnjs.com/libraries/vanilla-tilt)
@@ -38,7 +39,7 @@
 ## Read file JSON in local or api link
 - [Usage](https://oxylabs.io/blog/javascript-read-json-file)
 
-## Tools online
+## Tools online generates some style box-shadow, background color about gradient,...v.v
 - [Usage](https://front-end-tools.com/en/generateBorder/)
 
 ## Author:
