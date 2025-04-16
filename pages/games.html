@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="My first web is only testing" />
+    <meta property="og:description" content="Website about shopping cart, to do list, app mobile" />
+    <meta property="og:image" content="../images/favicon.ico" />
+    <meta property="og:url" content="../images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/games.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>Games</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wraper">
+            <div class="topnav" id="myTopnav">
+                <a href="../index.html">Home</a>
+                <a href="./todo.html">To do</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./translatepage.html">Translate</a>
+                <a href="./mobiapp.html">My App Mobile</a>
+                <div class="dropdown">
+                    <button onclick="onDropdown()" class="dropbtn">Dropdown
+                        <i class="fa-solid fa-caret-down"></i>
+                    </button>
+                    <ul id="myDropdown" class="dropdown-content">
+                        <li><a title="calculator" href="../pages/calculator.html">Calculator</a></li>
+                        <li><a title="demo iframe" href="../pages/exampleweb.html">Demo Iframe</a></li>
+                        <li><a title="drag & drop" href="../pages/draganddrop.html">Drag & Drop</a></li>
+                        <li><a title="gallery images" href="../pages/galleryimages.html">Gallery Images</a></li>
+                    </ul>
+                </div>
+
+                <a href="javascript:void(0);" class="icon" onclick="myburger()">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <a href="./login.html">Sign In</a>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="velocityBall">
+                <input id="vxBall" type="number" value="0" />
+                <input id="vyBall" type="number" value="0" />
+                <button onclick="onChangeVelocityBall()">Increase Velocity</button>
+            </div>
+            <div class="frame">
+                <canvas></canvas>
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="mainFooter">
+                <div class="site-info">
+                    <img src="../images/logo.png" alt="" width="120" height="120" />
+                    <p>
+                        InTech Website là trang web được sử dụng cho việc kiểm thử - bằng kiến thức Frontend mình đã có
+                        qua những năm tháng đi làm.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="headerFooter">InTech Sites</div>
+                    <div class="links">
+                        <a href="https://duyenqa.github.io/firstweb/">Ecommerce</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/todo.html">To Do List</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/calculator.html">Calculator</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/exampleweb.html">Use Iframe</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/draganddrop.html">Drag & Drop</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/galleryimages.html">Gallery Images</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/translatepage.html">Translate</a>
+                        <a href="https://duyenqa.github.io/firstweb/pages/contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="headerFooter">App Mobile</div>
+                    <a href="https://duyenqa.github.io/firstweb/pages/mobiapp.html">Cats App</a>
+                </div>
+                <div class="footer-links">
+                    <div class="headerFooter">Log In</div>
+                    <a href="https://duyenqa.github.io/firstweb/pages/login.html">Log In</a>
+                </div>
+                <div class="footer-links">
+                    <div class="headerFooter">Refer Websites</div>
+                    <div class="links">
+                        <a href="https://www.w3schools.com/howto/default.asp">W3School</a>
+                        <a href="https://learnlayout.com/flexbox">Flexbox CSS</a>
+                        <a href="https://flexboxfroggy.com/">Game Flexbox CSS</a>
+                        <a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/">Grid CSS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>
+                    &copy; Copyright by Ngô Thị Kim Duyên 2024 -
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/games.js" defer></script>
+</body>
+
+</html>
