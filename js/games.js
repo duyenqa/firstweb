@@ -13,6 +13,9 @@ let x = 200, y = 150;
 //Set initial ball velocity 
 let vx = 0, vy = 0;
 
+//Set score
+let score = 0;
+
 function onChangeVelocityBall() {
     let a = parseFloat(document.getElementById("vxBall").value) || 0;
     let b = parseFloat(document.getElementById("vyBall").value) || 0;
@@ -60,17 +63,27 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBackground();
     drawTextText();
+    drawScore();
     drawBall();
+}
+
+//Draw text
+function drawScore() {
+    ctx.font = "40px Consolas";
+    ctx.fillStyle = "yellow";
+    ctx.fillText(`Score: ${score}`, 300, 120);
 }
 
 function updateBall() {
     //when ball detect wall
     if (x + vx > options.width - ballRadius || x + vx < ballRadius) {
         vx = -vx;
+        score += 1;
     }
 
     if(y + vy > options.height - ballRadius || y + vy < ballRadius){
         vy = -vy;
+        score += 1;
     }
 
     //ball is moving 
