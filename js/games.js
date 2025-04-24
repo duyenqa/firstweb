@@ -8,7 +8,7 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 // Set initial ball position
-let x = 250, y = 250;
+let x = 200, y = 150;
 
 //Set initial ball velocity 
 let vx = 0, vy = 0;
@@ -20,6 +20,13 @@ function onChangeVelocityBall() {
     vy = b;
 }
 
+function onResetBall() {
+    let newX = document.getElementById("vxBall").value = 0;
+    let newY = document.getElementById("vyBall").value = 0;
+    vx = newX;
+    vy = newY;
+}
+
 //Set radius ball
 let ballRadius = 30;
 
@@ -27,15 +34,23 @@ let ballRadius = 30;
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 }
 
 //Draw text
 function drawTextText() {
-    ctx.font = "48px serif";
-    ctx.fillText("Ball speed simulation", 155, 50);
+    ctx.font = "40px Consolas";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText("Ball speed simulation", 160, 60);
+}
+
+//background game
+function drawBackground() {
+    const base_image = new Image();
+    base_image.src = "../images/background_game.png";
+    ctx.drawImage(base_image, 0, 0, 800, 365);
 }
 
 //Draw everything
@@ -43,6 +58,7 @@ function draw() {
     canvas.width = options.width;
     canvas.height = options.height;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBackground();
     drawTextText();
     drawBall();
 }
