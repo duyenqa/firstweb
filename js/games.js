@@ -28,6 +28,7 @@ function onResetBall() {
     let newY = document.getElementById("vyBall").value = 0;
     vx = newX;
     vy = newY;
+    score = 0;
 }
 
 //Set radius ball
