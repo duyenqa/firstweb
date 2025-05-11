@@ -18,7 +18,7 @@ let score = 0;
 
 //set position ground
 const paddleHeight = 60;
-const paddleWidth = 745;
+const paddleWidth = 770;
 let paddleX = (options.width - paddleWidth) / 2;
 
 function onChangeVelocityBall() {
@@ -59,10 +59,10 @@ function drawTextText() {
 function drawBackground() {
     const base_image = new Image();
     base_image.src = "../images/grass.png";
-    ctx.drawImage(base_image, 0, 0, 750, 369);
+    ctx.drawImage(base_image, 0, 0, 780, 369);
 }
 
-//paddle
+//ground
 function drawGround() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
