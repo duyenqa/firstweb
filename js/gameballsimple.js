@@ -16,6 +16,11 @@ let vx = 0, vy = 0;
 //Set score
 let score = 0;
 
+//set position ground
+const paddleHeight = 60;
+const paddleWidth = 745;
+let paddleX = (options.width - paddleWidth) / 2;
+
 function onChangeVelocityBall() {
     let a = parseFloat(document.getElementById("vxBall").value) || 0;
     let b = parseFloat(document.getElementById("vyBall").value) || 0;
@@ -32,14 +37,14 @@ function onResetBall() {
 }
 
 //Set radius ball
-let ballRadius = 30;
+let ballRadius = 40;
 
 // Draw the ball
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-    ctx.fillStyle = "red";
-    ctx.fill();
+    ctx.lineWidth = 3;
+    ctx.stroke();
     ctx.closePath();
 }
 
@@ -53,8 +58,17 @@ function drawTextText() {
 //background game
 function drawBackground() {
     const base_image = new Image();
-    base_image.src = "../images/background_game.png";
-    ctx.drawImage(base_image, 0, 0, 800, 365);
+    base_image.src = "../images/grass.png";
+    ctx.drawImage(base_image, 0, 0, 750, 369);
+}
+
+//paddle
+function drawGround() {
+    ctx.beginPath();
+    ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+    ctx.fillStyle = "brown";
+    ctx.fill();
+    ctx.closePath();
 }
 
 //Draw everything
@@ -66,6 +80,7 @@ function draw() {
     drawTextText();
     drawScore();
     drawBall();
+    drawGround();
 }
 
 //Draw text
@@ -82,7 +97,7 @@ function updateBall() {
         score += 1;
     }
 
-    if(y + vy > options.height - ballRadius || y + vy < ballRadius){
+    if (y + vy > options.height - ballRadius - paddleHeight || y + vy < ballRadius - 5) {
         vy = -vy;
         score += 1;
     }
