@@ -22,17 +22,21 @@ const paddleWidth = 770;
 let paddleX = (options.width - paddleWidth) / 2;
 
 function onChangeVelocityBall() {
-    let a = parseFloat(document.getElementById("vxBall").value) || 0;
-    let b = parseFloat(document.getElementById("vyBall").value) || 0;
-    vx = a;
-    vy = b;
+    let inputVX = document.getElementById("vxBall").value;
+    vx = inputVX;
+    let inputVY = document.getElementById("vyBall").value;
+    vy = inputVY;
 }
 
 function onResetBall() {
-    let newX = document.getElementById("vxBall").value = 0;
-    let newY = document.getElementById("vyBall").value = 0;
-    vx = newX;
-    vy = newY;
+    let newVX = document.getElementById("vxBall").value = 0;
+    let newResultVX = document.getElementById("outputvx").value = 0;
+    vx = newVX;
+
+    let newVY = document.getElementById("vyBall").value = 0;
+    let newResultVY = document.getElementById("outputvy").value = 0;
+    vy = newVY;
+
     score = 0;
 }
 

@@ -44,9 +44,11 @@
         </div>
         <div class="wraper">
             <div class="velocityBall">
-                <input id="vxBall" type="number" value="0" />
-                <input id="vyBall" type="number" value="0" />
-                <button onclick="onChangeVelocityBall()">Increase Velocity</button>
+                 <input id="vxBall" type="range" value="0" min="0" max="100" oninput="outputvx.value = vxBall.value" />
+                 <output id="outputvx">0</output>
+                 <input id="vyBall" type="range" value="0" min="0" max="100" oninput="outputvy.value = vyBall.value" />
+                 <output id="outputvy">0</output>
+                <button onclick="onChangeVelocityBall()">Change Velocity</button>
                 <button onclick="onResetBall()">Reset game</button>
             </div>
             <div class="frame">
