@@ -173,7 +173,7 @@
 
 .btnTranslates {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -202,6 +202,22 @@
 #sentences>p:hover{
     box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
     color:#f80;
+}
+
+.versionUpdate{
+    width: 100%;
+    padding: 16px;
+    margin: 8px;
+    border: 1px solid #d5c394;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.35) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0.35) 75%, transparent 75%) left / 20px 20px repeat, #fff3cd;
+    
+}
+.introduce{
+    margin-left: 30px;
+}
+.introduce > li > a{
+    color: #7a4d05;
+    font-weight: 700;
 }
 
 @media (max-width: 600px) {
