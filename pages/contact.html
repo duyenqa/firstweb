@@ -9,6 +9,7 @@
   <meta property="og:image" content="../images/favicon.ico" />
   <meta property="og:url" content="../images/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="../css/footer.css">
   <title>Page Contact</title>
@@ -108,7 +109,7 @@
           </div>
           <div class="row">
             <div class="input-container">
-              <input type="text" id="datepicker" />
+              <input type="text" id="datepicker" placeholder=" ">
               <label for="datepicker">Date</label>
             </div>
           </div>
@@ -172,6 +173,15 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#datepicker", {
+                dateFormat: "d/m/Y",
+                minDate: "today"
+            });
+        });
+    </script>
   <script src="../js/menu.js" defer></script>
   <script src="../js/formContact.js" defer></script>
 </body>

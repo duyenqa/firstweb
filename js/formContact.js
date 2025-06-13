@@ -4,7 +4,7 @@ function showAlert() {
     let email = document.getElementById("email").value;
     let country = document.getElementById("country").value;
     let description = document.getElementById("description").value;
-    let createdDate = document.getElementById("datepicker").value;
+    let createdDate = document.getElementById("datepicker").value;    
     let gender = "";
     let genderRadioButtons = document.getElementsByName("gender");
     let colors = "";

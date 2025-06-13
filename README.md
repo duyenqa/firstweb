@@ -23,6 +23,9 @@
 - [Toolbar](https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/toolbar.html)
 - [Usage](https://github.com/duyenqa/Use-CKEditor)
 
+## Flatpickr
+- [Install CDN CSS & JS](https://flatpickr.js.org/getting-started/)
+
 ## CDN Hover Effects
 - [Install](https://cdnjs.com/libraries/vanilla-tilt)
 - [Demo](https://micku7zu.github.io/vanilla-tilt.js/)
