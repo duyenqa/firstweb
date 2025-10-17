@@ -7,7 +7,7 @@ function preview() {
     numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
     for(i of fileInput.files){
         let reader = new FileReader();
-        let aTag = document.createElement("a");
+        let aTag = document.createElement("li");
         let figCap = document.createElement("div");
         figCap.classList.add("caption");
         figCap.innerText = i.name;

@@ -166,19 +166,27 @@ label {
 
 #list-images{
   width: 90%;
-  position: relative;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
 }
 
-#list-images > a{
-  border: 1px solid #ccc;
-  width: 30%;
-  height: fit-content;
-  flex: 50%;
-  text-decoration: none;
+#list-images > li{
+  height: 246px;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
 }
+
+#list-images > li > img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .caption{
   padding: 15px;
   text-align: center;
